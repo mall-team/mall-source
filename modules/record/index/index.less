@@ -1,0 +1,167 @@
+@import "../global.less";
+@import "../record-nav/index.less";
+
+
+
+body{
+	background-color: #fff;
+}
+
+.icon-listen{
+	display: inline-block;
+	.bg-contain('/images/record/icon-listen.png', 20px, 35px/2);
+}
+
+.icon-discuss{
+	display: inline-block;
+	.bg-contain('/images/record/icon-discuss.png', 19px, 14px);
+}
+
+.icon-discuss2{
+	display: inline-block;
+	.bg-contain('/images/record/icon-discuss2.png', 15px, 15px);
+}
+
+.icon-college{
+	display: inline-block;
+	.bg-contain('/images/record/icon-college.png', 14px, 17px);
+}
+
+.icon-yes{
+	display: inline-block;
+	.bg-contain('/images/record/icon-yes.png', 17px, 29px/2);
+}
+
+.icon-heart{
+	display: inline-block;
+	.bg-contain('/images/record/icon-heart.png', 26px/2, 23px/2);
+}
+
+.discuss-layer{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 19px;
+	height: 14px;
+
+	.icon-discuss2{
+	}
+
+	.layer-content{
+		background-color: #4d5052;
+		padding: 0 20px;
+		height: 40px;
+		line-height: 40px;
+		// .per(width, 540px, 605px);
+		width: 250px;
+		position: absolute;
+		right: 23px;
+		top: 50%;
+		margin-top: -20px;
+		.flex();
+		display: none;
+
+		>a{
+			color: #fff;
+			display: block;
+			font-size: 14px;
+			display: inline-block;
+			vertical-align: middle;
+			.flex-item();
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			i{
+				margin-right: 5px;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.friend-list{
+
+	>li{
+		.border-bottom(@border-base-color);
+		padding: 15px percentage(20/750);
+		.clearfix();
+
+		&.listened{
+			.icon-listen{
+				background-image: url(/images/record/icon-listen-sel.png);
+			}
+		}
+	}
+
+	.img-wrap{
+		.square();
+		.per(width, 85px, 710px);
+		margin-right: percentage(18/710);
+		text-align: left;
+		float: left;
+	}
+
+	.info{
+		float: left;
+		width: percentage((710-18-85)/710);
+	}
+
+	.name-wrap{
+		margin-bottom: 5px;
+		.flex();
+	}
+
+	.name{
+		color: #63738e;
+		display: block;
+		width: 30%;
+		vertical-align: middle;
+	}
+
+	.listen-label{
+		color: #999;
+		display: block;
+		font-size: 12px;
+		.flex-item();
+		text-align: right;
+
+		.icon-listen{
+			margin-left: 10px;
+			vertical-align: middle;
+		}
+	}
+
+	.title{
+		margin-bottom: 8px;
+
+		>a{
+			display: block;
+			background-color: #f3f1f3;
+			color: #2d2d2d;
+			padding: 17px 14px;
+		}
+	}
+
+	.date-wrap{
+
+	}
+
+	.date{
+		color: @text-light-color;
+		font-size: 12px;
+	}
+	
+	.discuss-layer{
+		float: right;
+	}
+
+	.discuss-list{
+		background-color: #f3f1f3;
+		padding: 5px 10px;
+		.yesed{
+			
+		}
+	}
+}

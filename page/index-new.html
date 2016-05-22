@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<title>淘金子</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+	<script type="text/javascript">
+	setTimeout(function(){
+		phpdata = {
+			serverTime: 21005
+		}
+	}, 500);
+	</script>
+</head>
+<body>
+	<!--初始化购物车url，返回number-->
+	<input type="hidden" id="J-ajaxurl-initCart" value="/Mall/Home/cartGoodsNumber" />
+
+	<div class="wrap">
+		<!-- <div class="atten-panel clearfix">
+			<a class="logo"></a>
+			<a class="atten-btn">点击关注</a>
+			<p>
+				点击关注淘金子商城<br/>
+				赢好礼、享实惠
+			</p>
+		</div> -->
+		<section class="tj-section">
+			<link rel="import" href="/modules/search-panel/index.html?__inline">
+			<div id="banner" class='swipe'>
+				<div class="swipe-wrap">
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" tjz-bgimg="/static/images/index-new/test/5.jpg"></div>
+						  </a>
+					</div>
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" tjz-bgimg="/static/images/index-new/test/6.jpg"></div>
+						  </a>
+					</div>
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" tjz-bgimg="/static/images/index-new/test/7.jpg"></div>
+						  </a>
+					</div>
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" tjz-bgimg="/static/images/index-new/test/8.jpg"></div>
+						  </a>
+					</div>
+				</div>
+				<div id="bannerPager"><span id="page"></span></div>
+			</div>
+			<!-- <div class="festival-line"></div> -->
+			<ul class="tj-types">
+				<li>
+					<a>
+						<i class="icon"></i><label>食品</label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<i class="icon"></i><label>美妆</label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<i class="icon"></i><label>保健</label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<i class="icon"></i><label>母婴</label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<i class="icon"></i><label>其它</label>
+					</a>
+				</li>
+				<!-- <li>
+					<a>
+						<i class="icon"></i><label>居家</label>
+					</a>
+				</li> -->
+			</ul>
+		</section>
+		<section class="tj-quanmin">
+			<ul class="three dib-wrap">
+				<li class="dib">
+						<a href="http://www.baidu.com">
+					<div class="item item-big">
+						<!-- <div class="item-title dib-wrap">
+							<span class="cut-title dib">全民疯砍</span>
+							<div id="J-cut-timer" class="cut-timer dib" timer="21100"></div>
+						</div> -->
+						<!-- <div class="title-sub">25837人已砍价</div> -->
+						<!-- <div class="img-content">
+							<div class="img-wrap" tjz-bgimg="/static/images/index-new/ty-1.jpg"></div>
+							<div class="item-price">
+								<div class="price-wrap">
+									<p>0.01</p>
+									<p>元</p>
+								</div>
+							</div>
+						</div> -->
+					</div>
+						</a>
+				</li>
+				<li class="dib">
+					<ul class="child-ul">
+						<li>
+							<a href="http://www.baidu.com">
+							<div class="item item-small">
+								<!-- <div class="item-title world-title">跨境购</div>
+								<div class="title-sub">保税仓直达</div>
+								<div class="img-wrap" tjz-bgimg="/static/images/index-new/ty-2.png"></div> -->
+							</div>
+							</a>
+						</li>
+						<li>
+							<div class="item item-small">
+								<!-- <div class="item-title worth-title">值得买</div>
+								<div class="title-sub">小编精选推荐</div>
+								<div class="img-wrap" tjz-bgimg="/static/images/index-new/ty-3.png"></div> -->
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section class="banner-1212">
+			<a class="img-wrap" data-original="http://cdn0.taojinzi.com/static/images/ny/ny-1.jpg"></a>
+			<div class="img-wrap" data-original="http://cdn2.taojinzi.com/static/images/ny/ny-3.jpg">
+				<div class="row">
+					<a href="http://www.baidu.com" class="row-half"></a>
+					<a href="http://www.taobao.com" class="row-half"></a>
+				</div>
+			</div>
+			<a class="img-wrap" data-original="http://cdn1.taojinzi.com/static/images/ny/ny-2.jpg"></a>
+		</section>
+		<section class="tj-section">
+			<div class="chr-ms-title">
+				<div class="section-title3 title-ms">
+					<h3><i class="icon-ms"></i>疯狂秒杀</h3>
+				</div>
+				<div id="J-miao-nav" class="miao-time">
+					<span class="active">10:00</span>
+					<span>17:00</span>
+					<span>21:00</span>
+				</div>
+			</div>
+			<ul id="J-miao-list" class="banner-list">
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/3.jpg">
+						<div class="empty"></div>
+					</div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li act-id="25">
+					<div class="img-wrap" data-original="/static/images/index-new/test/2.jpg">
+						<div class="ready-tip">
+							<p>距离开抢</p>
+							<p class="J-miao-timer" timer="1000">10:50:10</p>
+							<a class="ready-btn"><i class="icon-ling"></i><label>开抢提醒</label></a>
+						</div>
+					</div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="tj-section">
+			<div class="chr-ms-title">
+				<div class="section-title3 title-ms">
+					<h3><i class="icon-ms"></i>元旦特卖</h3>
+				</div>
+				<div id="J-ny-nav" class="miao-time ny-time">
+					<span class="active" type="0">第一波<br/><span class="date">12.31至01.02</span></span>
+					<span type="1">第二波<br/><span class="date">01.03</span></span>
+					<span type="2">第三波<br/><span class="date">01.04</span></span>
+				</div>
+			</div>
+			<ul id="J-ny-list" class="banner-list">
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/3.jpg">
+						<div class="empty"></div>
+					</div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li act-id="25">
+					<div class="img-wrap" data-original="/static/images/index-new/test/2.jpg">
+						<div class="ready-tip">
+							<p>距离开抢</p>
+							<p class="J-miao-timer" timer="1000">10:50:10</p>
+							<a class="ready-btn"><i class="icon-ling"></i><label>开抢提醒</label></a>
+						</div>
+					</div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="tj-section">
+			<div class="section-title3 title-xp">
+				<h3><i class="icon-xp"></i>新品上市</h3>
+			</div>
+			<ul class="banner-list">
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/3.jpg">
+						<div class="empty"></div>
+					</div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/2.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="tj-section">
+			<div class="section-title3">
+				<h3>特卖商品</h3>
+			</div>
+			<div class="temai-list dib-wrap">
+				<div class="temai-item dib">
+					<a>
+						<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)">
+						</div>
+						<div class="item-info">
+							<div class="item-title">clinique超值润肤水1clinique超值润肤水1</div>
+							<div class="item-price">
+								<span class="price">&yen; 253.00</span>
+								<label class="btn btn-sm">7.8折</label>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="temai-item dib">
+					<a>
+						<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+						<div class="item-info">
+							<div class="item-title">clinique超值润肤水1clinique超值润肤水1</div>
+							<div class="item-price">
+								<span class="price">&yen; 253.00</span>
+								<label class="btn btn-sm">7.8折</label>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="temai-item dib">
+					<a>
+						<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+						<div class="item-info">
+							<div class="item-title">clinique超值润肤水1clinique超值润肤水1</div>
+							<div class="item-price">
+								<span class="price">&yen; 253.00</span>
+								<label class="btn btn-sm">7.8折</label>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="tj-section tj-section-common tj-cut">
+			<div class="section-title clearfix">
+				<h3>全民砍价 - 底价砍</h3>
+			</div>
+			<div class="section-item">
+				<div class="timer-tag">
+					<div class="amount">500人已砍价</div>
+					<div class="timer"><span class="J-timer" timer-end="21000"></span>开始</div>
+				</div>
+				<div class="img-wrap" data-original="/static/images/index-new/test/4.jpg">
+					<div class="empty"></div>
+				</div>
+				<div class="item-infos">
+					<p class="item-title">淑女绣花连衣长裙</p>
+					<div class="clearfix">
+						<span class="price-min"><label>底价:</label><span class="price">&yen;1.00</span></span>
+						<span class="price-origin"><label>原价:</label><span class="price">128.00</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="section-item">
+				<div class="timer-tag">
+					<div class="amount">500人已砍价</div>
+					<div class="timer"><span class="J-timer" timer-end="21000"></span>开始</div>
+				</div>
+				<div class="img-wrap" data-original="/static/images/index-new/test/5.jpg"></div>
+				<div class="item-infos">
+					<p class="item-title">淑女绣花连衣长裙</p>
+					<div>
+						<span class="price-min"><label>底价:</label><span class="price">&yen;1.00</span></span>
+						<span class="price-origin"><label>原价:</label><span class="price">128.00</span></span>
+						<a class="btn right">砍一刀</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="tj-section">
+			<div class="section-title2">
+				<h3>疯狂秒杀</h3>
+			</div>
+			<div class="miao-time">
+				<span class="active">10:00</span>
+				<span>17:00</span>
+				<span>21:00</span>
+			</div>
+			<ul class="banner-list">
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/3.jpg">
+						<div class="empty"></div>
+					</div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/2.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="tj-section worth-section">
+			<div class="section-title">
+				<h3>值得买 - 精选单品</h3>
+			</div>
+			<ul class="banner-list">
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/3.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/2.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="tj-section worth-section">
+			<div class="section-title">
+				<h3>值得买 - 精选主题</h3>
+			</div>
+			<ul class="banner-list">
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/6.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/7.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/8.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/9.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/10.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/11.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/1.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/13.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+				<li>
+					<div class="img-wrap" data-original="/static/images/index-new/test/15.jpg"></div>
+					<div class="banner-info clearfix">
+						<span class="qi">2折起</span>
+						<span class="banner-title">海洋基因嫩颜秘诀专场</span>
+						<span class="J-banner-timer banner-timer right" timer="21100">剩1天</span>
+					</div>
+				</li>
+			</ul>
+		</section> -->
+		<a class="cart"><i>2</i></a>
+		<ul class="nav">
+			<li class="mall active">
+				<a>
+					<i class="icon"></i>
+					<label>淘金商城</label>
+				</a>
+			</li>
+			<li class="gift">
+				<a>
+					<i class="icon"></i>
+					<label>开店</label>
+				</a>
+			</li>
+			<li class="mine">
+				<a>
+					<i class="icon"></i>
+					<label>我的</label>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+        require('index-new/index');
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<% $.each(list, function(i, item){ %>
+<li act-id="<%= item.id %>">
+	<a href="/Mall/Goods/detail?g=<%= item['goodsInfo']['product_id'] %>&spe=3&act_id=<%= item.id %>">
+		<div class="img-wrap" style="background-image:url(<%= item.image_url %>)">
+			<% if(+item['goodsInfo']['product_number'] <= +item['goodsInfo']['sold_number']){ %>
+			<div class="empty"></div>
+			<% } %>
+			<% if(!activityAlreadyStart && item.remainTime){ %>
+			<div class="ready-tip">
+				<p>距离开抢</p>
+				<p class="J-miao-timer" timer="<%= item.remainTime %>"></p>
+				<% if(item.subscribe == 1){ %>
+				<button class="ready-btn active"><i class="icon-ling"></i><label>已订阅</label></button>
+				<% }else{ %>
+				<button class="ready-btn"><i class="icon-ling"></i><label>开抢提醒</label></button>
+				<% } %>
+			</div>
+			<% } %>
+		</div>
+		<div class="banner-info clearfix">
+			<% if(item['goodsInfo']['discount']){ %>
+			<span class="qi"><%= item['goodsInfo']['discount'] %>折</span>
+			<% } %>
+			<span class="banner-title"><%= item.title %></span>
+			<% if(activityAlreadyStart){ %>
+			<span class="banner-timer right" timer="21100">剩<%= item.remainTime %></span>
+			<% } %>
+		</div>
+	</a>
+</li>
+<% }) %>

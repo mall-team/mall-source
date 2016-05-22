@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>地址管理</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="addr-user">
+		<dl>
+			<dt>收货人</dt>
+			<dd><input type="text" placeholder="请输入收货人姓名" /></dd>
+			<dt>手机号</dt>
+			<dd><input type="tel" placeholder="请输入手机号" /></dd>
+		</dl>
+		<dl class="address">
+			<dt>省</dt>
+			<dd><span>选择省份</span><i class="icon-arrow"></i></dd>
+			<dt>市</dt>
+			<dd><span>选择市</span><i class="icon-arrow"></i></dd>
+			<dt>区</dt>
+			<dd><span>选择区</span><i class="icon-arrow"></i></dd>
+			<dt>详细地址</dt>
+			<dd><input placeholder="请输入你的有效地址" /></dd>
+		</dl>
+	</section>
+	<footer>
+		<a href="" class="btnl btnl-primary">确认</a>
+		<a href="" class="btnl btnl-default">删除地址</a>
+	</footer>
+
+	<script type="text/javascript">
+		require('addr-edit/index');
+	</script>
+</body>
+</html>

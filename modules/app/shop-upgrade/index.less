@@ -1,0 +1,50 @@
+@import '/modules/common/common.less';
+
+.wrap{
+	background-color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.bg-img{
+	.bg-contain();
+	background-image: url(/images/app/shop-upgrade/bg.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: percentage(900/1136);
+	width: 100%;
+
+}
+
+.content{
+	background-color: #cfba9f;
+	padding: 12px 0 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+
+	>p{
+		line-height: 26px;
+		color: #000;
+		font-size: 18px;
+	}
+
+	.btn-wrap{
+		text-align: center;
+		margin-top: 6px;
+	}
+
+	.btnl{
+		line-height: 40px;
+		height: 40px;
+		width: auto;
+		padding: 0 25px;
+	}
+
+}

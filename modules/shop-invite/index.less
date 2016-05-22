@@ -1,0 +1,89 @@
+@import '/modules/common/common.less';
+
+.wrap{
+	padding: 0 percentage(20/640);
+}
+
+.shop-list{
+	padding: 30px 0 20px;
+
+	>li{
+		background-color: #fff;
+		border: 1px solid @bg-main-color;
+		border-top: 0;
+		.border-radius(4px);
+		margin-bottom: 15px;
+		position: relative;
+
+		&:nth-child(2){
+			border-color: #87b5fb;
+			margin-bottom: 0;
+
+			h2{
+				background-color: #87b5fb;
+			}
+		}
+
+	}
+
+	h2{
+		background-color: @bg-main-color;
+		color: #fff;
+		font-size: 18px;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 12px;
+	}
+
+	.shop-des{
+		padding: 10px percentage(80/600) 10px percentage(20/600);
+
+		p{
+			color: @text-gray-color;
+			font-size: 12px;
+			line-height: 1.5;
+
+			&.bb{
+				color: #000;
+				font-size: 15px;
+			}
+			&.b{
+				color: @text-base-color;
+				font-size: 14px;
+			}
+		}
+
+		ol{
+			>li{
+				color: @text-gray-color;
+				list-style: decimal outside;
+				font-size: 12px;
+				margin-left: 15px;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	.radio{
+		.bg-contain('/images/shop-invite/radio.png', 30px, 30px);
+		position: absolute;
+		right: percentage(20/600);
+		top: 50%;
+		margin-top: -15px;
+
+		&.active{
+			background-image: url(/images/shop-invite/radio-sel.png);
+		}
+	}
+}
+
+.sel-tip{
+	color: @text-light-color;
+	font-size: 12px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.btn-wrap{
+
+}

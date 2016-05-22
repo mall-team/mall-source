@@ -1,0 +1,20 @@
+<% if(list && list.length > 0){ %>
+<ul class="pop-client-list" style="max-height: <%= maxHei %>px;overflow-y:auto;">
+	<% $.each(list, function(i, item){ %>
+	<li userinfo='<%= JSON.stringify(item) %>'>
+		<div class="info">
+			<div class="img-wrap" style="background-image:url(<%= item['head_sculpture'] %>)"></div>
+			<div class="info-inner">
+				<p class="nick"><%= item.nickname %></p>
+				<p class="phone"><%= item.cellphone %></p>
+			</div>
+		</div>
+		<div class="radio <%= curUser && curUser.id == item.id?'selected':'' %>">
+			<i class="icon-radio"></i>
+		</div>
+	</li>
+	<% }) %>
+</ul>
+<% }else{ %>
+<div class="pop-client-list empty">您暂时还没有客户哦~~</div>
+<% } %>

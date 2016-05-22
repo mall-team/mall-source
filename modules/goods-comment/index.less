@@ -1,0 +1,174 @@
+@import '/modules/common/common.less';
+
+.icon-yes{
+	display: inline-block;
+	.bg-contain('/images/icon-yes.png', 32px/2, 29px/2);
+}
+
+body{
+	background-color: #fff;
+}
+
+.discuss-list{
+	padding: 15px percentage(20/640) 0;
+	position: relative;
+
+
+	>li{
+		border-bottom: 1px solid #efefef;
+		.flex();
+		padding-bottom: 10px;
+		margin-bottom: 14px;
+
+		&:last-child{
+			border-bottom: 0;
+		}
+
+		.img-wrap{
+			width: 35px;
+			height: 35px;
+			margin-right: 5px;
+		}
+
+		.info{
+			.flex-item();
+			text-align: left;
+		}
+
+		.name-wrap{
+			line-height: 1;
+			margin-bottom: 4px;
+		}
+
+		.name{
+			color: #63738e;
+			display: inline-block;
+			width: 50%;
+			.ellipsis();
+		}
+
+		.yes-bar{
+			font-size: 0;
+			float: right;
+
+			&.active{
+				>.icon-yes{
+					background-image: url(/images/icon-yes-active.png);
+				}
+			}
+
+			>.icon-yes{
+				margin-right: 6px;
+			}
+			>b{
+				color: @text-light-color;
+				font-size: 12px;
+				font-weight: normal;
+			}
+
+		}
+
+		.star-bar{
+			position: relative;
+			width: 152px/2;
+			height: 23px/2;
+
+			.star-inner{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 2;
+				overflow: hidden;
+			}
+
+			.star-gray, .star-active{
+				.bg-contain();
+				background-image: url(/images/star-s.png);
+				width: 152px/2;
+				height: 23px/2;
+			}
+			.star-gray{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.star-active{
+				background-image: url(/images/star-s-active.png);
+			}
+		}
+
+		.date{
+			color: #9a9a9a;
+			font-size: 12px;
+		}
+
+		.star-wrap{
+			margin-bottom: 10px;
+
+			.star-bar{
+				display: inline-block;
+				margin-right: 5px;
+			}
+		}
+
+		.cotent{
+			color: #2d2d2d;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+
+.img-list{
+	font-size: 0;
+	.clearfix();
+
+	>li{
+		.bg-cover();
+		overflow: hidden;
+		float: left;
+		.square();
+		width: 30%;
+		margin-right: 4px;
+		margin-bottom: 4px;
+	}
+}
+
+.see-more{
+	color: @bg-main-color;
+	font-size: 12px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+
+	.dib{
+		vertical-align: middle;
+		width: 14px;
+	}
+	.loading-icon-wrap{
+		display: none;
+		height: 14px;
+		vertical-align: middle;
+		margin-left: 10px;
+
+		.loading-icon{
+			border-width: 1px;
+			width: 14px;
+			height: 14px;
+			left: 0;
+			top: 0;
+			margin-left: 0;
+		}
+	}
+}
+
+.nodata{
+	color: @text-gray-color;
+	display: none;
+	font-size: 15px;
+	text-align: center;
+	padding: 30px percentage(20/640);
+}

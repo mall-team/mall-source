@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>详单详情</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+
+	<!-- <p class="tip">请在<b>14:58</b>内支付，过期订单将自动取消</p> -->
+
+	<section class="order-state">
+		<!-- <div class="state-title">付款成功等待发货...</div> -->
+		<div class="state-title">您的订单正在配送中...</div>
+		<!-- <div class="state-title">已签收，请留下您宝贵评价...</div> -->
+		<div class="state-list step-2">
+			<ul>
+				<li>
+					<label>待发货</label>
+					<i></i>
+				</li>
+				<li>
+					<label>配送中</label>
+					<i></i>
+				</li>
+				<li>
+					<label>签收成功</label>
+					<i></i>
+				</li>
+			</ul>
+			<div class="lines"><i></i><i></i></div>
+		</div>
+	</section>
+
+	<section class="address">
+		<ul>
+			<li class="addr-user">
+				<span class="user-name">李刀刀</span>
+				<span class="tel">15210010587</span>
+			</li>
+			<li class="addr-addr">浙江省杭州市白马广场浙江省杭州市白马广场浙江省杭州市白马广场</li>
+		</ul>
+	</section>
+
+	<section class="order-trans">
+		<a>
+			<label class="section-title">最新物流:</label>
+			<div class="trans-item">
+				<i class="icon-trans"></i>
+				<p class="item-addr">浙江省义乌中转站</p>
+				<p class="item-time"><span>2015-07-05</span><span>15:30</span></p>
+			</div>
+			<i class="icon-arrow"></i>
+		</a>
+	</section>
+		
+	<section class="goods">
+		<div class="goods-item">
+			<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png);"></div>
+			<div class="goods-info">
+				<p class="goods-name">御泥坊爽肤水玫瑰滋养润肤水150ml补水</p>
+				<div class="clearfix">
+					<span class="amount">x1</span>
+					<span class="price right"><i>&yen;</i><b>100.00</b></span>
+				</div>
+			</div>
+		</div>
+		<div class="price-wrap">
+			<div class="price"><label>运费:</label><i>&yen;</i><b>100.00</b></div>
+			<div class="price price-pay"><label>实付:</label><i>&yen;</i><b>200.00</b></div>
+		</div>
+		<ul class="order-sub">
+			<li>订单编号:121765450876046873124</li>
+			<li>下单时间:2015-07-05 15:30</li>
+		</ul>
+	</section>
+
+	<footer>
+		<!-- <a class="btnl">提醒发货</a> -->
+
+		<a class="btnl btnl-border">查看物流</a>
+		<a class="btnl">确认收货</a>
+
+		<!-- <a class="btnl btnl-default">退换货</a>
+		<a class="btnl btnl-wx">去评价</a> -->
+	</footer>
+
+	<script type="text/javascript">
+		require('order-detail/index');
+	</script>
+</body>
+</html>

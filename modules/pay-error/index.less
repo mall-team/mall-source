@@ -1,0 +1,139 @@
+@import '../common/ui/func.less';
+
+.tip{
+	background-color: @bg-section-color;
+	font-size: 15px;
+	padding: 15px 25/640*100%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	.clearfix();
+
+	.icon-error{
+		display: inline-block;
+		.bg-contain('/images/error.png?__inline', 90/590*100%, 45px);
+		vertical-align: top;
+		float: left;
+		margin-right: 26/590*100%;
+	}
+	
+	.tip-content{
+		display: inline-block;
+		vertical-align: top;
+		float: left;
+		width: 474/590*100%;
+		color: @text-light-color;
+	}
+	.tip-title{
+		font-size: 18px;
+		color: @text-base-color;
+		margin-bottom: 8px;
+	}
+	b{
+		color: @bg-main-color;
+		font-weight: normal;
+	}
+}
+
+section.pay-way{
+	.section-title{
+		color: #515f64;
+		font-size: 12px;
+		line-height: 1;
+		padding: 0 10px 9px;
+	}
+
+}
+
+.pay-types{
+	background-color: @bg-section-color;
+	padding: 16px 12/640 * 100%;
+	font-size: 0;
+	.clearfix();
+
+	li{
+		border: 2px solid #fff;
+		.border-radius(8px);
+		padding: 5px 0;
+		display: inline-block;
+		width: 170/600 * 100%;
+		margin-right: 45/600*100%;
+		float: left;
+		position: relative;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&.active{
+			border-color: @color-wx;
+
+			.icon-sel{
+				display: inline-block;
+			}
+		}
+
+		i{
+			.bg-contain();
+			display: block;
+			height: 50px;
+			margin-bottom: 10px;
+		}
+		label{
+			color: @text-gray-color;
+			display: block;
+			text-align: center;
+			font-size: 12px;
+		}
+		.icon-sel{
+			display: none;
+			.bg-contain('/images/icon-sel.png', 18px, 18px);
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		.icon-wx{
+			background-image: url(/images/pay-wx.png?__inline);
+		}
+
+		.icon-alipay{
+			background-image: url(/images/pay-alipay.png?__inline);
+		}
+
+		.icon-upay{
+			background-image: url(/images/pay-upay.png?__inline);
+		}
+
+		.icon-yue{
+			background-image: url(/images/pay-yue.png?__inline);
+		}
+	}
+}
+
+footer{
+	border-top: 1px solid @border-base-color;
+	background-color: @bg-gray-color;
+	padding: 5px 20/640*100% 8px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	.pay-val{
+		text-align: right;
+		font-size: 12px;
+		margin-bottom: 5px;
+
+		label{
+			margin-right: 4px;
+		}
+	}
+	.price{
+		color: @bg-main-color;
+
+		b{
+			margin-left: 2px;
+			font-weight: normal;
+		}
+	}
+}

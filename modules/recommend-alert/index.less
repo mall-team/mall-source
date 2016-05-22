@@ -1,0 +1,92 @@
+@import '/modules/common/ui/func.less';
+
+.alert .recommend-alert{
+	padding-top: 0;
+}
+
+.recommend-alert-content{
+	.title{
+		border-bottom: 1px solid #d8d8d8;
+		color: @text-gray-color;
+		font-size: 15px;
+		line-height: 1;
+		padding: 16px 0;
+		margin-bottom: 14px;
+		text-align: center;
+	}
+	.tips{
+		color: @text-light-color;
+		font-size: 12px;
+		line-height: 1;
+		margin-bottom: 8px;
+	}
+	.input-wrap{
+		background-color: @bg-section-color;
+		border: 1px solid #d7d7d7;
+		padding: 0 0 0 10px;
+		line-height: 1;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+
+		.flex();
+
+		label{
+			color: #666;
+			display: block;
+			width: 58px;
+			padding: 14px 0;
+			font-size: 16px;
+		}
+		input{
+			display: block;
+			.flex-item(2);
+			padding: 14px 0;
+			text-align: left;
+			font-size: 16px;
+			line-height: 1;
+		}
+	}
+
+	.btn-content{
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	.userinfo{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.headimg{
+		border: 2px solid #fff;
+		display: inline-block;
+
+		.bg-cover();
+		.circle();
+		width: percentage(135/640);
+		margin-bottom: 17px;
+	}
+
+	.user-name{
+		font-size: 18px;
+		line-height: 1;
+		margin-bottom: 10px;
+	}
+
+	.phone-label{
+		color: @text-light-color;
+		font-size: 14px;
+		line-height: 1;
+	}
+
+	.modify-wrap{
+		margin-top: 15px;
+		text-align: right;
+	}
+
+	.modify-link{
+		color: #717c99;
+		font-size: 12px;
+		text-decoration: none;
+	}
+}

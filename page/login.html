@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>登录</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body no-copyright="1" no-fastclick="1">
+	<!--
+		@require "/modules/common/common.less"
+	-->
+	<form id="J-login-form" action="/User/Login/doLogin" method="post" autocomplete="off">
+		<input id="J-recommend" type="hidden" name="recommend" />
+		<section class="phone-panel">
+			<div class="input-wrap">
+				<label>手机号</label>
+				<input id="J-phone" type="tel" placeholder="请输入您的手机号码" />
+			</div>
+			<div class="yzm">
+				<div class="input-wrap">
+					<label>验证码</label>
+					<input id="J-code" type="number" placeholder="输入验证码" />
+				</div>
+				<button id="J-yzm-bt" type="button">获取验证码</button>
+			</div>
+			<div>
+				<button id="J-phone-ok" class="btnl btnl-wx">确认</button>
+			</div>
+		</section>
+	</form>
+	<p class="help clearfix" style="margin-bottom: 1000px;">
+		忘记密码，<a alert="register-4.html">重置密码</a>
+		<a alert="register-1.html" class="right">注册新用户</a>
+	</p>
+	<div class="btn-wrap">
+		<a alert="register-5.html" class="btnl btnl-border">手机验证登录</a>
+	</div>
+	<ul class="nav dib-wrap">
+		<li class="mall dib">
+			<a>
+				<i class="icon"></i>
+				<label>淘金商城</label>
+			</a>
+		</li>
+		<li class="gift dib">
+			<a>
+				<i class="icon"></i>
+				<label>开店</label>
+			</a>
+		</li>
+		<li class="mine active dib">
+			<a>
+				<i class="icon"></i>
+				<label>我的</label>
+			</a>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		require('login/index');
+	</script>
+</body>
+</html>

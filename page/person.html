@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>个人中心</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+		@require "/modules/common/nav/nav.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="klj-section">
+		<a href="" class="klj-link"></a>
+	</section>
+	<section class="person dib-wrap">
+		<div class="img-wrap dib" style="background-image: url(/static/images/test/person.png)"></div>
+		<div class="user-info dib">
+			<div class="user-name">慕容孤雪</div>
+			<!-- <div class="user-des">请使用淘金子账号，享受淘金子会员权利及优惠。</div> -->
+			<div class="user-des">15210010587</div>
+		</div>
+		<a href="http://mall.taojinzi.com/Mall/Home/shareShop" class="erwei-wrap dib"><i class="icon-erwei"></i></a>
+	</section>
+	<ul class="wealth-list">
+		<li>
+			<a>
+				<label>50.00</label>
+				<p>我的余额</p>
+			</a>
+		</li>
+		<li>
+			<a>
+				<label>2个</label>
+				<p>我的优惠券</p>
+			</a>
+		</li>
+		<li>
+			<a>
+				<label>50</label>
+				<p>我的积分</p>
+			</a>
+		</li>
+	</ul>
+	<section class="order">
+		<div class="order-list">
+			<a>
+				<i class="icon"><span class="num">2</span></i>
+				<label>待支付</label>
+			</a>
+			<a>
+				<i class="icon"><span class="num">5</span></i>
+				<label>待收货</label>
+			</a>
+			<a>
+				<i class="icon"></i>
+				<label>已完成</label>
+			</a>
+		</div>
+	</section>
+	<section class="mys">
+		<a href="cart.html" class="item-bar">
+			<i class="icon-cart"></i>
+			<label>我的购物车</label>
+			<b class="icon-arrow"></b>
+		</a>
+		<a href="activity.html" class="item-bar">
+			<i class="icon-activity"></i>
+			<label>我的活动</label>
+			<b class="icon-arrow"></b>
+		</a>
+		<a href="address.html" class="item-bar">
+			<i class="icon-addr"></i>
+			<label>我的地址</label>
+			<b class="icon-arrow"></b>
+		</a>
+	</section>
+	<section>
+		<a class="item-bar" href="/User/Customer/showCustomerList?type=1">
+			<i class="icon-chat"></i>
+			<label>客户管理</label>
+			<b class="icon-arrow"></b>
+		</a>
+		<a class="item-bar main-color">
+			<i class="icon-shop-invite"></i>
+			<label>邀请开店</label>
+			<b class="icon-arrow"></b>
+		</a>
+		<a class="item-bar">
+			<i class="icon-pf"></i>
+			<label>批发中心</label>
+			<b class="icon-arrow"></b>
+		</a>
+		<a class="item-bar">
+			<i class="icon-taobi"></i>
+			<label>我的淘币</label>
+			<b class="icon-arrow"></b>
+		</a>
+	</section>
+	<section>
+		<a id="J-other" class="item-bar">
+			<i class="icon-other"></i>
+			<label>其它</label>
+			<b class="icon-arrow"></b>
+		</a>
+		<a class="item-bar">
+			<i class="icon-que"></i>
+			<label>意见反馈</label>
+			<b class="icon-arrow"></b>
+		</a>
+	</section>
+	<section class="exit-wrap">
+		<a id="J-exit">切换帐号</a>
+	</section>
+
+	<ul class="nav">
+		<li class="mall active">
+			<a>
+				<i class="icon"></i>
+				<label>淘金商城</label>
+			</a>
+		</li>
+		<li class="gift">
+			<a>
+				<i class="icon"></i>
+				<label>开店</label>
+			</a>
+		</li>
+		<li class="mine">
+			<a>
+				<i class="icon"></i>
+				<label>我的</label>
+			</a>
+		</li>
+	</ul>
+
+	<script type="text/tmpl" id="J-other-tmpl">
+		<section>
+			<a class="item-bar">
+				<i class="icon-service"></i>
+				<label>我的服务人</label>
+				<b class="icon-arrow"></b>
+			</a>
+			<a class="item-bar">
+				<i class="icon-partner"></i>
+				<label>我的小伙伴</label>
+				<b class="icon-arrow"></b>
+			</a>
+			<a class="item-bar">
+				<i class="icon-invite"></i>
+				<label>邀请会员</label>
+				<b class="icon-arrow"></b>
+			</a>
+		</section>
+	</script>
+	<script type="text/javascript">
+		require('person/index');
+	</script>
+</body>
+</html>

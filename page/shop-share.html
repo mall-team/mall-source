@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<title>淘金子</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body no-copyright="1" jump="http://taojinzi.com">
+	<input id="J-rcode" type="hidden" value="222" />
+	<!--
+		@require "/modules/common/common.less"
+	-->
+	<div class="wrap">
+		<section class="logo">
+			<div class="logo-des"></div>
+		</section>
+		<section class="share-user">
+			<div class="img-container">
+				<div class="img-wrap" style="background-image: url(/static/images/test/person.png);"></div>
+			</div>
+			<p class="user-name">慕容孤雪</p>
+			<p class="share-des">邀请您加入淘金子</p>
+		</section>
+		<section class="phone-panel">
+			<div class="input-wrap">
+				<label>手机号</label>
+				<input id="J-phone" type="tel" placeholder="请输入您的手机号码" />
+			</div>
+			<div class="yzm">
+				<div class="input-wrap">
+					<label>验证码</label>
+					<input id="J-code" type="number" placeholder="输入验证码" />
+				</div>
+				<button style="vertical-align: top;" id="J-yzm-bt" type="button">获取验证码</button>
+			</div>
+			<div>
+				<button id="J-phone-ok" class="btnl">确认</button>
+			</div>
+		</section>
+	</div>
+	
+	<script type="text/javascript">
+	require('shop-share/index');
+	</script>
+</body>
+</html>

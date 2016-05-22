@@ -1,0 +1,18 @@
+<% $.each(list, function(i, item){ %>
+<li>
+	<a>
+		<div class="img-wrap" style="background-image: url(<%= item.img %>)"></div>
+		<div class="act-info">
+			<p class="act-title"><%= item.title %></p>
+			<% if(item.state == 1){ %>
+			<div class="act-state doing">进行中</div>
+			<% }else if(item.state ==2 ){ %>
+			<div class="act-state">已完成</div>
+			<% }else if(item.state == 3){ %>
+			<div class="act-state cancel">已取消</div>
+			<% } %>
+		</div>
+		<i class="icon-arrow"></i>
+	</a>
+</li>
+<% }) %>

@@ -1,0 +1,50 @@
+@import '../common/common.less';
+
+body{
+	background-color: #fff;
+}
+
+.tuan-rule{
+	background-color: @bg-section-color;
+	.section-title{
+		color: @text-gray-color;
+		height: 36px;
+		line-height: 36px;
+		font-size: 12px;
+		padding-left: 20/640*100%;
+		margin-bottom: 4px;
+		margin-top: 6px;
+	}
+
+	.rule-content{
+		padding: 20/640*100%;
+		padding-top: 0;
+	}
+
+	.img-wrap{
+		background-color: #fff;
+		.bg-contain('/images/tuan-rule.png?__inline', 100%, 28px);
+	}
+	ol{
+		padding-top: 15px;
+		li{
+			color: @text-light-color;
+			font-size: 12px;
+			margin-bottom: 15px;
+			padding-left: 32px;
+			position: relative;
+
+			>label{
+				display: inline-block;
+				width: 32px;
+				vertical-align: middle;
+				position: absolute;
+				left: 0;
+				top: 0;
+				// top: 50%;
+				// margin-top: -7px;
+			}
+		}
+	}
+
+}

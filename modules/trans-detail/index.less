@@ -1,0 +1,68 @@
+@import '../common/ui/func.less';
+
+.trans-title{
+	background-color: @bg-section-color;
+	font-size: 12px;
+	padding: 14px 20/640*100%;
+	.clearfix();
+	line-height: 1;
+
+	>label{
+		color: @text-gray-color;
+	}
+
+	>dl{
+		float: right;
+		text-align: right;
+		dt{
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.trans-content{
+	padding: 10px 20/640*100% 10px;
+
+
+}
+
+.trans-day{
+	.date{
+		color: @color-wx;
+		line-height: 1;
+		margin-bottom: 13px;
+	}
+	
+}
+
+.trans-list{
+	border-left: 2px solid @color-wx;
+	margin-left: 32/600*100%;
+
+	li{
+		padding-top: 5px;
+		margin-bottom: 13px;
+
+		.icon-node{
+			
+		}
+
+		.item{
+			background-color: @bg-section-color;
+			color: @text-gray-color;
+			.border-radius(3px);
+			margin-left: 72/568*100%;
+			min-height: 43px;
+			padding: 16px 12px 14px;
+			.flex();
+
+			.time{
+				width: 112/472*100%;
+			}
+			.trans-info{
+				.flex-item(2);
+				text-align: left;
+			}
+		}
+	}
+}

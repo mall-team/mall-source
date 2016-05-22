@@ -1,0 +1,17 @@
+<div class="service-alert-content">
+	<% if(userList.length == 2){ %>
+	<p class="title">请选择一位朋友作为您的推荐人(<b>2选1</b>)</p>
+	<% }else{ %>
+	<p class="title">请确认您的推荐人</p>
+	<% } %>
+	<ul class="service-list">
+		<% $.each(userList, function(i, user){ %>
+		<li>
+			<div class="img-wrap headimg" style="background-image:url(<%= user.headImg %>)"></div>
+			<p class="user-name"><%= user.userName %></p>
+			<p class="phone-label"><%= user.phone %></p>
+			<a class="J-sel-btn btnl" recommend="<%= user.recommend %>">就Ta了</a>
+		</li>
+		<% }) %>
+	</ul>
+</div>

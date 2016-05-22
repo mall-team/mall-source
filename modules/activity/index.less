@@ -1,0 +1,98 @@
+@import '../common/ui/func.less';
+
+.copyright{
+	margin-top: 20px;
+}
+
+.icon-arrow{
+	display: inline-block;
+	.bg-contain('/images/arrow.png?__inline', 7px, 12px);
+}
+
+.act-nav{
+	background-color: #fff;
+	.flex();
+	margin-bottom: 10px;
+
+	>li{
+		.flex-item();
+	
+		a{
+			color: @text-gray-color;
+			display: inline-block;
+			line-height: 35px;
+			font-size: 15px;
+			padding: 0 5px;
+		}
+
+		&.active{
+			a{
+				color: @bg-main-color;
+				border-bottom: 2px solid @bg-main-color;
+			}
+		}
+	}
+
+}
+
+.act-list{
+	background-color: #fff;
+	padding-left: 20/640*100%;
+	
+	>li{
+		border-bottom: 1px solid @border-base-color;
+		padding: 10px 20/620*100% 10px 0;
+		
+		a{
+			display: block;
+			.flex();
+			position: relative;
+		}
+
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+
+	.img-wrap{
+		display: block;
+		// .square(140/600*100%);
+		.square();
+		width: 70px;
+		margin-right: 10px;
+	}
+
+	.act-info{
+		display: block;
+		.flex-item(2);
+	}
+
+	.act-title{
+		text-align: left;
+		// .ellipsis-multiple(2);
+		padding-right: 50/600*100%;
+		padding-top: 8px;
+		margin-bottom: 15px;
+		min-height: 34px;
+	}
+
+	.act-state{
+		text-align: right;
+		font-size: 13px;
+		color: @bg-main-color;
+
+		&.doing{
+			color: @color-wx;
+		}
+		&.cancel{
+			color: @label-base-color;
+		}
+	}
+
+	.icon-arrow{
+		position: absolute;
+		right: 20/620*100%;
+		top: 11px;
+	}
+
+}

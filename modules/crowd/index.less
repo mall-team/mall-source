@@ -1,0 +1,172 @@
+@import '../common/ui/func.less';
+
+.icon-heart{
+	display: inline-block;
+	.bg-contain('/images/crowb/icon-heart.png', 25px, 22px);
+}
+
+.icon-share{
+	display: inline-block;
+	.bg-contain('/images/crowb/icon-share.png', 22px, 23px);
+}
+
+body > section{
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+
+.goods-item{
+	#bannerPager{
+		text-align: center;
+	}
+	.img-wrap{
+		.bg-cover();
+		.square();
+		position: relative;
+	}
+	.item-infos{
+		padding: 11px percentage(25/640) 12px;
+
+		.item-title{
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
+
+		.price-wrap{
+			line-height: 1;
+			margin-bottom: 8px;
+		}
+
+		.price{
+			color: @bg-main-color;
+			font-size: 18px;
+
+			i{
+				font-style: normal;
+				margin-right: 2px;
+			}
+			b{
+				font-weight: normal;
+			}
+		}
+
+		.has-amount{
+			color: #777;
+			font-size: 12px;
+			line-height: 1;
+		}
+	}
+}
+
+.progress{
+	background-color: #eee;
+	.border-radius(2px);
+	overflow: hidden;
+
+	.progress-bar{
+		background-color: #85b3fd;
+		height: 4px;
+		width: 50%;
+	}
+}
+
+.progress-section{
+	padding: 16px percentage(25/640);
+
+	.progress{
+		margin-bottom: 8px;
+	}
+
+	.progress-text{
+		color: @text-gray-color;
+		font-style: 12px;
+		line-height: 1;
+
+		b{
+			color: @bg-main-color;
+			font-weight: normal;
+		}
+	}
+}
+
+.intro-section{
+	padding: 12px percentage(25/640);
+
+	h3{
+		font-size: 14px;
+		margin-bottom: 4px;
+		line-height: 1;
+	}
+	ol{
+		color: @text-gray-color;
+		font-style: 12px;
+		padding-left: 18px;
+		line-height: 1.5;
+		margin-bottom: 12px;
+
+		li{
+			list-style: decimal;
+		}
+	}
+	ul{
+		color: @text-gray-color;
+		font-style: 12px;
+		line-height: 1.5;
+	}
+}
+
+.goods-des{
+	.section-title{
+		font-size: 15px;
+		line-height: 37px;
+		padding: 0 20/640*100%;
+	}
+	.goods-des-content{
+		img{
+			width: 100%;
+		}
+	}
+	table{
+		width: 100%!important;
+	}
+}
+
+footer{
+	background-color: #fafafa;
+	border-top: 1px solid #eee;
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	max-height: 640px;
+	z-index: 1000;
+	.flex();
+	font-size: 0;
+
+	.btnl{
+		background-color: #e52961;
+		.border-radius(0);
+		color: #fff;
+		display: block;
+		.flex-item();
+
+	}
+
+	.icon-share, .icon-heart{
+		margin-bottom: 3px;
+	}
+	.atten-btn, .share-btn{
+		color: @text-light-color;
+		display: block;
+		width: percentage(160/640);
+		text-align: center;
+		padding-top: 6px;
+
+		>p{
+			font-size: 12px;
+			.transform(scale(10/12));
+		}
+	}
+
+
+}

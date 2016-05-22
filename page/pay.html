@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>支付</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="address">
+		<a>
+			<h3>收货地址</h3>
+			<ul>
+				<li>添加收货地址</li>
+			</ul>
+			<!-- <ul>
+				<li>
+					<span class="user-name">李刀刀</span>
+					<span class="tel">15210010587</span>
+				</li>
+				<li>浙江省杭州市白马广场浙江省杭州市白马广场浙江省杭州市白马广场</li>
+			</ul> -->
+			<i class="icon-arrow"></i>
+		</a>
+	</section>
+	<section class="cart-section">
+		<div class="cart-title">淘金子商城</div>
+		<ul class="cart-list">
+			<li>
+				<div class="img-wrap" style="background-image:url(/static2/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+					<div class="goods-amount">x1</div>
+				</div>
+				
+			</li>
+			<li>
+				<div class="img-wrap" style="background-image:url(/static2/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+					<div class="goods-amount">x1</div>
+				</div>
+				
+			</li>
+			<li>
+				<div class="img-wrap" style="background-image:url(/static2/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+					<div class="goods-amount">x1</div>
+				</div>
+				
+			</li>
+		</ul>
+	</section>
+	<section class="goods-trans">
+		<ul>
+			<li class="clearfix">
+				<label class="">商品总金额</label>
+				<span class="price price-total right"><i>&yen;</i><b>200.00</b></span>
+			</li>
+			<li class="clearfix">
+				<label class="">淘金子商城发货</label>运费
+				<span class="price right"><i>&yen;</i><b>10.00</b></span>
+			</li>
+		</ul>
+	</section>
+	<section class="goods-juan clearfix">
+		<label>卡券</label>选择可用卡券
+		<span class="right">0张</span>
+	</section>
+	<section class="goods-pay">
+		<div class="price-wrap">
+			<label>实付款</label>
+			<span class="price"><i>&yen;</i><b>200.00</b></span>
+		</div>
+		<div class="btn-wrap">
+			<!-- <a class="btnl btnl-wx">微信安全支付</a> -->
+			<!-- <a class="btnl">余额支付</a> -->
+			<a class="btnl">提交订单</a>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		require('pay/index');
+	</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>我的订单</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+
+	<section class="order-info">
+		<p>订单号:99844545451213</p>
+		<p class="date"><span>下单时间:2015-07-05</span><span>15:30</span></p>
+	</section>
+	<section class="address">
+		<a>
+			<i class="icon-addr"></i>
+			<ul>
+				<li class="addr-user">
+					<span class="user-name">李刀刀</span>
+					<span class="tel">15210010587</span>
+				</li>
+				<li class="addr-addr">浙江省杭州市白马广场浙江省杭州市白马广场浙江省杭州市白马广场</li>
+			</ul>
+		</a>
+	</section>
+
+	<div class="goods-container">
+		<ul class="goods-list">
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+			<li class="goods-state dib-wrap">
+				<span class="state dib">待发货</span>
+				<div class="btn-wrap dib">
+					<a class="J-remind-btn btnl btnl-border">提醒发货</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="goods-list">
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+			<li class="goods-state dib-wrap">
+				<span class="state dib">待发货</span>
+				<div class="btn-wrap dib">
+					<a class="btnl btnl-border">提醒发货</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="goods-list">
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+			<li class="goods-state dib-wrap">
+				<span class="state dib">待收款</span>
+				<div class="btn-wrap dib">
+					<a class="btnl btnl-border">查看物流</a>
+					<a class="btnl">确认收货</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="goods-list">
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+			<li class="goods-state dib-wrap">
+				<span class="state dib">待评价</span>
+				<div class="btn-wrap dib">
+					<a class="btnl btnl-border">查看物流</a>
+					<a class="J-sold-btn btnl btnl-default">售后</a>
+					<a class="btnl btnl-wx">评价</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<section class="goods-trans">
+		<ul>
+			<li class="clearfix">
+				<label>运费</label>
+				<span class="price right"><i>&yen;</i><b>20.00</b></span>
+			</li>
+			<li class="clearfix">
+				<label>合计</label>
+				<span class="price price-total right"><i>&yen;</i><b>400.00</b></span>
+			</li>
+		</ul>
+	</section>
+	<section class="money-calculate">
+		<div class="calculate">
+			<span class="price"><i>&yen;</i><b>400.00</b></span>
+			<span>+</span>
+			<span class="price"><i>&yen;</i><b>20.00</b></span>运费
+			<span>
+				<span>-</span>
+				<span class="price"><i>&yen;</i><b>100.00</b></span>余额
+			</span>
+		</div>
+		<div class="result">微信已支付:<span class="price"><i>&yen;</i><b>320.00</b></span></div>
+	</section>
+	<script type="text/javascript">
+		require('order-wait-sign/index');
+	</script>
+</body>
+</html>

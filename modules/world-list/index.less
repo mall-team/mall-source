@@ -1,0 +1,135 @@
+@import '../common/common.less';
+@import '../common/header/header.less';
+
+.banner-section{
+}
+.banner{
+	&.img-wrap{
+		.bg-cover();
+		background-color: #fff;
+		background-image: url(/images/banner-world.jpg);
+		.rect(100%, 256/640*100%);
+	}
+}
+
+
+.price{
+	color: @text-light-color;
+	font-size: 12px;
+	line-height: 1;
+	label{
+		margin-right: 2px;
+	}
+	i{
+		margin-right: 2px;
+		font-style: normal;
+	}
+	b{
+		font-weight: normal;
+	}
+}
+
+.tj-section{
+	margin-bottom: 10px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.section-title{
+		background-color: #fff;
+		height: 36px;
+		line-height: 36px;
+		padding-left: 6px;
+	}
+
+	h3{
+		border-left: 2px solid @label-active-color;
+		display: inline-block;
+		font-size: 16px;
+		line-height: 1;
+		padding-left: 7px;
+	}
+
+	&.section-mg{
+		.section-title{
+			margin-bottom: 1px;
+			// border-bottom: 1px solid @border-base-color;
+		}
+		.temai-list{
+			padding-top: 10px;
+		}
+	}
+}
+
+.banner-list{
+	li{
+		background-color: #fff;
+		margin-bottom: 10px;
+	}
+
+	.img-wrap{
+		.rect(100%, 306/640*100%);
+		position: relative;
+	}
+
+	.banner-info{
+		line-height: 36px;
+		padding: 0 15/640*100%;
+	}
+	.qi{
+		color: @bg-main-color;
+		font-size: 15px;
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+	.banner-title{
+		display: inline-block;
+		font-size: 15px;
+		vertical-align: middle;
+		max-width: 60%;
+		.ellipsis();
+	}
+	.banner-timer{
+		color: @text-light-color;
+		font-size: 12px;
+	}
+	.price{
+		color: @bg-main-color;
+		font-size: 15px;
+		line-height: 36px;
+		i{
+			margin-right: 3px;
+		}
+	}
+
+	.pre-timer{
+		background-color: rgba(0, 0, 0, 0.4);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.pre-content{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 224px/2;
+			height: 114px/2;
+			margin-left: -224px/4;
+			margin-top: -114px/4;
+
+			border: 1px solid #fff;
+			.border-radius(2px);
+			padding: 6px;
+			line-height: 23px;
+			color: #fff;
+			text-align: center;
+
+			>p:first-child{
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+}

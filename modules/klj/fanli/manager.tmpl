@@ -1,0 +1,14 @@
+<% $.each(list, function(i, item){ %>
+<li>
+	<div class="img-wrap" 
+	<% if(item.head_sculpture){ %>
+	style="background-image: url(<%= item.head_sculpture %>)"
+	<% } %>
+	></div>
+	<div class="info">
+		<p class="name"><%= item.nickname %></p>
+		<p class="time"><%= item.create_time %></p>
+	</div>
+	<div class="amount">推荐<b><%= item.num %></b>人</div>
+</li>
+<% }) %>

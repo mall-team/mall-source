@@ -1,0 +1,41 @@
+@import '/modules/common/common.less';
+
+body{
+	background-color: #fff;
+}
+
+.banner{
+	.bg-cover();
+	background-image: url(/images/tea/guide/banner.jpg);
+	.rect(100%, percentage(278/640));
+	overflow: hidden;
+}
+
+.qrcode-wrap{
+	padding-top: percentage(70/640);
+	padding-bottom: percentage(60/640);
+	text-align: center;
+
+	>img{
+		display: inline-block;
+		width: percentage(340/640);
+	}
+
+	.tip{
+		color: #999;
+		font-size: 12px;
+	}
+}
+
+.footer{
+	background-color: #f3f4f6;
+	text-align: center;
+	padding: 18px 0;
+
+	ul{
+		color: #666;
+		display: inline-block;
+		text-align: left;
+		font-size: 14px;
+	}
+}

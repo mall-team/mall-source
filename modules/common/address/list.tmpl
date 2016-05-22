@@ -1,0 +1,20 @@
+<div class="address-container">
+	<ul class="address-list" style="max-height: <%= maxHei %>px">
+		<% $.each(list, function(i, item){ %>
+		<li class="address-item dib-wrap" addr-id="<%= item.id %>">
+
+			<a class="radio <% if(item.is_default == 1){ %>selected<% } %> dib"><i class="icon-radio"></i></a>
+			<div class="addr-info dib">
+				<p class="user"><span><%= item.recipient_name %>，</span><span><%= item.recipient_phone %></span></p>
+				<p class="addr"><%= item.province_name + item.city_name + item.region_name + item.recipient_address %></p>
+			</div>
+			<a class="edit dib"><i class="icon-edit"></i></a>
+		</li>
+		<% }) %>
+	</ul>
+	<div class="btn-add dib-wrap">
+		<span class="dib add-wrap"><i class="icon-add dib"></i></span>
+		<label class="dib">新增地址</label>
+		<span class="arrow-wrap dib"><i class="icon-arrow dib"></i></span>
+	</div>
+</div>

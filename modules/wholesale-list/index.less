@@ -1,0 +1,82 @@
+@import '/modules/common/common.less';
+
+body{
+	background-color: #fff;
+}
+
+.no-data{
+	color: @text-gray-color;
+	text-align: center;
+	padding: 20px;
+}
+
+.wholesale-list{
+	>li{
+		padding: 14px 0;
+		margin-left: percentage(20/640);
+		.border-bottom(#eee);
+
+		&:last-child{
+			&:before{
+				display: none;
+			}
+		}
+
+		>a{
+			display: block;
+			.flex();
+		}
+	}
+
+	.img-wrap{
+		.bg-cover();
+		width: percentage(180/620);
+		margin-right: percentage(20/620);
+		.square();
+	}
+
+	.info{
+		.flex-item();
+		text-align: left;
+	}
+
+	.item-name{
+		min-height: 50px;
+		margin-bottom: 6px;
+	}
+
+	dl{
+		font-size: 12px;
+		.clearfix();
+
+		dt{
+			width: 50px;
+			float: left;
+			clear: left;
+			margin-bottom: 5px;
+		}
+		dd{
+			float: left;
+			clear: right;
+			margin-bottom: 5px;
+		}
+
+		.primary{
+			color: @bg-main-color;
+		}
+	}
+
+	.btn-opt{
+		text-align: right;
+		padding-right: percentage(20/420);
+
+		button{
+			display: inline-block;
+			width: auto;
+			height: 30px;
+			line-height: 30px;
+			padding: 0 12px;
+		}
+	}
+
+}

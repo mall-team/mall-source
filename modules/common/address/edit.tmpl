@@ -1,0 +1,47 @@
+<div class="address-edit">
+	<ul>
+		<li>
+			<label>收货人</label>
+			<input class="J-name" placeholder="名字" value="<%= item.recipient_name %>" />
+		</li>
+		<li>
+			<label>联系方式</label>
+			<input class="J-phone" type="tel" placeholder="手机或联系电话" value="<%= item.recipient_phone %>" />
+		</li>
+		<li>
+			<label>选择地区</label>
+			<div class="addr-sel">
+				<div class="inner">
+					<div class="select-wrap">
+						<select id="J-pro-text">
+							<option>选择省份</option>
+						</select>
+					</div>
+					<div class="select-wrap">
+						<select id="J-city-text">
+							<option>选择市区</option>
+						</select>
+					</div>
+					<div class="select-wrap">
+						<select id="J-region-text">
+							<option>选择县区</option>
+						</select>
+					</div>
+				</div>
+				<!-- <label id="J-pro-text"><%= item.province_name || '选择省份' %></label>
+				<label id="J-city-text"><%= item.city_name || '选择市区' %></label>
+				<label id="J-region-text"><%= item.region_name || '选择县区' %></label> -->
+			</div>
+		</li>
+		<li>
+			<label>详细地址</label>
+			<input class="J-addr" placeholder="街道门牌信息" value="<%= item.recipient_address %>" />
+		</li>
+	</ul>
+	<div class="btnl-wrap">
+		<button type="submit" class="btnl btnl-wx J-save">保存</button>
+		<% if(item.recipient_name){ %>
+		<a class="btnl btnl-default J-del">删除</a>
+		<% } %>
+	</div>
+</div>

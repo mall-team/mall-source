@@ -1,0 +1,12 @@
+<% $.each(list, function(key, item){ %>
+<div class="record-item dib-wrap">
+	<a href="/Mall/Haggle/showHaggle?haggleId=<%= params.activeId %>&cutId=<%= item['id'] %>&rankType=1">
+		<div class="img-wrap dib" style="background-image: url(<%= item['head_sculpture'] %>)"></div>
+		<div class="record-m dib">
+			<div class="record-user"><%= item['customer_nickname'] %></div>
+			<div class="record-date"><%= item['update_time'] %></div>
+		</div>
+		<div class="record-price dib"><label>砍至</label><small>¥</small><%= item['current_price'] %></div>
+	</a>
+</div>
+<% }) %>

@@ -1,0 +1,9 @@
+<% _.each(list, function(item){  %>
+<div class="comment">
+	<div class="comment-t clearfix">
+		<label><%= item.user_name %></label>
+		<label class="right"><%= item.gmt_createtime %></label>
+	</div>
+	<div class="comment-des"><%= item.content %></div>
+</div>
+<% }) %>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<title>我的</title>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+</head>
+<body no-copyright="1">
+	<div class="wrap">
+		<header>修改课程</header>
+
+		<div class="container">
+			<div class="summary">
+				<p>录制时间:2015-09-06 14:58:23</p>
+				<p>包含2条文字 5张图片 3段录音课程标题</p>
+			</div>
+
+			<dl class="edit-content">
+				<dt>课程标题</dt>
+				<dd>
+					<input type="text" value="一起来淘金联盟吧(点击修改)" />
+				</dd>
+				<dt>请选择课程类型</dt>
+				<dd>
+					<select>
+						<option>徽商1</option>
+						<option>徽商2</option>
+						<option>徽商3</option>
+					</select>
+				</dd>
+				<dt>是否设置听课密码<input id="J-set-pwd" type="checkbox" /></dt>
+				<dd>
+					<input id="J-pwd-input" type="password" placeholder="设置密码" />
+				</dd>
+			</dl>
+
+			<div class="btn-wrap">
+				<a class="btnl btnl-border">删除本次录制课程</a>
+				<p>
+					<a class="btnl cancel">取消</a>
+					<a class="btnl ok">确定修改 </a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+        require('college/course-edit/index');
+    </script>
+</body>
+</html>

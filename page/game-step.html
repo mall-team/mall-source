@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<title>您的团队值多少钱</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body no-copyright="1">
+<div class="wrap">
+	<section class="banner">
+		<div class="img-wrap"></div>
+		<p>阿里巴巴团队的18罗汉，腾讯团队的5虎将，做为社群领袖，你了解你的团队吗？你知道你的团队估值吗？调研得出：团队估值与以下因素均有关系，根据提示开始你的团队估值吧！</p>
+	</section>
+	<form>
+		<section class="step" order="1">
+			<div class="topic">1、请输入您的团队成员数</div>
+			<div class="content onerow">
+				<div class="row">
+					<input placeholder="请输入您的团队成员数" type="tel" id="J-member" />
+				</div>
+			</div>
+			<div class="foot">
+				<span>当前：1/6</span>
+				<button class="btnl J-next" type="button">下一步</button>
+			</div>
+		</section>
+		<section class="step" order="2">
+			<input class="J-radio-val" type="hidden" />
+			<div class="topic">2、团队成员兼职或全职</div>
+			<div class="content">
+				<div class="row">
+					<label class="radio" val="1">全职为主</label>
+				</div>
+				<div class="row">
+					<label class="radio" val="2">兼职为主</label>
+				</div>
+			</div>
+			<div class="foot">
+				<span>当前：2/6</span>
+				<button class="btnl J-next" type="button">下一步</button>
+			</div>
+		</section>
+		<section class="step" order="3">
+		<input class="J-radio-val" type="hidden" />
+			<div class="topic">3、团队成员性别</div>
+			<div class="content">
+				<div class="row">
+					<label class="radio half" val="1">女性为主</label>
+					<label class="radio half" val="2">男性为主</label>
+				</div>
+				<div class="row">
+					<label class="radio half" val="3">男女平均</label>
+				</div>
+			</div>
+			<div class="foot">
+				<span>当前：3/6</span>
+				<button class="btnl J-next" type="button">下一步</button>
+			</div>
+		</section>
+		<section class="step" order="4">
+			<input class="J-radio-val" type="hidden" />
+			<div class="topic">4、团队成员年龄阶段</div>
+			<div class="content">
+				<div class="row">
+					<label class="radio half" val="1">18-25岁为主</label>
+					<label class="radio half" val="2">25-35岁为主</label>
+				</div>
+				<div class="row">
+					<label class="radio half" val="3">35-45岁为主</label>
+					<label class="radio half" val="4">45岁以上</label>
+				</div>
+			</div>
+			<div class="foot">
+				<span>当前：4/6</span>
+				<button class="btnl J-next" type="button">下一步</button>
+			</div>
+		</section>
+		<section class="step" order="5">
+			<input class="J-radio-val" type="hidden" />
+			<div class="topic">5、每月人均销售额</div>
+			<div class="content">
+				<div class="row">
+					<label class="radio half" val="1">小于3000</label>
+					<label class="radio half" val="2">3000-5000</label>
+				</div>
+				<div class="row">
+					<label class="radio half" val="3">大于5000</label>
+				</div>
+			</div>
+			<div class="foot">
+				<span>当前：5/6</span>
+				<button class="btnl J-next" type="button">下一步</button>
+			</div>
+		</section>
+		<section class="step" order="6">
+			<div class="topic">6、输入手机号码和团队昵称</div>
+			<div class="content">
+				<div class="row">
+					<input id="J-phone" type="tel" placeholder="请输入您的手机号码" />
+				</div>
+				<div class="row">
+					<input id="J-nick" type="text" placeholder="请输入您的团队昵称" />
+				</div>
+			</div>
+			<div class="foot">
+				<span>当前：6/6</span>
+				<button id="J-submit" class="btnl" type="submit">开始</button>
+			</div>
+		</section>
+	</form>
+</div>
+
+<script type="text/javascript">
+    require('game-step/index');
+</script>
+</body>
+</html>

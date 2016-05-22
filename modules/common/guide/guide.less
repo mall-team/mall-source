@@ -1,0 +1,48 @@
+@import '../ui/func.less';
+
+.guide{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	z-index: 2000;
+
+	&:before{
+		content: '';
+		background-color: #000;
+		opacity: .8;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.icon-guide{
+		display: block;
+		// .bg-contain('/images/guide.png', 178px, 100px);
+		.bg-contain('/images/guide2.png', 110px/2, 200px/2);
+		position: absolute;
+		// top: 0;
+		// right: 20px;
+		top: 78px;
+    	right: 55px;
+		z-index: 2;
+	}
+
+	&.browser{
+		.icon-guide{
+			background-image: url(/images/guide-b.png);
+			width: 239px;
+			height: 138px;
+		}
+	}
+	&.download{
+		.icon-guide{
+			background-image: url(/images/guide-c.png);
+			width: 240px;
+			height: 165px;
+		}
+	}
+}

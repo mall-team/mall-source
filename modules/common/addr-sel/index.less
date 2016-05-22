@@ -1,0 +1,25 @@
+@import '../ui/func.less';
+
+.alert .alert-content{
+	// padding: 0;
+}
+.addr-selector{
+	max-height: 400px;
+	overflow-y: auto;
+	// padding: 0 30/640*100%;
+
+	li{
+		color: @text-gray-color;
+		text-align: center;
+		line-height: 40px;
+		font-size: 15px;
+
+		// &:first-child{
+			// border-bottom: 1px solid @border-old-color;
+		// }
+	}
+	li:active, li.selected{
+		background-color: #eee;
+		color: @text-base-color;
+	}
+}

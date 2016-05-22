@@ -1,0 +1,83 @@
+@import '/modules/common/common.less';
+
+@colloge-border-color: #dadada;
+
+.course-list{
+	padding: 15px 0 15px 20/750*100%;
+
+	li{
+		font-size: 0;
+		margin-bottom: 15px;
+	}
+
+	.img-wrap{
+		display: inline-block;
+		.rect(180/730*100%, 142/180*100%);
+		margin-right: 18/730*100%;
+		vertical-align: top;
+	}
+
+	.course-info{
+		border-bottom: 1px solid @colloge-border-color;
+		display: inline-block;
+		text-align: left;
+		width: (730-180-18)/730*100%;
+		padding-right: 20/730*100%;
+		vertical-align: top;
+
+		p{
+			margin-bottom: 10px;
+		}
+	}
+
+	.name-wrap{
+		font-size: 0;
+	}
+
+	.course-name{
+		display: inline-block;
+		color: #333;
+		font-size: 15px;
+		vertical-align: middle;
+		width: 75%;
+		.ellipsis();
+	}
+
+	.course-score{
+		display: inline-block;
+		border-left: 1px solid #646464;
+		color: #646464;
+		font-size: 13px;
+		padding-left: 6px;
+		margin-left: 2%;
+		vertical-align: middle;
+		width: 23%;
+		line-height: 1;
+	}
+
+	.course-date{
+		color: #646464;
+		font-size: 14px;
+		line-height: 1;
+
+		&:before{
+			content: '';
+			display: inline-block;
+			.bg-contain('/images/college/icon-date.png', 21px/2, 21px/2);
+			margin-right: 5px;
+		}
+	}
+
+	.course-amount{
+		color: #646464;
+		font-size: 13px;
+		line-height: 1;
+
+		&:before{
+			content: '';
+			display: inline-block;
+			.bg-contain('/images/college/icon-listen.png', 21px/2, 21px/2);
+			margin-right: 5px;
+		}
+	}
+}

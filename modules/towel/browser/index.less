@@ -1,0 +1,35 @@
+@import '/modules/common/common.less';
+
+body{
+	background-color: #fff;
+}
+.wrap{
+	position: relative;
+}
+
+.bg-img{
+	.bg-contain();
+	background-image: url(/images/towel/browser.jpg);
+	.rect(100%, percentage(439/640));
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.qrcode-section{
+	position: relative;
+	z-index: 2;
+	padding-top: percentage(450/640);
+	text-align: center;
+
+	>img{
+		display: inline-block;
+		width: percentage(320/640);
+		margin-bottom: 5px;
+	}
+	>p{
+		color: @text-gray-color;
+	}
+}
+

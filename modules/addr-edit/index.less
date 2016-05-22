@@ -1,0 +1,66 @@
+@import '../common/ui/func.less';
+
+.icon-arrow{
+	display: inline-block;
+	.bg-contain('/images/arrow.png', 7px, 12px);
+}
+
+
+
+body >section{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+dl{
+	background-color: @bg-section-color;
+	color: @text-gray-color;
+	padding-left: 40/640*100%;
+	font-size: 0;
+	margin-bottom: 5px;
+
+	.icon-arrow{
+		position: absolute;
+		top: 16px;
+		right: 20px;
+	}
+
+	input{
+		width: 100%;
+	}
+
+	dt{
+		display: inline-block;
+		font-size: 14px;
+		height: 45px;
+		line-height: 44px;
+		width: 130/600 * 100%;
+		vertical-align: top;
+	}
+	dd{
+		border-bottom: 1px solid @border-base-color;
+		display: inline-block;
+		font-size: 14px;
+		padding-bottom: 15px;
+		height: 45px;
+		line-height: 44px;
+		width: 470/600 * 100%;
+		vertical-align: top;
+		position: relative;
+
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+
+	&.address{
+		padding-bottom: 15px;
+	}
+
+}
+
+footer{
+	.btnl{
+		margin-bottom: 10px;
+	}
+}

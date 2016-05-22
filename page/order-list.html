@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>我的订单</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body order-type="pay-wait">
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<ul class="order-nav">
+		<li class="active"><a>待支付</a></li>
+		<li><a>待收货</a></li>
+		<li><a>已完成</a></li>
+	</ul>
+	<ul class="order-list">
+		
+		<li class="order-item">
+			<a>
+				<p class="top-info clearfix">
+					<span class="date"><label>下单时间:</label><b>2015-07-18</b></span>
+					<span class="state right">待支付</span>
+				</p>
+				<div class="order-info dib-wrap">
+					<div class="img-wrap dib" style="background-image: url(/static/images/test/tuan-1.png)"></div>
+					<dl class="dib clearfix">
+						<dt>订单编号</dt>
+						<dd>1424651423021</dd>
+						<dt>订单金额</dt>
+						<dd><span class="price"><i>&yen;</i><b>1500.00</b></span></dd>
+						<dt>商品件数</dt>
+						<dd>1</dd>
+					</dl>
+					<i class="icon-arrow"></i>
+				</div>
+				<div class="btn-wrap">
+					<button class="btnl">支付<span timer="600">12:58</span></button>
+				</div>
+			</a>
+		</li>
+
+		<li class="order-item">
+			<a>
+				<p class="top-info clearfix">
+					<span class="date"><label>下单时间:</label><b>2015-07-18</b></span>
+					<span class="state right">待支付</span>
+				</p>
+				<div class="order-info dib-wrap">
+					<div class="img-wrap dib" style="background-image: url(/static/images/test/tuan-1.png)"></div>
+					<dl class="dib clearfix">
+						<dt>订单编号</dt>
+						<dd>1424651423021</dd>
+						<dt>订单金额</dt>
+						<dd><span class="price"><i>&yen;</i><b>1500.00</b></span></dd>
+						<dt>商品件数</dt>
+						<dd>1</dd>
+					</dl>
+					<i class="icon-arrow"></i>
+				</div>
+				<div class="btn-wrap">
+					<button class="btnl">支付<span timer="600">12:58</span></button>
+				</div>
+			</a>
+		</li>
+
+		<li class="order-item">
+			<a>
+				<p class="top-info clearfix">
+					<span class="date"><label>下单时间:</label><b>2015-07-18</b></span>
+					<span class="state right">待收货</span>
+				</p>
+				<div class="order-info dib-wrap">
+					<div class="img-wrap dib" style="background-image: url(/static/images/test/tuan-1.png)"></div>
+					<dl class="dib clearfix">
+						<dt>订单编号</dt>
+						<dd>1424651423021</dd>
+						<dt>订单金额</dt>
+						<dd><span class="price"><i>&yen;</i><b>1500.00</b></span></dd>
+						<dt>商品件数</dt>
+						<dd>1</dd>
+					</dl>
+					<i class="icon-arrow"></i>
+				</div>
+			</a>
+		</li>
+
+		<li class="order-item">
+			<a>
+				<p class="top-info clearfix">
+					<span class="date"><label>下单时间:</label><b>2015-07-18</b></span>
+					<span class="state right">已完成</span>
+				</p>
+				<div class="order-info dib-wrap">
+					<div class="img-wrap dib" style="background-image: url(/static/images/test/tuan-1.png)"></div>
+					<dl class="dib clearfix">
+						<dt>订单编号</dt>
+						<dd>1424651423021</dd>
+						<dt>订单金额</dt>
+						<dd><span class="price"><i>&yen;</i><b>1500.00</b></span></dd>
+						<dt>商品件数</dt>
+						<dd>1</dd>
+					</dl>
+					<i class="icon-arrow"></i>
+				</div>
+			</a>
+		</li>
+
+		<li class="order-item">
+			<a>
+				<p class="top-info clearfix">
+					<span class="date"><label>下单时间:</label><b>2015-07-18</b></span>
+					<span class="state cancel right">已取消</span>
+				</p>
+				<div class="order-info dib-wrap">
+					<div class="img-wrap dib" style="background-image: url(/static/images/test/tuan-1.png)"></div>
+					<dl class="dib clearfix">
+						<dt>订单编号</dt>
+						<dd>1424651423021</dd>
+						<dt>订单金额</dt>
+						<dd><span class="price"><i>&yen;</i><b>1500.00</b></span></dd>
+						<dt>商品件数</dt>
+						<dd>1</dd>
+					</dl>
+					<i class="icon-arrow"></i>
+				</div>
+			</a>
+		</li>
+
+	</ul>
+	<!-- <ul class="order-list nodata">
+		<li>
+			<i class="icon"></i>
+			<p>您还没有相关订单哦！</p>
+			<div class="btn-wrap">
+				<a href="/" class="btnl btnl-border">买买买 >></a>
+			</div>
+		</li>
+	</ul> -->
+	<div id="J-loading" class="loading-icon-wrap"><i class="loading-icon"></i></div>
+	<script type="text/javascript">
+		require('order-list/index');
+	</script>
+</body>
+</html>

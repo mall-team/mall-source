@@ -1,0 +1,31 @@
+<% $.each(list, function(i, item){  %>
+<li>
+	<div class="img-wrap" style="background-image:url(<%= item.head_sculpture %>)"></div>
+	<div class="info">
+		<div class="name-wrap">
+			<label class="name"><%= item.customer_name %></label>
+			<span item-id="<%= item.id %>" class="yes-bar <%= item.isSupport?'active':'' %>"><i class="icon-yes"></i><b><%= item.comment_praise_num %></b></span>
+		</div>
+		<div class="star-wrap">
+			<div class="star-bar">
+				<div class="star-gray"></div>
+				<div class="star-inner" style="width:<%= item.product_score/5*100 %>%;">
+					<div class="star-active"></div>
+				</div>
+			</div>
+			<span class="date"><%= item.create_time %></span>
+		</div>
+		<p class="cotent"><%= item.comment_content %></p>
+		<% if(item.imgList && item.imgList.length > 0){ %>
+		<ul class="img-list">
+			<% $.each(item.imgList, function(i, imgUrl){ %>
+			<li style="background-image:url(<%= imgUrl %>)"></li>
+			<% }) %>
+		</ul>
+		<% } %>
+		<% $.each(item.reply, function(index, replyItem){ %>
+		<p class="cotent-replay"><b><%= replyItem.reply_user %></b>回复<b><%= item.customer_name %></b>：<%= replyItem.back_content %></p>
+		<% }) %>
+	</div>
+</li>
+<% }) %>

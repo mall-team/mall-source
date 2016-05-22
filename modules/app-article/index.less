@@ -1,0 +1,71 @@
+@import '../common/ui/func.less';
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body{
+	background-color: #fff;
+	font-family: arial,sans-serif,Microsoft YaHei;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	max-width: 640px;
+	margin: 0 auto;
+	// -webkit-user-select: none;
+ //    user-select: none;
+}
+
+img{vertical-align: middle;}
+
+header{
+	border-bottom: 1px dotted #d7d7d7;
+	margin: 0 30/640*100% 10px;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.article-title{
+	color: #353b3f;
+	font-size: 18px;
+	line-height: 26px;
+	padding: 11px 0 4px
+}
+
+.article-date{
+	line-height: 1;
+	i{
+		display: inline-block;
+		.bg-contain('/images/app/icon-clock.png', 11px, 11px);
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+	span{
+		color: #7a7d88;
+		font-size: 12px;
+	}
+
+}
+
+.article-container{
+	padding: 0 30/640*100% 15px;
+
+	// *{
+	// 	color: #565f64!important;
+	// 	font-size: 12px!important;
+	// 	line-height: 18px!important;
+	// 	max-width: 100%!important;
+	//     box-sizing: border-box!important;
+	//     -webkit-box-sizing: border-box!important;
+	//     word-wrap: break-word!important;
+	// }
+
+	img{
+		width: 100%!important;
+	}
+}

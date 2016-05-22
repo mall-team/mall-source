@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>转发淘币</title>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+</head>
+<body>
+	<div class="wrap taobi-trans">
+		<form id="J-pay-form" action="" method="post">
+			<div class="user-panel">
+				<div class="input-wrap"><input id="J-custom-phone" type="tel" placeholder="请输入您客户手机号码" /></div>
+				<p id="J-nick" class="nick"></p>
+				<div id="J-client-btn" class="icon-client"></div>
+			</div>
+			<div class="input-wrap amount-input">
+				<label>数量</label>
+				<input id="J-amount" type="number" placeholder="请输入充值淘币数量" />
+			</div>
+			<div class="btn-wrap">
+				<button id="J-submit" type="button" class="j-ajax btnl" form="J-pay-form">确认转发</button>
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	require('taobi/taobi-trans/index');
+	</script>
+</body>
+</html>

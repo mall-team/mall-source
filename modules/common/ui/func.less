@@ -1,0 +1,352 @@
+/*基本色调*/
+@color-wx: #06be04;
+
+/*Background Color*/
+@bg-base-color:#f3f4f6;
+@bg-main-color: #ea0079;
+@bg-section-color: #fff;
+@bg-header-color: #232327;
+@bg-gray-color: #fafafa;
+@bg-load-color: #eee;
+
+/*Border Color*/
+@border-old-color:#d7d7d7;
+@border-base-color:#eee;
+
+/*Text Color*/
+@text-base-color:#313131;
+@text-suc-color: #18b500;
+@text-link-color: #2589be;
+// @text-highlight-color:#f40;
+// @text-bright-color:#999;
+// @text-link-color:#666;
+// @text-blue-color:#4499ee;
+@text-gray-color:#666;
+@text-light-color:#999;
+// @text-orange-color:#FF7644;
+
+/*Text size*/
+@text-base-size:14px;
+@text-big-size:16px;
+@text-small-size:12px;
+@text-title-size:24px;
+@text-tab-size:18px;
+
+/*label color*/
+@label-base-color: #94979e;
+@label-active-color: #ea0079;
+@text-link-color: #5388bb;
+
+/*button color*/
+@btn-base-color: #ea0079;
+@btn-base-txt-color: #fff;
+
+
+/*三角形*/
+.triangle (@color: #8D8D8D, @edge: 5px) {
+	border-color: @color transparent transparent;
+	border-style: solid;
+	border-width: @edge;
+}
+
+
+/*边框三角形*/
+.border-arrow(@width, @height, @color, @border-width:1px, @rotate:0deg) {
+	@size:round((@width / 2 + @height) / 1.3);
+	
+	display:inline-block;
+	font-size:0;
+	border-top:@border-width solid @color;
+	border-left:@border-width solid @color;
+	width:@size;
+	height:@size;
+	background-color:transparent;
+	-webkit-transform:rotate(45deg + @rotate);
+}
+
+/*圆角*/
+.rounded-corners (@radius: 2px) {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+/*圆角*/
+.border-radius (@radius: 2px) {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+/*线性渐变*/
+.gradient-linear (@color: #F2451A, @start: #F94B21, @stop: #EB3E12) {
+	background: @color;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, @start),color-stop(1, @stop));
+}
+
+/*不折行*/
+.ellipsis() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.ellipsis-multiple(@num: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: @num; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*分栏*/
+.set-columns (@width: 100px, @num: 2) {
+	width: @width / @num;
+}
+
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+     -moz-transform: @transform;
+       -o-transform: @transform;
+          transform: @transform;
+}
+
+.border-radius(@radius) {
+  -webki-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.border-img(@v){
+  -webkit-border-image: @v; /* Safari 3.1-5 */
+  -o-border-image: @v; /* Opera 11-12.1 */
+  -moz-border-image: @v;
+  border-image: @v;
+}
+
+.bg-contain(){
+  -webki-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-contain(@url, @wid, @hei){
+  .bg-contain();
+  background-image: url(@url);
+  width: @wid;
+  height: @hei;
+}
+
+.bg-cover(){
+  -webki-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-cover(@url, @wid, @hei){
+  .bg-cover();
+  background-image: url(@url);
+  width: @wid;
+  height: @hei;
+}
+
+/*渐变*/
+.gradient-315 (@start, @end) {
+  background: -moz-linear-gradient(315deg, @start, @end);
+  background: -webkit-gradient(linear, 0 0%, 100% 100%, from(@start), to(@end));
+  background: -webkit-linear-gradient(315deg, @start, @end);
+}
+
+.square(){
+  &:before{
+    content: '';
+    display: block;
+    margin-top: 100%;
+  }
+}
+
+.square(@wid){
+  width: @wid;
+
+  &:before{
+    content: '';
+    display: block;
+    margin-top: 100%;
+  }
+}
+
+.rect(@wid, @hei){
+  width: @wid;
+  &:before{
+    content: '';
+    display: block;
+    margin-top: @hei;
+  }
+}
+
+.circle(){
+  .square();
+  .border-radius(50%);
+}
+
+.clearfix {
+
+  &:after{
+    display: block;
+    content: '';
+    clear: both;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+.flex(){
+  display: box;
+  display: -ms-box;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+.flex-item(@val: 1){
+  flex: @val;
+  -ms-flex: @val;
+  -webkit-flex: @val;
+  box-flex: @val;
+  -ms-box-flex: @val;
+  -webkit-box-flex: @val;
+  text-align: center;
+}
+
+.can-select(){
+-webkit-user-select: auto !important;
+    user-select: auto !important;
+}
+
+
+.border-top(@color){
+  position: relative;
+
+  &:before{
+    content: '';
+    background-color: @color;
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .transform(scaleY(0.5));
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    z-index: 100;
+  }
+}
+
+.border-bottom(@color){
+  position: relative;
+
+  &:before{
+    content: '';
+    background-color: @color;
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .transform(scaleY(0.5));
+     -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+}
+
+.border-right(@color){
+  position: relative;
+
+  &:before{
+    content: '';
+    background-color: @color;
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .transform(scaleX(0.5));
+     -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+}
+
+.border-left(@color){
+  position: relative;
+
+  &:before{
+    content: '';
+    background-color: @color;
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .transform(scaleX(0.5));
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+}
+
+.footer(){
+  footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 100;
+  }
+}
+
+.footer-btn(){
+  footer{
+    background-color: @bg-gray-color;
+    border-top: 1px solid @border-base-color;
+    padding: 5px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    font-size: 0;
+
+    .btn{
+      background-color: @bg-main-color;
+      .rounded-corners(4px);
+      border: 0;
+      color: #fff;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .btn-default{
+      background-color: @bg-section-color;
+      border: 1px solid #e6e6e6;
+      color: @text-gray-color;
+    }
+  }
+}

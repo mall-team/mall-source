@@ -1,0 +1,26 @@
+<div class="red-packet-panel">
+	<div class="packet-inner">
+		<div class="packet-close"></div>
+		<section class="info-section">
+			<div class="img-wrap head-img" 
+			<% if(!isTjz){ %>
+			style="background-image: url(<%= ownerHead %>)"
+			<% } %>
+			></div>
+			<p class="user-name"><%= isTjz?'淘金子商城':(ownerName) %></p>
+			<p class="des">给你发了一个惊喜礼包</p>
+			<p class="thanks"><%= isTjz?'感谢亲对淘金子的支持！':'谢谢帮砍！' %></p>
+			<div class="img-erwei">
+				<img src="<%= qrCode %>" />
+				<!-- <div class="logo"><img src="/static/images/logo.png" /></div> -->
+			</div>
+			<div class="tip-content">
+				<p class="tip">扫描关注领惊喜礼包</p>
+				<ul>
+					<li>1、长按上述二维码关注公众账号</li>
+					<li>2、关注后即可收到惊喜礼包</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+</div>

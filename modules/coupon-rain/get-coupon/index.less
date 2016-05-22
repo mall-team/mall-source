@@ -1,0 +1,150 @@
+@import '/modules/common/common.less';
+@import '/modules/common/header/header.less';
+
+.ticket-list{
+	padding: 25px percentage(20/640);
+
+	li{
+		background-color: #fff;
+		-webkit-border-bottom-right-radius: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		-webkit-box-shadow: 0 5px 5px #e4e4e4;
+		box-shadow: 0 5px 5px #e4e4e4;
+		color: @bg-main-color;
+		line-height: 1;
+		padding: 20px percentage(28/600) 8px percentage(36/600);
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 10px;
+
+		&.dated, &.used{
+			color: #d7d7d7;
+
+			&:after{
+				background-color: #d7d7d7;
+			}
+
+			.info{
+				&:after{
+					content: '';
+					display: block;
+					.bg-contain('/images/ticket-list/icon-dated.png', 113px/2, 93px/2);
+					position: absolute;
+					left: percentage(334/640);
+					top: 20px;
+				}
+			}
+
+			.tip{
+				color: #d7d7d7;
+			}
+
+		}
+
+		&.used{
+			.info{
+				&:after{
+					background-image: url(/images/ticket-list/icon-used.png);
+				}
+			}
+		}
+
+		&:before{
+			content: '';
+			display: block;
+			background: @bg-base-color url(/images/bg-bo.png) repeat-x 0 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 7px;
+		}
+
+		&:after{
+			content: '';
+			background-color: @bg-main-color;
+			display: block;
+			height: 2px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		.ticket-name{
+			font-size: 18px;
+    		line-height: 1.2;
+			margin-bottom: 8px;
+			width: 80%;
+		}
+
+		.ticket-date{
+			font-size: 12px;
+		}
+
+		.money{
+			display: block;
+			position: absolute;
+			right: percentage(28/600);
+			top: 20px;
+
+			small{
+				font-size: 14px;
+				margin-right: 5px;
+			}
+
+			b{
+				font-weight: normal;
+				font-size: 36px;
+			}
+		}
+
+		.info{
+			margin-bottom: 30px;
+		}
+
+		.tip{
+			color: @text-light-color;
+			font-size: 12px;
+		}
+
+		.img-wrap{
+			background-color: #fff;
+			.bg-contain('/images/ticket-list/ty-1.png', 85px/2, 94px/2);
+			position: absolute;
+			right: percentage(28/600);
+			bottom: 0;
+		}
+	}
+}
+
+.empty{
+	.icon-empty{
+		.bg-contain('/images/ticket-list/empty.png', 100px, 100px);
+		margin: 125px auto 15px;
+	}
+	>p{
+		color: @text-light-color;
+		font-size: 15px;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.btn-wrap{
+		text-align: center;
+	}
+	.btnl{
+		background-color: transparent;
+		width: auto;
+		line-height: 36px;
+		padding: 0 37px;
+		font-size: 15px;
+	}
+}
+
+.btn-wrap{
+	padding: 0 percentage(20/640);
+	margin-bottom: 20px;
+}

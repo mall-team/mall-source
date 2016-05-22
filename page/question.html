@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>反馈意见</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<form id="J-form" action="http://www.baidu.com" method="post">
+		<section class="text-wrap">
+			<textarea id="J-area" name="content" placeholder="请告诉我们您的意见和建议，帮助我们改进和提高"></textarea>
+			<label><span id="J-num">0</span>/200</label>
+		</section>
+
+		<section class="phone-wrap">
+			<label>您的手机号</label>
+			<input id="J-phone" name="phone" type="tel" placeholder="请输入你的手机号码" />
+		</section>
+
+		<footer>
+			<button id="J-submit" class="j-ajax btnl" form="J-form" alert="您的意见反馈已提交成功，感谢支持！" alert-to="">提交</button>
+		</footer>
+	</form>
+
+	
+	<script type="text/javascript">
+	require('question/index');
+	</script>
+</body>
+</html>

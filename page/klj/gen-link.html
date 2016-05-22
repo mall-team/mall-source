@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>我的顾客明细</title>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+</head>
+<body no-copyright="1">
+	<div class="wrap">
+		<ul class="klj-nav">
+			<li class="active"><a>生成链接</a></li>
+			<li><a>总监奖励</a></li>
+			<li><a>顾客奖励</a></li>
+		</ul>
+		<p class="welcome">慕容刀刀，欢迎您参与可丽金喷雾体验活动！</p>
+		<section class="gen-link-section">
+			<div class="gen-item">
+				<div class="tel-wrap">
+					<input id="J-phone-num" type="tel" placeholder="输入总监手机号码" />
+				</div>
+				<a id="J-gen-link" class="gen-link">生成链接</a>
+			</div>
+			<div class="copy-item">
+				<div id="J-url-text" class="url-wrap">http://172.18.8.250:8080/template/klj/gen-link.html2</div>
+			</div>
+			<div class="gen-tip">
+				<p>生成推广链接，<b>长按链接</b>，复制发给好友</p>
+				<p>（如果总监丢失链接，可以重新生成一次发送给对方哦)</p>
+			</div>
+		</section>
+	</div>
+
+	<a class="fix-main">活动<br/>主页</a>
+
+	<script type="text/javascript"></script>
+	<script type="text/javascript">
+        require('klj/gen-link/index');
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+@import '../common/common.less';
+@import '../common/header/header.less';
+
+
+@crab-main-color: #e3ac09;
+
+.icon-laba{
+	display: inline-block;
+	.bg-contain('/images/crab/icon-laba.png', 22px/2, 27px/2);
+}
+
+.icon-arrow{
+	display: inline-block;
+	.bg-contain('/images/arrow.png?__inline', 7px, 12px);
+}
+
+.icon-addr{
+	display: inline-block;
+	.bg-contain('/images/icon-addr.png?__inline', 13px, 18px);
+}
+
+.crab-notice{
+	background-color: #fff;
+	font-size: 0;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	margin-bottom: 10px;
+
+	&.txtleft{
+		height: auto;
+		line-height: 1.25;
+		padding: 10px 20/640*100%;
+		.flex();
+
+		>i{
+			vertical-align: top;
+		}
+		>span{
+			display: block;
+			.flex-item();
+			text-align: left;
+			vertical-align: top;
+		}
+	}
+
+	>i{
+		margin-right: 4px;
+		vertical-align: middle;
+	}
+	>span{
+		color: @crab-main-color;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+}
+
+// header{
+// 	background-color: #fff;
+// 	font-size: 0;
+// 	margin-bottom: 10px;
+// 	padding: 10px 20/640*100%;
+
+	
+
+// 	>i{
+// 		margin-right: 4px;
+// 		vertical-align: top;
+// 	}
+// 	>div{
+// 		.flex-item();
+// 		color: @crab-main-color;
+// 		font-size: 14px;
+// 		text-align: left;
+// 		vertical-align: top;
+// 	}
+
+// }
+
+.card{
+	margin: 0 20/640*100% 10px;
+	.bg-contain();
+	background-image: url(/images/crab/card.png);
+	.rect(600/640*100%, 388/611*100%);
+}
+
+.address{
+	background-color: @bg-section-color;
+	padding: 15px 114/640*100% 14px 65/640*100%;
+	margin-bottom: 30px;
+	position: relative;
+
+	&.no-address{
+		ul{
+			display: none;
+		}
+		ul.no-addr{
+			display: block;
+		}
+	}
+
+	>a{
+		display: block;
+		cursor: pointer;
+	}
+
+	.icon-addr{
+		position: absolute;
+		left: 20/640*100%;
+		top: 50%;
+		margin-top: -9px;
+	}
+
+	.addr-user{
+		font-size: 15px;
+		line-height: 1;
+	}
+
+	.addr-addr{
+		font-size: 12px;
+		color: @text-gray-color;
+	}
+
+	ul{
+		li{
+			margin-bottom: 8px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	ul.no-addr{
+		display: none;
+		font-size: 14px;
+		text-align: center;
+		padding: 15px;
+		li{
+			margin-bottom: 0;
+		}
+	}
+	.user-name{
+		margin-right: 15px;
+	}
+	.icon-arrow{
+		position: absolute;
+		top: 35px;
+		right: 20/640  * 100%;
+	}
+}
+
+.btn-wrap{
+	padding: 0 20/640*100%;
+	
+	.btnl-crab, .btnl-crab:active{
+		color: #fff;
+		background-color: @crab-main-color;
+	}
+}
+

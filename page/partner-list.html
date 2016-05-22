@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>营销统计</title>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+</head>
+<body no-copyright="1">
+	<div class="wrap">
+		<link rel="import" href="/modules/common/header/header.html?__inline">
+		<ul class="tab-nav">
+			<li class="active" type="1"><a>我的引荐</a></li>
+			<li type="2"><a>小伙伴的订单</a></li>
+		</ul>
+		<div class="award-rule">
+			<a id="J-rule">奖励细则>></a>
+		</div>
+		<section>
+			<ul class="partner-nav">
+				<li class="active" type="1">
+					<a>
+						<label id="J-t-num">3</label>
+						<p id="J-t-key">今日引荐人数</p>
+					</a>
+				</li>
+				<li type="2">
+					<a>
+						<label id="J-y-num">200</label>
+						<p id="J-y-key">昨日引荐人数</p>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section id="J-container-list">
+			<ul class="partner-list">
+				<li class="middle">
+					<div class="img-wrap" style="background-image: url(/static/images/test/person.png)"></div>
+					<div class="info">
+						<p class="name">彩虹塔</p>
+					</div>
+					<p class="date">2015-10 17:55</p>
+				</li>
+				<li class="middle">
+					<div class="img-wrap" style="background-image: url(/static/images/test/person.png)"></div>
+					<div class="info">
+						<p class="name">彩虹塔</p>
+					</div>
+					<p class="date">2015-10 17:55</p>
+				</li>
+				<li>
+					<div class="img-wrap" style="background-image: url(/static/images/test/person.png)"></div>
+					<div class="info">
+						<p class="name">彩虹塔</p>
+						<p class="des">贡献了<b>1</b>单</p>
+					</div>
+					<p class="date">2015-10 17:55</p>
+				</li>
+				<li>
+					<div class="img-wrap" style="background-image: url(/static/images/test/person.png)"></div>
+					<div class="info">
+						<p class="name">彩虹塔</p>
+						<p class="des">贡献了1单</p>
+					</div>
+					<p class="date">2015-10 17:55</p>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<script type="text/javascript">
+        require('partner-list/index');
+    </script>
+</body>
+</html>

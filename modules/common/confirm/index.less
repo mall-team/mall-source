@@ -1,0 +1,34 @@
+@import '../ui/func.less';
+
+.confirm{
+
+	&.alert-msg{
+		.confirm-btns{
+			text-align: center;
+			.btn-no{
+				display: none;
+			}
+			.btn-yes{
+				background-color: #fff;
+				border: 1px solid @border-base-color;
+				color: @text-gray-color;
+			}
+		}
+	}
+
+	.confirm-content{
+		font-size: 15px;
+		padding: 10px 0 25px;
+		text-align: center;
+	}
+
+	.confirm-btns{
+		.btnl{
+			display: inline-block;
+			width: 280/580*100%;
+			&.first-child{
+				margin-right: 10px;
+			}
+		}
+	}
+}

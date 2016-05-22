@@ -1,0 +1,98 @@
+@import '../common/ui/func.less';
+
+.tip{
+	background-color: @bg-section-color;
+	font-size: 15px;
+	padding: 20px 26px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	b{
+		color: @bg-main-color;
+		font-weight: normal;
+	}
+}
+
+section.pay-way{
+	.section-title{
+		color: #515f64;
+		font-size: 12px;
+		line-height: 1;
+		padding: 0 10px 9px;
+	}
+
+	ul{
+		background-color: @bg-section-color;
+		padding: 16px 12/640 * 100%;
+		font-size: 0;
+		.clearfix();
+
+		li{
+			border: 2px solid #fff;
+			.border-radius(4px);
+			padding: 5px 0;
+			display: inline-block;
+			width: 25%;
+			float: left;
+
+			&.active{
+				border-color: @color-wx;
+			}
+
+			i{
+				.bg-contain();
+				display: block;
+				height: 50px;
+				margin-bottom: 10px;
+			}
+			label{
+				color: #595f64;
+				display: block;
+				text-align: center;
+				font-size: 12px;
+			}
+
+			.icon-wx{
+				background-image: url(/images/pay-wx.png);
+			}
+
+			.icon-alipay{
+				background-image: url(/images/pay-alipay.png);
+			}
+
+			.icon-upay{
+				background-image: url(/images/pay-upay.png);
+			}
+
+			.icon-yue{
+				background-image: url(/images/pay-yue.png);
+			}
+		}
+	}
+}
+
+footer{
+	background-color: @bg-section-color;
+	padding: 5px 20/640*100% 8px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	.pay-val{
+		text-align: right;
+		font-size: 12px;
+		margin-bottom: 5px;
+
+		label{
+			margin-right: 4px;
+		}
+	}
+	.price{
+		color: @bg-main-color;
+
+		b{
+			margin-left: 2px;
+			font-weight: normal;
+		}
+	}
+}

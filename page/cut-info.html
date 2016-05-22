@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>砍价</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+	<script type="text/javascript">
+		var phpdata = {
+            channelId : 75,
+            channelType: 2,
+            redPackage: 1,
+            ownerName: '',
+            ownerHead: '',
+            // ownerName:'王灵',
+            // ownerHead:'http://wx.qlogo.cn/mmopen/xiau71qpHMT4yXH3PicFokSHJemzZ4GYsl5mlMAbr0rFia5y5w5Jib4VVMA32Y6KwFo5aiaUUgPsE4VtDIQPuibXY6v5MN0hYXZoMS/0',
+            isSelf:1,
+            qrCode:'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFW7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3d6ak9uRlRsT3VWRFJzaXhqaGFZAAIEj14KVgMEIBwAAA=='
+        };
+	</script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="goods-item">
+		<div class="img-wrap" style="background-image: url(/static2/images/test/tuan-1.png)">
+			<div class="cut-timer-down">
+				<div class="mask"></div>
+				<div class="timer-content">倒计时:<span id="J-timer" timer="0"></span></div>
+			</div>
+			<!-- <div class="empty">已抢光</div> -->
+		</div>
+		<div class="item-infos row">
+			<a>
+				<div class="item-title-wrap">
+					<div class="item-title">韩束红石榴化妆品套装春夏补水保湿控水沐浴乳装春夏补水保湿控水沐浴乳</div>
+					<i class="icon-arrow"></i>
+				</div>
+				<ul class="item-b">
+					<li class="half">
+						<span class="price price-low"><label>底价:</label><i>&yen;</i><b>1.00</b></span>
+						<span class="price"><label>原价:</label><i>&yen;</i><b>124.00</b></span>
+					</li>
+					<li class="half">
+						<span class="amount-last"><label>剩余:</label><b>3</b>件</span>
+						<span><label>出刀:</label><b>600</b>人</span>
+					</li>
+				</ul>
+			</a>
+		</div>
+		<!-- <div class="no-goods"></div> -->
+	</section>
+	<section class="warning">
+		<h3>声明：</h3>
+		<p>尊敬的淘金子用户，你好，目前砍价关注领红包活动过于火爆，所设置的数万个红包已瞬间被抢完，故今日砍价红包活动只能提前结束，待明日再砍，谢谢关注。红包没抢过瘾的，我们准备了可丽金活动，每推荐成功一个系统自动发40元红包  <a href="http://mall.taojinzi.com/Activity/Home?pid=1&did=1&recommend=ed9119a7&from_src=hongbao" style="color: -webkit-link;">点击参与可丽金1亿红包大派送活动>></a> 。</p>
+	</section>
+	<section class="userinfo dib-wrap">
+		<div class="img-wrap dib" style="background-image: url(/static/images/test/person.png)"></div>
+		<div class="say dib">
+			<p>我是慕容孤雪,</p>
+			<p>帮忙砍一刀吧，谢谢啦~</p>
+		</div>
+		<p class="des"><label>XXXXXXXX已帮砍至:</label><span class="price"><i>&yen;</i><b>36.08</b></span></p>
+	</section>
+	<section class="cut-time">
+		<dl class="row clearfix">
+			<dt>活动周期：</dt>
+			<dd>24小时</dd>
+			<dt>活动开始：</dt>
+			<dd>2015.06.17   10:00:00</dd>
+			<dt>活动结束：</dt>
+			<dd>2015.06.18   10:00:00</dd>
+		</dl>
+		<div class="cut-end"></div>
+	</section>
+	<section class="cut-invites">
+		<div class="row">
+			<h3>邀请小伙伴们来帮忙砍价:</h3>
+			<ul class="clearfix">
+				<li><a class="icon-wx" invite></a></li>
+				<li><a class="icon-pyq" invite></a></li>
+				<li><a class="icon-qqkj"></a></li>
+				<li><a class="icon-qq"></a></li>
+				<li><a class="icon-weibo"></a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="cut-rule">
+		<div class="row">
+			<h3>活动规则:<span class="title-tip">(*邀请好友砍价，砍至底价一起买)</span></h3>
+			<ol>
+				<!-- <table width="1000px">
+					<tr>
+						<td>所有买家均可免费参与活动，单个卖家仅能抢购一件（店主和分销商不能参与活动）</td>
+					</tr>
+				</table> -->
+				<li>所有买家均可免费参与活动，单个卖家仅能抢购一件（店主和分销商不能参与活动）</li>
+				<li>自己砍价之后，可继续召唤小伙伴免费帮忙出刀砍价，召唤20个小伙伴可100%砍至1元；</li>
+				<li>活动解释权归淘金子官方所有。</li>
+			</ol>
+		</div>
+	</section>
+	<section class="cut-banner">
+		<div class="img-wrap" style="background-image: url(/static/images/test/banner.png)"></div>
+	</section>
+	<section class="cut-record">
+		<div id="J-tab" class="tab">
+			<ul class="tab-nav">
+				<li>总排行榜</li>
+				<li>出刀记录</li>
+			</ul>
+			<div class="tab-content">
+				<div class="content-item content-rank">
+					<!-- <div class="line"></div> -->
+					<div class="record-list">
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑</div>
+								<div class="record-date">07-07 20:20</div>
+							</div>
+							<div class="record-price dib"><label>已砍至</label><small>¥</small>125.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑</div>
+								<div class="record-date">07-07 20:20</div>
+							</div>
+							<div class="record-price dib"><label>已砍至</label><small>¥</small>125.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑</div>
+								<div class="record-date">07-07 20:20</div>
+							</div>
+							<div class="record-price dib"><label>已砍至</label><small>¥</small>125.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑</div>
+								<div class="record-date">07-07 20:20</div>
+							</div>
+							<div class="record-price dib"><label>已砍至</label><small>¥</small>125.00</div>
+						</div>
+					</div>
+					<div class="see-more">查看更多<div class="dib"><div class="J-more-loading loading-icon-wrap"><i class="loading-icon"></i></div></div></div>
+				</div>
+				<!-- <div class="content-item no-data">
+					暂无排行榜数据
+				</div> -->
+				<div class="content-item">
+					<!-- <div class="line"></div> -->
+					<div class="record-list">
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气此刀已耗我千年真气此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+						<div class="record-item dib-wrap">
+							<div class="img-wrap dib" style="background-image: url(/static2/images/test/person.png)"></div>
+							<div class="record-m dib">
+								<div class="record-user">圈子郑<span class="record-date">07-07 20:20</span></div>
+								<div class="record-des">此刀已耗我千年真气</div>
+							</div>
+							<div class="record-price dib"><i>-</i><small>&yen;</small>9.00</div>
+						</div>
+					</div>
+					<div class="see-more">查看更多<div class="dib"><div class="J-more-loading loading-icon-wrap"><i class="loading-icon"></i></div></div></div>
+				</div>
+				<!-- <div class="content-item no-data">
+					暂无出刀记录
+				</div> -->
+			</div>
+		</div>
+	</section>
+	<!-- <footer>
+		<button id="J-cut" class="btn">砍一刀</button>
+	</footer> -->
+	<!-- <footer>
+		<a class="btn btn-buy">直接购买</a>
+		<button id="J-invite" class="btn btn-invite">邀请好友拔刀相助</button>
+	</footer> -->
+	<!-- <footer> -->
+		<!-- <button class="btnl disabled">未开始</button> -->
+		<!-- <button id="J-help-cut"  class="btn">拔刀相助，帮砍一刀</button> -->
+		<!-- <form action="/index.php/HaggleAction/joinHaggleActive" enctype="application/x-www-form-urlencoded" method="post"><input type="hidden" name="activeId" value="13"><input type="hidden" name="ownerId" value="0"><button type="submit" id="J-help-cut" class="btn">拔刀相助，帮砍一刀</button></form>
+	</footer> -->
+
+	<!-- <footer>
+		<a class="btn">我也要发起砍价</a>
+	</footer>
+ -->
+	<footer>
+		<a class="btn">以底价购买</a>
+	</footer>
+
+	<a href="/" class="fix-cut-main"></a>
+	<script type="text/javascript">
+		require('cut-info/index');
+	</script>
+</body>
+</html>

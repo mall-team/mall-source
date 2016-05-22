@@ -1,0 +1,72 @@
+@import '/modules/common/common.less';
+
+.ticket-container{
+
+	.icon-radio{
+		display: inline-block;
+		.bg-contain('/images/radio.png', 18px, 18px);
+	}
+
+	.radio{
+		text-align: right;
+		width: 70/600*100%;
+
+		&.selected{
+			.icon-radio{
+				background-image: url(/images/radio-blue.png)
+			}
+		}
+	}
+
+	ul{
+		max-height: 400px;
+    	overflow-y: scroll;
+	}
+	li{
+		border-bottom: 1px solid @border-base-color;
+		.flex();
+		margin: 0 percentage(24/640);
+		padding: 14px 0;
+
+		.money{
+			border: 1px solid @bg-main-color;
+			color: @bg-main-color;
+			height: 35px;
+			line-height: 33px;
+			width: 55px;
+			text-align: center;
+			font-size: 14px;
+			margin-right: percentage(16/592);
+
+			>i{
+				font-style: normal;
+				margin-right: 2px;
+				vertical-align: middle;
+			}
+			>b{
+				font-weight: normal;
+				vertical-align: middle;
+			}
+		}
+
+		.ticket-info{
+			.flex-item();
+			text-align: left;
+
+			.ticket-title{
+				font-size: 14px;
+				margin-bottom: 5px;
+			}
+
+			.des{
+				color: @text-gray-color;
+				font-size: 12px;
+			}
+		}
+
+		.radio{
+			display: block;
+
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<% $.each(list, function(i, item){  %>
+<li>
+	<div class="img-wrap" style="background-image:url(<%= item.head_sculpture %>)"></div>
+	<div class="info">
+		<div class="name-wrap">
+			<label class="name"><%= item.customer_name %></label>	
+			<span class="date"><%= item.create_time %></span>
+		</div>
+		<p class="cotent"><%= item.comment_content %></p>
+		<% if(item.imgList && item.imgList.length > 0){ %>
+		<ul class="img-list">
+			<% $.each(item.imgList, function(i, imgUrl){ %>
+			<li style="background-image:url(<%= imgUrl %>)"></li>
+			<% }) %>
+		</ul>
+		<% } %>
+	</div>
+</li>
+<% }) %>

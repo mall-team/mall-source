@@ -1,0 +1,10 @@
+<% $.each(list, function(key, item){ %>
+<div class="record-item dib-wrap">
+	<div class="img-wrap dib" style="background-image: url(<%= item['head_sculpture'] %>)"></div>
+	<div class="record-m dib">
+		<div class="record-user"><%= item['customer_nickname'] %><span class="record-date"><%= item['create_time'] %></span></div>
+		<div class="record-des"><%= item['des'] %></div>
+	</div>
+	<div class="record-price dib"><i>-</i><small>¥</small><%= item['haggle_price'] %></div>
+</div>
+<% }) %>

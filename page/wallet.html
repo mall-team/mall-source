@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>我的钱包</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<input id="J-ajax-url" type="hidden" value="" />
+
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+
+	<section class="money-wrap">
+		<div class="my-money">
+			<a id="J-chongzhi" class="btn-cz">充值</a>
+			<span class="money">88.<small>00</small></span>
+			<a id="J-tixian" class="btn-tx">提现</a>
+		</div>
+		<label>满100元可提现</label>
+	</section>
+
+	<section class="wallet-detail">
+		<ul class="nav">
+			<li class="active"><a>全部</a></li>
+			<li><a>支出</a></li>
+			<li><a>收入</a></li>
+		</ul>
+		<div class="container">
+			<ul id="J-bill-all" class="detail-list">
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+			</ul>
+			<ul id="J-bill-out" class="detail-list">
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">购买商品</span>
+					<span class="price">-10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+			</ul>
+			<ul id="J-bill-in" class="detail-list">
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+				<li>
+					<span class="title">推荐好友</span>
+					<span class="price income">+10.00</span>
+					<span class="date">07-20 12:01</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<input id="J-has-pay-account" type="hidden" value="0" />
+
+	<script type="text/tmpl" id="J-tx-tmpl">
+		<div class="tx-panel">
+			<form id="J-next-form" action="http://www.baidu.com" method="post">
+				<div class="tip">请绑定您本人的支付宝</div>
+				<div class="input-wrap">
+					<label>帐号</label>
+					<input id="J-account-input" name="alipay" type="text" placeholder="请输入您的支付宝帐号" />
+				</div>
+				<div class="input-wrap">
+					<label>姓名</label>
+					<input id="J-username" name="username" type="text" placeholder="请输入您的真实姓名" />
+				</div>
+				<div class="btn-wrap">
+					<a id="J-next-btn" class="btnl">下一步</a>
+				</div>
+			</form>
+		</div>
+	</script>
+	<script type="text/tmpl" id="J-tx-yes-tmpl">
+		<div class="tx-panel">
+			<form id="J-tx-form" action="http://www.baidu.com" method="post">
+				<div class="tip">预计3个工作日内到达</div>
+				<div class="input-wrap">
+					<label>提现金额</label>
+					<input id="J-tx-money" name="money" type="tel" placeholder="本次可提现金额为188元" />
+				</div>
+				<div class="input-wrap">
+					<label>支付宝</label>
+					<p id="J-account-yes">84605****2@qq.com</p>
+				</div>
+				<div class="btn-wrap">
+					<a id="J-tx-sumit" class="btnl">提交</a>
+				</div>
+			</form>
+		</div>
+	</script>
+	<script type="text/javascript">
+		require('wallet/index');
+	</script>
+</body>
+</html>

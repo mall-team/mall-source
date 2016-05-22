@@ -1,0 +1,53 @@
+@import '../ui/func.less';
+
+@barHei: 40px;
+@barWid: 42px;
+
+.amount-bar{
+	border: 1px solid @border-base-color;
+	.border-radius(2px);
+	display: inline-block;
+	height: @barHei+2px;
+	vertical-align: middle;
+
+	>li{
+		min-width: @barWid;
+		text-align: center;
+		line-height: 0;
+	}
+
+	.btn-minus{
+		border-right: 1px solid @border-base-color;
+
+		.icon{
+			display: inline-block;
+			.bg-contain('/images/minus.png?__inline', 17px, @barHei);
+		}
+		&.disabled {
+			background-color: #eee;
+			.icon{
+				background-image: url(/images/minus-no.png?__inline);
+			}
+		}
+	}
+
+	.btn-add{
+		border-left: 1px solid @border-base-color;
+
+		.icon{
+			display: inline-block;
+			.bg-contain('/images/add.png?__inline', 17px, @barHei);
+		}
+		&.disabled{
+			background-color: #eee;
+			.icon{
+				background-image: url(/images/add-no.png?__inline);
+			}
+		}
+	}
+
+	.amount-val{
+		line-height: @barHei;
+	}
+
+}

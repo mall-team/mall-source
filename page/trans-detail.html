@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>物流明细</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="trans-title">
+		<label>顺丰快递</label>
+		<dl>
+			<dt>快递单号:</dt>
+			<dd>20154545454545454</dd>
+		</dl>
+	</section>
+
+	<section class="trans-content">
+		<div class="trans-day">
+			<div class="date">02-07</div>
+			<ul class="trans-list">
+				<li>
+					<i class="icon-node"></i>
+					<div class="item">
+						<span class="time">14:41</span>
+						<span class="trans-info">【浙江义乌公司】的派件员【李刀刀】正在派件</span>
+					</div>
+				</li>
+				<li>
+					<i class="icon-node"></i>
+					<div class="item">
+						<span class="time">14:41</span>
+						<span class="trans-info">【浙江义乌公司】的派件员【李刀刀】正在派件</span>
+					</div>
+				</li>
+				<li>
+					<i class="icon-node"></i>
+					<div class="item">
+						<span class="time">14:41</span>
+						<span class="trans-info">【浙江义乌公司】的派件员【李刀刀】正在派件</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		require('trans-detail/index');
+	</script>
+</body>
+</html>

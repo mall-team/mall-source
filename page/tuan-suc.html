@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>开团成功</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<div class="tuan-suc">
+		<i class="icon-suc"></i><span>开团成功</span>
+	</div>
+	<!-- <div class="tuan-suc tuan-join">快来入团吧！</div> -->
+	<section class="tuan-info dib-wrap">
+		<div class="img-wrap dib" style="background-image:url(/static2/images/test/tuan-1.png)"></div>
+		<div class="info-r dib">
+			<div class="item-title">御泥坊爽肤水玫瑰滋养润肤水150ml补水保湿柔肤化妆品女士官方售</div>
+			<p class="item-b">
+				<span class="amount">3人团</span>
+				<span class="price"><i>&yen;</i><b>62.00/件</b></span>
+			</p>
+		</div>
+		<div class="state suc"></div>
+		<!-- <div class="state fail"></div> -->
+	</section>
+	<div class="tuan-timer">
+		<label>剩余:</label><span id="J-timer" timer="10000"></span>
+	</div>
+	<section class="tuan-list">
+		<ul class="tuan-person">
+			<li style="background-image: url(/static2/images/test/person.png)"><span>崔少伟</span><i class="icon-paying"></i></li>
+			<li style="background-image: url(/static2/images/test/person.png)"><span>崔少伟伟</span><i class="icon-payed"></i></li>
+			<li><span>崔少伟伟伟伟</span></li>
+			<li><span>崔少伟伟伟伟</span></li>
+			<li><span>崔少伟伟伟伟</span></li>
+		</ul>
+		<p class="tuan-tip">还差<span class="amount">2</span>人即可完成团购哦，<br/>快邀约好友来参团吧</p>
+		<link rel="import" href="/modules/common/tuan-steps/index.html?__inline">
+		<div class="tuan-rule-wrap"><a class="tuan-rule-link">查看拼团规则>></a></div>
+	</section>
+	<section class="goods-des">
+		<div class="section-title">商品详情</div>
+		<div class="goods-des-content">
+			<img src="/images/test/tuan-1.png" />
+			<img src="/images/test/tuan-1.png" />
+			<img src="/images/test/tuan-1.png" />
+		</div>
+	</section>
+	<!-- <section class="tuan-rule">
+		<div class="section-title">拼团流程</div>
+		<div class="rule-content">
+			<div class="img-wrap"></div>
+			<ol>
+				<li><label>（1）</label>选择商品开团:选择拼团商品下单，团长完成支付后，团即刻开启。在24小时内参团人数大道规定人数，此团方能成功。若24小时内参团人数不到规定人数，则该团失败，系统自动为您退款。</li>
+				<li><label>（2）</label>团长:开团且第一位该团支付成功的人。</li>
+				<li><label>（3）</label>参团人员:通过团长邀请购买该商品的成员即为参团成员，参团成员也可邀请更多的成员参团。</li>
+				<li><label>（4）</label>团购成功:从团长开团24小时内找到相应开团人数的好友参团，则该团成功，商城发货。</li>
+				<li><label>（5）</label>团购失败:从团长开团24小时内未能找到相应开团人数的好友参团，则该团失败，系统会在1-2个工作日内提交微信处理，微信审核后自动原路退款到您的支付宝账户。</li>
+				<li><label>（6）</label>拼团，是基于好友的组团购买，获取团购优惠，为了保证广大消费者的权益，淘金子商城有权将判定为黄牛倒货的团解散并取消订单。</li>
+			</ol>
+		</div>
+	</section> -->
+	<footer>
+		<!-- <a id="J-btn-invite" class="btnl">邀请好友参团</a> -->
+		<a class="btnl">我要参团</a>
+	</footer>
+	<script type="text/javascript">
+		require('tuan-suc/index');
+	</script>
+</body>
+</html>

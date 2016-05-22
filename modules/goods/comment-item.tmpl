@@ -1,0 +1,9 @@
+<% $.each(list, function(i, item){  %>
+<div class="comment">
+	<div class="comment-t clearfix">
+		<label><%= item.customer_name %></label>
+		<label class="right"><%= item.create_time %></label>
+	</div>
+	<div class="comment-des"><%= item.comment_content %></div>
+</div>
+<% }) %>

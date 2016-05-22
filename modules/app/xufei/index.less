@@ -1,0 +1,92 @@
+@import '/modules/common/common.less';
+
+@main-color: #e4007f;
+
+.img-wrap{
+	background-color: transparent;
+}
+
+.wrap{
+	
+	.bg-cover();
+	background-image: url(/images/app/xufei/bg.jpg);
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	text-align: center;
+}
+
+.wrap-inner{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin-top: -180px;
+}
+
+.thanks{
+	display: inline-block;
+	.bg-contain();
+	background-image: url(/images/app/xufei/thanks.png);
+	.rect(percentage(588/640), percentage(164/588));
+}
+
+.thanks-sub{
+	color: @main-color;
+	line-height: 1;
+	font-size: 0;
+	margin: 10px auto 20px;
+	position: relative;
+
+	&:before{
+		content: '';
+		display: inline-block;
+		border-top: 1px solid @main-color;
+		height: 0;
+		width: percentage(114/640);
+		margin-right: 5px;
+	}
+
+
+	&:after{
+		content: '';
+		display: inline-block;
+		border-top: 1px solid @main-color;
+		height: 0;
+		width: percentage(114/640);
+		vertical-align: middle;
+		margin-left: 5px;
+	}
+
+	>span{
+		display: inline-block;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+
+}
+
+.wish{
+	color: @main-color;
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 88px;
+}
+
+.xufei{
+	>p{
+		color: #fe9500;
+		font-size: 18px;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+	.btnl, .btnl:active{
+		background-color: #fe9500;
+		color: #fff;
+		font-size: 15px;
+		width: 120px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+}

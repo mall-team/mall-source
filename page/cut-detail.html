@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>商品详情</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="goods-item">
+		<link rel="import" href="/modules/common/swiper/index.html?__inline">
+		<div class="row">
+			<div class="item-infos">
+				<a>
+					<div class="item-title">韩束红石榴化妆品套装春夏补水保湿控水沐浴乳</div>
+					<ul class="item-b">
+						<li><span class="price price-cur"><i>&yen;</i><b>124.<small>00</small></b></span></li>
+						<li class="clearfix">
+							<span class="price"><label>原价:</label><i>&yen;</i><b>500.00</b></span>
+							<label class="right">2560人已购买</label>
+						</li>
+					</ul>
+					<i id="J-share" class="icon-share"></i>
+				</a>
+			</div>
+			<dl class="goods-attrs clearfix">
+				<dt>颜色:</dt>
+				<dd>红色、白色、蓝色、藏青、绿色、青色、灰色</dd>
+				<dt>规格:</dt>
+				<dd>500ml、1000ml</dd>
+				<dt>尺寸:</dt>
+				<dd>500ml、1000ml</dd>
+			</dl>
+		</div>
+	</section>
+	<section>
+		<ul class="tj-types dib-wrap">
+			<li class="dib">
+				<a>
+					<i class="icon icon-by"></i><label>全场包邮</label>
+				</a>
+			</li>
+			<li class="dib">
+				<a>
+					<i class="icon icon-js"></i><label>极速到货</label>
+				</a>
+			</li>
+			<li class="dib">
+				<a>
+					<i class="icon icon-bt"></i><label>淘金补贴</label>
+				</a>
+			</li>
+			<li class="dib">
+				<a>
+					<i class="icon icon-zp"></i><label>正品保证</label>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section class="goods-des">
+		<div class="section-title">商品详情</div>
+		<div class="goods-des-content">
+			<img src="/images/test/tuan-1.png" />
+			<img src="/images/test/tuan-1.png" />
+			<img src="/images/test/tuan-1.png" />
+		</div>
+	</section>
+	<footer>
+		<input type="hidden" name="activeId" value="13">
+		<input type="hidden" name="ownerId" value="20060">
+		<button class="btn btn-buy disabled">以底价购买</button>
+		<button id="J-invite" class="btn btn-invite">邀请好友拔刀相助</button>
+	</footer>
+	<!-- <footer> -->
+		<!-- <button id="J-help-cut"  class="btn">拔刀相助，帮砍一刀</button> -->
+		<!-- <form action="/index.php/HaggleAction/joinHaggleActive" enctype="application/x-www-form-urlencoded" method="post"><input type="hidden" name="activeId" value="13"><input type="hidden" name="ownerId" value="0"><button type="submit" id="J-help-cut" class="btn">拔刀相助，帮砍一刀</button></form> -->
+	<!-- </footer> -->
+	<script type="text/javascript">
+		require('cut-detail/index');
+	</script>
+</body>
+</html>

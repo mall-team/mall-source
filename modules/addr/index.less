@@ -1,0 +1,58 @@
+@import '../common/ui/func.less';
+
+.icon-radio{
+	display: inline-block;
+	.bg-contain('/images/radio.png?__inline', 18px, 18px);
+}
+
+.addr-list{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	overflow: hidden;
+
+	>li{
+		background-color: @bg-section-color;
+		margin-bottom: 5px;
+		padding: 14px 20/640*100%;
+	}
+	&>li.sel{
+		.icon-radio{
+			background-image: url('/images/radio-sel.png?__inline');
+		}
+	}
+	.dib{
+		vertical-align: middle;
+	}
+	.radio-wrap{
+		width: 54/600*100%;
+	}
+	ul{
+		color: @text-gray-color;
+		font-size: 12px;
+		width: 460/600 * 100%;
+	}
+	ul>li{
+		margin-bottom: 8px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.edit-wrap{
+		text-align: right;
+		width: 86/600*100%;
+	}
+	.edit{
+		color: @bg-main-color;
+	}
+}
+footer{
+	padding: 0 20/640*100%;
+	
+	.btnl{
+		margin-bottom: 10px;
+	}
+	.btnl-default{
+		color: @bg-main-color;
+		
+	}
+}

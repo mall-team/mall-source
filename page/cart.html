@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>购物车</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--购物车产品数量更新-->
+	<input id="J-ajaxurl-updateNum" type="hidden" value="/Mall/Cart/update" />
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<form action="http://www.baidu.com">
+		<section class="cart-section">
+			<div class="cart-title">淘金子商城</div>
+			<ul class="cart-list">
+				<li>
+					<input class="J-price" type="hidden" value="200"/>
+					<input type="hidden" class="J-id" value="15008">
+					<input type="hidden" class="J-checkbox-val" value="0">
+					<div class="radio warning"><i class="icon-radio"></i></div>
+					<a href="http://www.baidu.com">
+						<div class="img-content">
+							<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)">
+								<div class="no-store">库存紧张</div>
+							</div>
+						</div>
+					</a>
+					<div class="goods-info">
+						<p class="goods-title">百雀羚化妆</p>
+						<div class="clearfix">
+							<link rel="import" href="/modules/common/amount/index.html?__inline">
+							<span class="price right"><i>&yen;</i><b>200.00</b></span>
+						</div>
+					</div>
+					<div class="btn-del" ajax-url="/Mall/Cart/delete" ajax-type="post" ajax-data='{"id": 1}'></div>
+				</li>
+				<li>
+					<input class="J-price" type="hidden" value="200"/>
+					<input type="hidden" class="J-id" value="15008">
+					<input type="hidden" class="J-checkbox-val" value="0">
+					<div class="radio active"><i class="icon-radio"></i></div>
+					<a>
+						<div class="img-content">
+							<i class="icon-tm"></i>
+							<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)">
+								<div class="tm-timer">剩余<span class="J-tm-timer" timer="1000000">21:21:21</span></div>
+							</div>
+							<p class="tm-tip">*即将恢复原价</p>
+						</div>
+					</a>
+					<div class="goods-info">
+						<p class="goods-title">百雀羚化妆品套装女水</p>
+						<div class="goods-attr">颜色:黄色 尺码:10</div>
+						<div class="clearfix">
+							<link rel="import" href="/modules/common/amount/index.html?__inline">
+							<span class="price right"><i>&yen;</i><b>200.00</b></span>
+						</div>
+					</div>
+					<div class="btn-del"></div>
+				</li>
+				<li>
+					<input class="J-price" type="hidden" value="200"/>
+					<input type="hidden" class="J-id" value="15008">
+					<input type="hidden" class="J-checkbox-val" value="0">
+					<div class="radio"><i class="icon-radio"></i></div>
+					<a>
+						<div class="img-content">
+							<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+						</div>
+					</a>
+					<div class="goods-info">
+						<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+						<div class="goods-attr">颜色:黄色 尺码:10</div>
+						<div class="clearfix">
+							<link rel="import" href="/modules/common/amount/index.html?__inline">
+							<span class="price right"><i>&yen;</i><b>200.00</b></span>
+						</div>
+					</div>
+					<div class="btn-del"></div>
+				</li>
+			</ul>
+		</section>
+		<footer>
+			<div id="J-sel-all" class="radio"><i class="icon-radio"></i><span>全选</span></div>
+			<div class="pay-r dib-wrap">
+				<span class="price dib"><label>实付:</label><i>&yen;</i><b id="J-total-price">200</b></span>
+				<button id="J-buy" class="btnl dib">结算（<span id="J-amount">2</span>）</button>
+			</div>
+		</footer>
+	</form>
+	<!-- <div class="cart-empty">
+		<div class="icon-empty"></div>
+		<p>啊哦，购物车是空的！</p>
+		<div class="btn-wrap">
+			<a href="/" class="btnl btnl-border">去逛逛 >></a>
+		</div>
+	</div> -->
+	<script type="text/javascript">
+		require('cart/index');
+	</script>
+</body>
+</html>

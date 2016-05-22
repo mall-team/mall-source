@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>支付</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+
+	<div class="tip" style="padding-bottom: 1000px;">
+		<i class="icon-error"></i>
+		<div class="tip-content">
+			<p class="tip-title">支付失败</p>
+			<p>订单将为您保留<b>29:28</b>,超时将自动取消</p>
+		</div>
+	</div>
+
+	<section id="J-pay-way" class="pay-way">
+		<input id="J-radio" type="hidden" value="1" />
+		<div class="section-title">选择支付方式</div>
+		<ul id="J-pay-types" class="pay-types">
+			<li class="active" value="1">
+				<i class="icon-wx"></i>
+				<label>微信支付</label>
+				<span class="icon-sel"></span>
+			</li>
+			<li value="2">
+				<i class="icon-alipay"></i>
+				<label>支付宝</label>
+				<span class="icon-sel"></span>
+			</li>
+			<li value="3">
+				<i class="icon-upay"></i>
+				<label>银联支付</label>
+				<span class="icon-sel"></span>
+			</li>
+		</ul>
+	</section>
+
+	<footer>
+		<div class="pay-val"><label>实付:</label><span class="price">&yen;<b>200</b></span></div>
+		<button id="J-test" class="btnl">继续支付</button>
+	</footer>
+
+	<script type="text/javascript">
+		require('pay-error/index');
+	</script>
+</body>
+</html>

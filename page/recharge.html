@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>充值</title>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+</head>
+<body>
+	<div class="cz-panel">
+		<form id="J-pay-form" action="/Mall/Pay/order" method="post">
+			<div class="input-wrap cz">
+				<label>金额</label>
+				<input id="J-cz-input" name="alipay" type="number" placeholder="请输入充值金额(只支持整数)" />
+			</div>
+			<div class="btn-wrap">
+				<a class="J-pay-btn btnl btnl-wx" type="2">微信充值</a>
+				<button class="J-pay-btn btnl btnl-default" type="1">支付宝充值</button>
+			</div>
+
+			<input id="J-pay-type" name="pay_type" type="hidden" value="" />
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	require('recharge/index');
+	</script>
+</body>
+</html>

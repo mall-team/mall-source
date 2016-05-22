@@ -1,0 +1,18 @@
+<% if(list.length > 0){ %>
+<ul class="partner-list">
+<% $.each(list, function(i, item){ %>
+	<li>
+		<div class="img-wrap" 
+		<% if(item.head_sculpture){ %>
+		style="background-image: url(<%= item.head_sculpture %>)"
+		<% } %>
+		></div>
+		<div class="info">
+			<p class="name"><%= item.nickname %></p>
+			<p class="des">贡献了<b><%= item.orderCount %></b>单</p>
+		</div>
+		<p class="date"><%= item.create_time %></p>
+	</li>
+<% }) %>
+</ul>
+<% } %>

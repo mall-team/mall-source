@@ -1,0 +1,55 @@
+@import '../common/ui/func.less';
+@import '../common/common.less';
+@import '../common/nav/nav.less';
+@import '../common/guide/guide.less';
+
+#J-guide, #J-suc-msg, #J-nav{
+	display: none;
+}
+
+.wrap{
+	background-color: #000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.suc-msg{
+	background-color: @bg-section-color;
+	padding: 15px 80/640*100% 15px 84/640*100%;
+
+	p{
+		color: @text-gray-color;
+		padding-left: 80/476*100%;
+		position: relative;
+		font-size: 15px;
+	}
+
+	.icon-ok{
+		.bg-contain('/images/ok.png?__inline', 28px, 28px);
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -14px;
+	}
+}
+
+.suc-content{
+	.bg-cover();
+	background-image: url(/images/shop-suc.jpg);
+	// background: url(/images/tuan-suc.jpg); no-repeat center 0;
+	.rect(100%, 880/640*100%);
+	overflow: hidden;
+	position: relative;
+
+	.btnl{
+		background-color: transparent;
+		display: none;
+		width: 388/640*100%;
+		position: absolute;
+		top: 506/880*100%;
+		left: 50%;
+		margin-left: -194/640*100%;
+		font-size: 24px;
+		line-height: 53px;
+	}
+}

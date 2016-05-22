@@ -1,0 +1,12 @@
+<div id="J-award-panel" class="award-panel">
+	<p class="award-msg"><%= msg %></p>
+	<p class="award-tip"><%= tip %></p>
+	<div class="btn-wrap">
+		<% if(isGoods){ %>
+		<button class="J-drop-btn btnl btnl-default">放弃领取</button>
+		<a class="J-goods-yes btnl btnl-lq">确认领取</a>
+		<% }else{ %>
+		<button class="J-yes-btn btnl">确认</button>
+		<% } %>
+	</div>
+</div>

@@ -1,0 +1,280 @@
+@import '../common/ui/func.less';
+
+body > section, form > section{
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+
+.icon-addr{
+	display: inline-block;
+	.bg-contain('/images/icon-addr.png?__inline', 13px, 18px);
+}
+
+.order-info{
+	padding: 10px 0 2px 20/640*100%;
+	overflow: hidden;
+	position: relative;
+	.can-select();
+
+	p{
+		margin-bottom: 6px;
+		line-height: 1;
+	}
+	p.date{
+		color: @text-light-color;
+
+		span{
+			margin-right: 10px;
+		}
+	}
+	.timer{
+		background-color: @bg-main-color;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		color: #fff;
+		line-height: 20px;
+		padding: 0 9px 0 8px;
+		position: absolute;
+		top: 50%;
+		margin-top: -10px;
+		right: 0;
+		font-size: 12px;
+	}
+}
+
+.address{
+	background-color: @bg-section-color;
+	padding: 15px 114/640*100% 14px 65/640*100%;
+	margin-top: 10px;
+	position: relative;
+
+	&.no-address{
+		ul{
+			display: none;
+		}
+		ul.no-addr{
+			display: block;
+		}
+	}
+
+	>a{
+		display: block;
+		cursor: pointer;
+	}
+
+	.icon-addr{
+		position: absolute;
+		left: 20/640*100%;
+		top: 50%;
+		margin-top: -9px;
+	}
+
+	.addr-user{
+		font-size: 15px;
+		line-height: 1;
+	}
+
+	.addr-addr{
+		font-size: 12px;
+		color: @text-gray-color;
+	}
+
+	ul{
+		li{
+			margin-bottom: 8px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	ul.no-addr{
+		display: none;
+		font-size: 14px;
+		text-align: center;
+		padding: 15px;
+		li{
+			margin-bottom: 0;
+		}
+	}
+	.user-name{
+		margin-right: 15px;
+	}
+	.icon-arrow{
+		position: absolute;
+		top: 35px;
+		right: 20/640  * 100%;
+	}
+}
+
+.goods-container{
+}
+
+
+.goods-list{
+	background-color: @bg-section-color;
+	padding-left: 20/640*100%;
+	position: relative;
+	margin-bottom: 10px;
+
+	>li{
+		border-bottom: 1px solid @border-base-color;
+		font-size: 0;
+		position: relative;
+		padding: 8px 20/620 * 100% 8px 0;
+	}
+
+	.img-wrap{
+		.bg-cover();
+		.square();
+		display: inline-block;
+		width: 122/600*100%;
+		overflow: hidden;
+		margin-right: 20/600*100%;
+		vertical-align: top;
+	}
+	.goods-info{
+		display: inline-block;
+		font-size: 12px;
+		color: @text-gray-color;
+		width: 314/600*100%;
+		vertical-align: top;
+	}
+	.goods-title{
+		margin-bottom: 8px;
+	}
+	.goods-attr{
+		color: @text-light-color;
+		margin-bottom: 9px;
+	}
+	.price-wrap{
+		display: inline-block;
+		vertical-align: top;
+		width: 144/600*100%;
+		text-align: right;
+	}
+	.price{
+		display: block;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	.goods-amount{
+		color: @text-gray-color;
+		font-size: 15px;
+		line-height: 1;
+	}
+	.goods-state{
+		padding-right: 20/620*100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		.state{
+			color: @bg-main-color;
+			width: 100/600*100%;
+			line-height: 25px;
+		}
+		.btn-wrap{
+			width: 500/600*100%;
+			text-align: right;
+		}
+		.btnl{
+			margin-left: 10px;
+			line-height: 25px;
+			width: 70px;
+			font-size: 12px;
+			.border-radius(3px);
+
+			&.btnl-border, &.btnl-default{
+				line-height: 23px;
+				width: 68px;
+			}
+		}
+	}
+}
+
+.price{
+	>label{
+		margin-right: 3px;
+	}
+	i{
+		font-style: normal;
+		margin-right: 2px;
+	}
+	b{
+		font-weight: normal;
+	}
+}
+
+.goods-trans{
+	font-size: 15px;
+
+	ul{
+		padding-left: 20/640*100%;
+	}
+
+	li{
+		line-height: 45px;
+		padding-right: 20/620*100%;
+		border-bottom: 1px solid @border-base-color;
+
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+
+	label{
+		// color: @text-gray-color;
+		margin-right: 10px;
+	}
+	.price-total{
+		color: @bg-main-color;
+	}
+}
+
+.money-calculate{
+	font-size: 12px;
+	padding: 16px 0;
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 20px;
+
+	.calculate{
+		margin-bottom: 11px;
+	}
+	.result{
+		color: @bg-main-color;
+
+		.price{
+			margin-left: 3px;
+		}
+	}
+	.frost{
+		margin-left: 8px;
+	}
+}
+
+.sold-panel{
+	margin-top: -15px;
+
+	.title{
+		color: @text-gray-color;
+		font-size: 15px;
+		line-height: 48px;
+		border-bottom: 1px solid @border-base-color;
+		text-align: center;
+	}
+
+	.desc{
+		color: @text-light-color;
+		font-size: 15px;
+		margin: 12px 0 15px;
+	}
+
+	img{
+		display: block;
+		background-color: #fff;
+		width: 429/540*100%;
+		min-height: 225px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+}

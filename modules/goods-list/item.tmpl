@@ -1,0 +1,14 @@
+<% _.each(list, function(item){  %>
+<div class="goods">
+	<a href="/Mall/Goods/detail?g=<%= item.product_id %>">
+		<div class="img-wrap" style="background-image: url(<%= item.image_url %>)"></div>
+		<div class="goods-title"><%= item.product_name %></div>
+		<div class="clearfix">
+			<label class="price"><i>&yen;</i><b><%= item.retail_price %></b></label>
+			<% if(item.discount){ %>
+			<label class="btn btn-sm right"><%= item.discount %>折</label>
+			<% } %>
+		</div>
+	</a>
+</div>
+<% }) %>

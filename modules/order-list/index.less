@@ -1,0 +1,271 @@
+@import '../common/ui/func.less';
+
+.icon-arrow{
+	display: inline-block;
+	.bg-contain('/images/arrow.png?__inline', 7px, 12px);
+}
+
+.loading-icon-wrap{
+	display: none;
+	margin-bottom: 15px;
+}
+
+.order-nav{
+	background-color: @bg-section-color;
+	.flex();
+	padding: 0 20/640*100%;
+
+	>li{
+		.flex-item();
+
+		&.active{
+			a{
+				color: @bg-main-color;
+				border-bottom: 2px solid @bg-main-color;
+			}
+		}
+	}
+
+	a{
+		display: inline-block;
+		line-height: 35px;
+		height: 35px;
+	}
+}
+
+
+
+.order-list{
+	padding-bottom: 10px;
+}
+
+.nodata{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+
+	.icon{
+		display: block;
+		.bg-contain('/images/nodata-order.png', 100%, 100px);
+		margin-bottom: 15px;
+	}
+	p{
+		color: #bebebe;
+		line-height: 1;
+		font-size: 15px;
+		margin-bottom: 15px;
+	}
+	.btn-wrap{
+		text-align: center;
+		font-size: 15px;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+	.btnl{
+		background-color: transparent;
+		width: auto;
+		line-height: 36px;
+		padding: 0 37px;
+		font-size: 15px;
+	}
+}
+
+.order-item{
+	background-color: @bg-section-color;
+	padding-left: 20/640*100%;
+	margin-top: 10px;
+
+	.top-info{
+		border-bottom: 1px solid @border-old-color;
+		padding-right: 20/620*100%;
+		height: 36px;
+		line-height: 35px;
+	}
+
+	.date{
+		label{
+			color: @text-light-color;
+		}
+		b{
+			font-weight: normal;	
+		}
+	}
+	.state{
+		color: @bg-main-color;
+
+		&.cancel{
+			color: @text-light-color;
+		}
+	}
+	.order-info{
+		border-bottom: 1px solid @border-base-color;
+		padding: 10px 20/620*100% 10px 0;
+		position: relative;
+		.can-select();
+
+		&:last-child{
+			border-bottom: 0;
+		}
+
+		.img-wrap{
+			.square();
+			width: 140/600*100%;
+			margin-right: 18/600*100%;
+		}
+
+		dl{
+			color: @text-light-color;
+			line-height: 24px;
+			width: 420/600*100%;
+
+			.price{
+				color: @text-base-color;
+				i{
+					margin-right: 5px;
+				}
+				b{
+					font-weight: normal;
+				}
+			}
+			dt{
+				// display: inline-block;
+				margin-right: 10px;
+				float: left;
+				clear: left;
+			}
+			dd{
+				float: left;
+				clear: right;
+				// display: inline-block;
+			}
+		}
+	}
+
+	.btn-wrap{
+		text-align: right;
+		padding: 10px 20/620*100% 10px 0;
+	}
+
+	.btnl{
+		line-height: 25px;
+		padding: 0 8px;
+		font-size: 12px;
+		width: auto;
+	}
+
+	.icon-arrow{
+		position: absolute;
+		right: 20/620*100%;
+		top: 50%;
+		margin-top: -6px;
+	}
+
+}
+
+// .order-inner-list{
+// 	background-color: @bg-section-color;
+// 	margin-bottom: 10px;
+// 	padding-left: 20/640*100%;
+
+// 	.inner-list-title{
+// 		border-bottom: 1px solid @border-base-color;
+// 		height: 35px;
+// 		line-height: 34px;
+// 		padding-right: 20/620*100%;
+// 		.clearfix();
+// 	}
+// 	.date{
+// 		color: @text-gray-color;
+// 	}
+// 	.state{
+// 		color: @bg-main-color;
+// 		float: right;
+// 	}
+
+// 	&.order-cancel{
+// 		.state{
+// 			color: @text-light-color;
+// 		}
+// 		.order-item{
+// 			border-bottom: 1px solid @border-base-color;
+// 		}
+// 	}
+
+// 	&.order-wait-pay{
+// 		.order-item{
+// 			border-bottom: 1px solid @border-base-color;
+// 		}
+// 		.item-price{
+// 			border-bottom: 0;
+// 		}
+// 	}
+
+// 	&.order-wait-comment{
+// 		.state{
+// 			color: @color-wx;
+// 		}
+// 	}
+
+// 	&.order-success{
+// 		.state{
+// 			color: @text-light-color;
+// 		}
+// 	}
+// }
+
+// .order-item{
+// 	padding: 10px 20/620*100% 10px 0;
+// 	.clearfix();
+
+// 	.img-wrap{
+// 		width: 125/600*100%;
+// 		.square();
+// 		float: left;
+// 	}
+
+// 	.item-name{
+// 		color: @text-gray-color;
+// 		width: 446/600*100%;
+// 		float: right;
+// 		font-size: 12px;
+// 		padding-top: 10px;
+// 	}
+// }
+
+// .item-price{
+// 	border-bottom: 1px solid @border-base-color;
+// 	height: 44px;
+// 	line-height: 44px;
+// 	padding-right: 20/620*100%;
+// 	.clearfix();
+
+// 	&:last-child{
+// 		border-bottom: 0;
+// 	}
+
+// 	.price{
+// 		color: @text-gray-color;
+// 		font-size: 12px;
+// 		label{
+// 			margin-right: 2px;
+// 		}
+// 		i{
+// 			margin-right: 2px;
+// 		}
+// 	}
+// 	.btnl{
+// 		line-height: 27px;
+// 		padding: 0 8px;
+// 		width: auto;
+// 		font-size: 12px;
+// 		float: right;
+// 		margin-top: 9px;
+// 		margin-left: 10px;
+// 		min-width: 70px;
+// 		text-align: center;
+// 	}
+// 	.btnl-border{
+// 		height: 27px;
+// 		line-height: 25px;
+// 	}
+// }

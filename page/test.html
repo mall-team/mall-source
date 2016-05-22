@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.wrap.show .item{
+		-webkit-transform: translateX(200px) translateY(200px);
+		transform: translateX(200px) translateY(200px);
+	}
+	.item{
+		width: 100px;
+		height: 100px;
+		background-color: green;
+		-webkit-transition: all 1s ease-out;
+		transition: all 1s ease-out;
+	}
+	/*.item.show{
+		-webkit-transform: translateX(200px) translateY(200px);
+		transform: translateX(200px) translateY(200px);
+	}*/
+	</style>
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="item">test </div>
+	</div>
+
+
+
+<script type="text/javascript">
+	
+	$ = require('zepto');
+
+	setTimeout(function(){
+		$('.wrap').addClass('show');
+	}, 2000)
+</script>
+</body>
+</html>

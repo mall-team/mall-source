@@ -1,0 +1,26 @@
+<% $.each(list, function(i, item){ %>
+<li>
+	<div class="img-content">
+		<div class="img-wrap" 
+		<% if(item.headimgurl){ %>
+		style="background-image: url(<%= item.headimgurl %>);"
+		<% } %>
+		>
+		</div>
+		<% if(item.newOne == 1){ %>
+		<i class="new"></i>
+		<% } %>
+	</div>
+	<div class="info">
+		<p class="name"><span><%= item.nickname %></span></p>
+		<p class="time"><%= item.remark %></p>
+	</div>
+	<div class="opt-wrap">
+		<% if(item.canChat == 1){ %>
+		<a chart-href="/User/Customer/single?touser=<%= item.uid %>" tel="<%= item.phone %>" class="J-contact-him contact-btn">联系他</a>
+		<% }else{ %>
+		<a tel="<%= item.phone %>" class="J-contact-him contact-btn disabled">联系他</a>
+		<% } %>
+	</div>
+</li>
+<% }) %>

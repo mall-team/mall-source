@@ -1,0 +1,26 @@
+@import '/modules/common/common.less';
+
+.wrap{
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 50px percentage(20/640);
+}
+
+.img-wrap{
+	background-image: url(/images/goods/make-money.jpg);
+	.rect(100%, percentage(546/592));
+}
+
+.btn-wrap{
+	margin-top: 20px;
+
+	.btnl, .btnl:active{
+		display: block;
+		color: #92550b;
+		.gradient-linear (#faf07f, #faf07f, #f0c657);
+		margin: 0 auto;
+		width: percentage(540/592);
+	}
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<title>开店成功</title>
+	<link rel="stylesheet" type="text/css" href="/modules/shop-suc/index.less?__inline" />
+</head>
+<body >
+	<div style="display:none;">
+		<img src="http://cdn.taojinzi.com/static/images/logo-big_01d5127.png" />
+	</div>
+	<div class="wrap">
+		<section id="J-suc-msg" class="suc-msg dib-wrap">
+			<p>
+				<i class="icon-ok dib"></i>
+				<span class="dib">
+				开通店主成功！<br/>请下载客户端管理自己的店铺
+				</span>
+			</p>
+		</section>
+		<section class="suc-content">
+			<a id="J-download-guide" class="btnl btnl-border">立即下载</a>
+			<a href="" id="J-download-android" class="btnl btnl-border">立即下载</a>
+			<a href="" id="J-download-ios" class="btnl btnl-border">立即下载</a>
+		</section>
+		<ul id="J-nav" class="nav dib-wrap">
+			<li class="mall dib">
+				<a href="http://mall.taojinzi.com/">
+					<i class="icon"></i>
+					<label>淘金商城</label>
+				</a>
+			</li>
+			<li class="gift active dib">
+				<a>
+					<i class="icon"></i>
+					<label>开店</label>
+				</a>
+			</li>
+			<li class="mine dib">
+				<a href="http://mall.taojinzi.com/User/Center/index">
+					<i class="icon"></i>
+					<label>我的</label>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="J-guide" class="guide download"><i class="icon-guide"></i></div>
+	<script type="text/javascript">
+	var guideBtn;
+	var guidePanel;
+
+	if(isWeiXin()){
+		guideBtn = getEle('J-download-guide');
+		guidePanel = getEle('J-guide');
+
+		guideBtn.style.display = 'block';
+		guideBtn.onclick = function(evt){
+			guidePanel.style.display = 'block';
+
+		};
+		guidePanel.onclick = function(){
+			guidePanel.style.display = 'none';
+		};
+	}else if(isAndroid()){
+		getEle('J-download-android').style.display = 'block';
+	}else if(isIos()){
+		getEle('J-download-ios').style.display = 'block';
+	}else{
+		location.href = "http://www.taojinzi.com";
+	}
+
+	if(location.search.indexOf('tjzfrom=wemall') > -1){
+		getEle('J-suc-msg').style.display = 'block';
+		getEle('J-nav').style.display = 'block';
+	}
+
+	function getEle(id){
+		return document.getElementById(id);
+	}
+
+	function isWeiXin(){
+		return navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger';
+	}
+
+ 	(function(){
+ 		var ua = navigator.userAgent,
+		ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+  		ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/),
+ 		iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/);
+
+
+	 	function isAndroid(){
+			return navigator.userAgent.match(/(Android);?[\s\/]+([\d.]+)?/);
+		}
+
+		function isIos(){
+			var ua = navigator.userAgent;
+			return ua.match(/(iPhone\sOS)\s([\d_]+)/) || ua.match(/(iPad).*OS\s([\d_]+)/) || ua.match(/(iPod)(.*OS\s([\d_]+))?/);
+		}
+
+		function getVersion(){
+			var version = '';
+			
+			if (iphone && !ipod) version = iphone[2].replace(/_/g, '.');
+		    if (ipad) version = ipad[2].replace(/_/g, '.');
+		    if (ipod) version = ipod[3] ? ipod[3].replace(/_/g, '.') : null;
+		    return version;
+		}
+
+		window.detect = {
+			isAndroid: isAndroid,
+			isIos: isIos,
+			getVersion: getVersion
+		};
+
+ 	})();
+
+	
+
+	</script>
+</body>
+</html>

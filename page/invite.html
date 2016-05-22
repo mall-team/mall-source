@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>邀请码</title>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="/modules/invite/index.less" /> -->
+</head>
+<body>
+	<input id="J-qrcode-url" type="hidden" value="http://www.baidu.com" />
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<div class="bg-invite img-wrap"></div>
+	<div id="J-qrcode-img" class="qrcode-img"></div>
+	<p class="tip">长按保存到手机，发送给好友</p>
+	
+	<script type="text/javascript">
+		require('invite/index');
+	</script>
+</body>
+</html>

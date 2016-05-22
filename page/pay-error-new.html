@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>支付</title>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="address">
+		<a>
+			<i class="icon-addr"></i>
+			<ul>
+				<li class="addr-user">
+					<span class="user-name">李刀刀</span>
+					<span class="tel">15210010587</span>
+				</li>
+				<li class="addr-addr">浙江省杭州市白马广场浙江省杭州市白马广场浙江省杭州市白马广场</li>
+			</ul>
+			<i class="icon-arrow"></i>
+		</a>
+	</section>
+	<section class="cart-section">
+		<ul class="cart-list">
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+			<li>
+				<div class="img-wrap" style="background-image:url(/static/images/test/tuan-1.png)"></div>
+				<div class="goods-info">
+					<p class="goods-title">百雀羚化妆品套装女水嫩倍现护肤品四件套爽肤水乳液</p>
+					<div class="goods-attr">颜色:黄色 尺码:10</div>
+				</div>
+				<div class="price-wrap">
+					<span class="price"><i>&yen;</i><b>200.00</b></span>
+					<div class="goods-amount">x1</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section class="goods-trans">
+		<ul>
+			<li class="clearfix">
+				<label>运费</label>
+				<span class="price right"><i>&yen;</i><b>20.00</b></span>
+			</li>
+			<li class="clearfix">
+				<label>合计</label>
+				<span class="price price-total right"><i>&yen;</i><b>400.00</b></span>
+			</li>
+		</ul>
+	</section>
+	<section class="money-last disabled clearfix">
+		<label>余额</label>
+		<div class="right">
+			<span class="price"><i>&yen;</i><b>100.00</b></span>
+		</div>
+	</section>
+	<section class="money-calculate">
+		<div class="calculate">
+			<span class="price"><i>&yen;</i><b>400.00</b></span>
+			<span>+</span>
+			<span class="price"><i>&yen;</i><b>20.00</b></span>运费
+			<span>
+				<span>-</span>
+				<span class="price"><i>&yen;</i><b>100.00</b></span>余额
+			</span>
+			<span class="frost">(已冻结)</span>
+		</div>
+		<div class="result">还需支付:<span class="price"><i>&yen;</i><b>320.00</b></span></div>
+	</section>
+	<div class="error-tip">为避免订单失效，建议您在<b>15分钟</b>内完成支付</div>
+	<footer>
+		<a class="btnl btnl-wx">微信安全支付</a>
+		<a id="J-pay-other" class="btnl btnl-default">其它方式支付</a>
+	</footer>
+
+	<script type="text/javascript">
+		require('pay-new/index');
+	</script>
+</body>
+</html>

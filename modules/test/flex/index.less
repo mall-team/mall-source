@@ -1,0 +1,28 @@
+@import '../../common/common.less';
+
+.col{
+	.flex();
+
+	-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-direction: reverse;
+box-direction: reverse;
+		height: 400px;
+
+}
+
+.item{
+	background-color: yellow;
+	.flex-item();
+
+	// height: 100px;
+	margin-bottom: 5px;
+
+	&:nth-child(2){
+		background-color: red;
+	}
+
+	&:nth-child(3){
+		background-color: gray;
+	}
+}

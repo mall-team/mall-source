@@ -1,0 +1,7 @@
+<% $.each(list, function(i, item){ %>
+<li>
+	<span class="title"><%= item.consum_type %></span>
+	<span class="price <% if(item.payment_type==1){ %>income<% } %>"><%= item.amount %></span>
+	<span class="date"><%= item.create_time %></span>
+</li>
+<% }) %>

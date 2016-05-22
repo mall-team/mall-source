@@ -1,0 +1,110 @@
+@import '/modules/common/common.less';
+
+body{
+	background-color: #ef165d;
+}
+
+.user{
+	padding: 14px 20/640*100%;
+	background-color: #fff;
+
+	.dib{
+		vertical-align: middle;
+	}
+
+	.img-wrap{
+		.square();
+		width: 80/600*100%;
+		margin-right: 20/600*100%;
+	}
+
+	.user-info{
+		background-color: #a2e65b;
+		.border-radius(6px);
+		width: 500/600*100%;
+		padding: 10px 5px;
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			.bg-contain('/images/klj/icon-arrow.jpg', 7px/2, 15px/2);
+			position: absolute;
+			left: -3.5px;
+			top: 50%;
+			margin-top: -7.5px/2;
+		}
+	}
+
+	.user-des{
+		font-size: 14px;
+		b{
+			// color: #ffb40b;
+		}
+	}
+}
+
+// .main-img{
+// 	background-image: url(/images/klj/bg-browser.jpg);
+// 	.rect(100%, 664/640*100%);
+// 	margin-bottom: 52px;
+// }
+
+.content{
+	background-color: #fff;
+	text-align: center;
+	padding-bottom: 55px;
+
+	.main-title{
+		color: #ef165d;
+		font-size: 32px;
+		font-weight: bold;
+	}
+	.sub-title{
+		color: #ef165d;
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	.img-wrap{
+		background-color: #fff;
+		background-image: url(/images/klj/bg-broser.png);
+		// .rect(395/640*100%, 474/395*100%);
+		.rect(395/640*100%, 474/395*100%);
+		width: 56%;
+		margin: 0 auto;
+	}
+}
+
+.footer{
+	background-color: #ef165d;
+	height: 107px;
+	position: relative;
+	padding-top: 62px;
+
+	.ercode{
+		width: 110px;
+		height: 110px;
+		position: absolute;
+		left: 50%;
+		top: -55px;
+		margin-left: -55px;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	p{
+		color: #fff;
+		text-align: center;
+
+		&.tel{
+			opacity: .6;
+		}
+		a{
+			color: #fff;
+		}
+	}
+
+}

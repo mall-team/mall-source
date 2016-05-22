@@ -1,0 +1,41 @@
+@import '../common/ui/func.less';
+
+.shop-banner{
+	background-image: url(/images/shop-banner.png);
+	.rect(100%, 50%);
+}
+
+.shop-tys{
+	padding: 10px 15/640*100%;
+
+	>a{
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.img-wrap{
+		.bg-contain();
+		background-color: @bg-base-color;
+	}
+
+	.shop-t1{
+		background-image: url(/images/shop-t2.png);
+		.rect(100%, 355/612*100%);
+		margin-bottom: 10px;
+	}
+
+	.shop-t2{
+		background-image: url(/images/shop-t1.png);
+		.rect(100%, 325/612*100%);
+	}
+
+	.shop-t3{
+		background-image: url(/images/shop-t3.png);
+		.rect(100%, 285/612*100%);
+	}
+	.shop-t4{
+		background-image: url(/images/shop-t4.png);
+		.rect(100%, 285/612*100%);
+	}
+}
+

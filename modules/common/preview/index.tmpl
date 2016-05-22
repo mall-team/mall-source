@@ -1,0 +1,23 @@
+<div class="preview-container">
+	<div class="preview-close"></div>
+	<div id="banner" class='J-banner swipe'>
+		<div class="swipe-wrap">
+			<% $.each(imgArr, function(i, imgUrl){ %>
+			<div>
+				<a>
+					<div class="img-wrap">
+						<div class="img-inner">
+							<div class="img-table">
+								<div class="img-v">
+									<img src="<%= imgUrl %>" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		    <% }) %>
+	    </div>
+	    <div id="bannerPager" class="J-bannerPager"><span id="page"></span></div>
+	</div>
+</div>

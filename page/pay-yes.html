@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>支付</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+
+	<p class="tip">请在<b>14:58</b>内支付，过期订单将自动取消</p>
+
+	<section id="J-pay-way" class="pay-way">
+		<input id="J-radio" type="hidden" value="1" />
+		<div class="section-title">选择支付方式</div>
+		<ul>
+			<li class="active" value="1">
+				<i class="icon-wx"></i>
+				<label>微信支付</label>
+			</li>
+			<li value="2">
+				<i class="icon-alipay"></i>
+				<label>支付宝</label>
+			</li>
+			<li value="3">
+				<i class="icon-upay"></i>
+				<label>银联支付</label>
+			</li>
+			<li value="4">
+				<i class="icon-yue"></i>
+				<label>余额支付</label>
+			</li>
+		</ul>
+	</section>
+
+	<footer>
+		<div class="pay-val"><label>实付:</label><span class="price">&yen;<b>200</b></span></div>
+		<button class="btnl">确认支付</button>
+	</footer>
+
+	<script type="text/javascript">
+		require('pay-yes/index');
+	</script>
+</body>
+</html>

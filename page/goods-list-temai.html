@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>化妆品</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<input id="J-ajax-url" type="hidden" value="/index.php/goodslistAction/get_list_data" />
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="banner" style="background-image:url(/static/images/test/1.jpg)">
+		<div class="banner-layer clearfix">
+			<span>海洋基因嫩颜秘诀专场</span>
+			<span class="right">剩余<span timer="100000"></span></span>
+		</div>
+	</section>
+	<ul class="goods-order goods-order-tm">
+		<li class="goods-filter"><a><i class="icon"></i>有货</a></li>
+		<li class="active up"><a><i class="icon-arrow-down"></i>销量</a></li>
+		<li><a><i class="icon-arrow-down"></i>价格</a></li>
+	</ul>
+	<section id="J-goods-list" class="goods-list">
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)">
+				<div class="empty">已抢光</div>
+			</div>
+			<div class="goods-title">clinique超值润肤水1,clinique超值润肤水1</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm right">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水1,clinique超值润肤水1</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm right">3折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水1,clinique超值润肤水1</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水1,clinique超值润肤水1</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水1,clinique超值润肤水1</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水1,clinique超值润肤水1</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水1,clinique超值润肤水1</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+	</section>
+	<div id="J-loading" class="loading-icon-wrap"><i class="loading-icon"></i></div>
+	<script type="text/javascript">
+		require('goods-list/index');
+	</script>
+</body>
+</html>

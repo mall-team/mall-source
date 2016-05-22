@@ -1,0 +1,94 @@
+@import '../global.less';
+
+@nav-border-color: #a3a3a3;
+@nav-color: #818183;
+@nav-color-sel: #46bf18;
+@nav-height: 50px;
+
+.record-nav{
+	.border-top(@nav-border-color);
+	.flex();
+	height: @nav-height;
+	line-height: @nav-height;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: @pageWid;
+	margin: 0 auto;
+	z-index: 1000;
+
+
+	>li{
+		.flex-item();
+		font-size: 0;
+
+		>a{
+			display: inline-block;
+			line-height: 1;
+			width: 100%;
+			vertical-align: middle;
+		}
+
+		i{
+			display: inline-block;
+			.bg-contain();
+			height: 19px;
+			width: 21px;
+		}
+
+		p{
+			color: @nav-color;
+			font-size: 12px;
+			margin-top: 5px;
+		}
+
+		&:nth-child(1){
+			i{
+				background-image: url(/images/record/nav/index.png);
+			}
+		}
+		&:nth-child(2){
+			i{
+				background-image: url(/images/record/nav/find.png);
+			}
+		}
+		&:nth-child(3){
+			i{
+				background-image: url(/images/record/nav/record.png);
+			}
+		}
+		&:nth-child(4){
+			i{
+				background-image: url(/images/record/nav/mine.png);
+			}
+		}
+
+		&.active{
+			&:nth-child(1){
+				i{
+					background-image: url(/images/record/nav/index-sel.png);
+				}
+			}
+			&:nth-child(2){
+				i{
+					background-image: url(/images/record/nav/find-sel.png);
+				}
+			}
+			&:nth-child(3){
+				i{
+					background-image: url(/images/record/nav/record-sel.png);
+				}
+			}
+			&:nth-child(4){
+				i{
+					background-image: url(/images/record/nav/mine-sel.png);
+				}
+			}
+
+			p{
+				color: @nav-color-sel;
+			}
+		}
+
+	}
+}

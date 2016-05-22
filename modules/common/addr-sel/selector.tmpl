@@ -1,0 +1,3 @@
+<% $.each(list, function(i, item){ %>
+<option value="<%= item.region_id %>" <%= (id==item.region_id&&id>0?'selected="selected"':'') %> ><%= item.region_name %></option>
+<% }) %>

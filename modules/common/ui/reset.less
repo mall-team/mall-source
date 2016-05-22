@@ -1,0 +1,247 @@
+@import "func.less";
+
+/*CSS Reset*/
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+table{border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	font-weight: normal;
+}
+ul,ol,li{list-style: none;}
+em,i{font-style: normal;}
+img{border: none;}
+input,img{vertical-align: middle;}
+input, button{
+	border: 0;
+}
+input:focus, button:focus{
+	outline: none;
+}
+input {
+    -webkit-user-select: auto !important;
+    user-select: auto !important;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+/*隐藏type=number箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number] {-moz-appearance: textfield;}
+body{
+	background-color: @bg-base-color;
+	color: @text-base-color;
+	font-size: @text-base-size;
+	font-family: arial,sans-serif,Microsoft YaHei;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	line-height: 1.25;
+	max-width: 640px;
+	margin: 0 auto;
+	-webkit-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+    // min-height: 650px;
+    // position: relative;
+}
+a{
+	color: @text-base-color;
+	text-decoration:none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+a:visited{
+	color: @text-base-color;
+	text-decoration:none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+.wrap{
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.row{
+	margin: 0 20/640 * 100%;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.dib-wrap{
+	font-size: 0;
+}
+.dib{
+	display: inline-block;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.flex{
+	.flex();
+}
+
+.flex-item{
+	.flex-item();
+}
+
+.clearfix:after {
+	display: block;
+	content: '';
+	clear: both;
+	visibility: hidden;
+}
+
+.btn, a.btn{
+	background-color: @btn-base-color;
+	.rounded-corners(3px);
+	border: 0;
+	color: @btn-base-txt-color;
+	display: inline-block;
+	line-height: 29px;
+	padding: 0 17px;
+	font-size: 14px;
+}
+.btn:active, a.btn:active{
+	color: #ccc;
+	background-color: #bb0061;
+}
+
+.btn-sm, a.btn-sm{
+	height: 16px;
+	line-height: 16px;
+	padding: 0 7px;
+}
+
+/**
+ * 长按钮
+ */
+.btnl, a.btnl{
+  background-color: @bg-main-color;
+  .rounded-corners(4px);
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+}
+.btnl:active, a.btnl:active{
+	color: #ccc;
+	background-color: #bb0061;
+}
+.btnl.disabled, .btnl.disabled:active{
+	background-color: #c8c8c8;
+	color: #fff;
+}
+.btnl-default, a.btnl-default{
+	background-color: #fff;
+	color: @text-gray-color;
+	border: 1px solid @border-base-color;
+}
+.btnl-default:active, a.btnl-default:active{
+	background-color: #e1e1e1;
+	color: #50555a;
+}
+.btnl-wx, a.btnl-wx{
+	background-color: @color-wx;
+}
+.btnl-wx:active, a.btnl-wx:active{
+	background-color: #009200;
+	color: #ccc;
+}
+
+.btnl-border, a.btnl-border{
+	border: 1px solid @bg-main-color;
+	background-color: @bg-section-color;
+	color: @bg-main-color;
+}
+
+.btnl-border:active, a.btnl-border:active{
+	background-color: @bg-main-color;
+	color: #fff;
+}
+
+.btnl-disabled, a.btnl-disabled{
+	background-color: #c8c8c8;
+}
+
+
+// .img-wrap{
+// 	display: table;
+
+// 	.img-c{
+// 		display: table-cell;
+// 		vertical-align: middle;
+// 	}
+// 	img{
+// 		max-width: 100%;
+// 		max-height: 100%;
+// 	}
+// }
+
+
+.loading-icon-wrap {
+  text-align: center;
+  padding: 5px;
+  height: 32px;
+  position: relative;
+
+  .hide{
+  	display: none;
+  }
+}
+.loading-icon {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  margin-left: -16px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid @bg-main-color;
+  border-radius: 24px;
+  -webkit-animation: gif 1s infinite linear;
+  animation: gif 1s infinite linear;
+  clip: rect(0 auto 12px 0);
+}
+
+@-webkit-keyframes gif{
+	0%{
+	}
+	100%{
+		.transform(rotateZ(360deg));
+	}
+}
+
+.img-wrap{
+	background-color: @bg-load-color;
+	.bg-cover();
+	overflow: hidden;
+}
+
+.copyright{
+	text-align: center;
+	padding: 10px 0 5px;
+	i{
+		display: inline-block;
+		.bg-contain('/images/copyright.png?__inline', 75px, 25px);
+	}
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>化妆品</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<!--列表url-->
+	<input id="J-ajax-url" type="hidden" value="/Mall/Home/getListData?id=8" />
+	
+	<!--
+		@require "/modules/common/common.less"
+		@require "/modules/common/header/header.less"
+	-->
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<section class="banner" style="background-image:url(/static/images/test/1.jpg)">
+		<div class="banner-layer clearfix">
+			<span>海洋基因嫩颜秘诀专场</span>
+		</div>
+	</section>
+	<ul class="goods-order">
+		<li class="cat-panel">
+			<a id="J-cat-btn"><i class="icon-cat"></i><span class="cat-name">精化液</span></a>
+			<ul id="J-cat-list" class="cat-list">
+				<li>
+					<a>全部</a>
+				</li>
+				<li>
+					<a>精化液</a>
+				</li>
+				<li>
+					<a>精化液</a>
+				</li>
+				<li class="active">
+					<a>精化液</a>
+				</li>
+				<li>
+					<a>精化液</a>
+				</li>
+				<li>
+					<a>精化液</a>
+				</li>
+				<li>
+					<a>精化液</a>
+				</li>
+				<li>
+					<a>精化液</a>
+				</li>
+				<li>
+					<a>精化液</a>
+				</li>
+			</ul>
+		</li>
+		<!-- <li class="active up"><a><i class="icon-arrow-down"></i>销量</a></li>
+		<li><a><i class="icon-arrow-down"></i>价格</a></li> -->
+	</ul>
+	<section id="J-goods-list" class="goods-list">
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水值润肤水值润肤水值润肤水<润肤水<润肤水</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm right">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水值润肤水值润肤水值润肤水</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水值润肤水值润肤水值润肤水</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水值润肤水值润肤水值润肤水</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水值润肤水值润肤水值润肤水</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水值润肤水值润肤水值润肤水</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="img-wrap" style="background-image: url(/static/images/test/tm-1.png)"></div>
+			<div class="goods-title">clinique超值润肤水值润肤水值润肤水值润肤水</div>
+			<div class="clearfix">
+				<label class="price"><i>&yen;</i><b>128.55</b></label>
+				<label class="btn btn-sm">7.8折</label>
+			</div>
+		</div>
+	</section>
+	<div id="J-loading" class="loading-icon-wrap"><i class="loading-icon"></i></div>
+	<!-- <div class="copyright"><i></i></div> -->
+	<script type="text/javascript">
+		require('goods-list/index');
+	</script>
+</body>
+</html>

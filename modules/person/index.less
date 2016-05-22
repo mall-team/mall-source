@@ -1,0 +1,285 @@
+@import '../common/ui/func.less';
+
+body{
+	padding-bottom: 50px;
+}
+body > section{
+	background-color: @bg-section-color;
+	margin-bottom: 10px;
+}
+
+.icon-erwei{
+	display: inline-block;
+	.bg-contain('/images/person-erwei.png', 16px, 16px);
+}
+
+.icon-arrow{
+	display: inline-block;
+	.bg-contain('/images/arrow.png', 7px, 12px);
+}
+
+// .icon-order{
+// 	display: inline-block;
+// 	.bg-contain('/images/my-order.png?__inline', 20px, 18px);
+// }
+
+.icon-money{
+	display: inline-block;
+	.bg-contain('/images/my-money.png', 20px, 20px);
+}
+
+.icon-cart{
+	display: inline-block;
+	.bg-contain('/images/my-cart.png', 20px, 20px);
+}
+
+.icon-addr{
+	display: inline-block;
+	.bg-contain('/images/my-addr.png', 20px, 20px);
+}
+
+.icon-que{
+	display: inline-block;
+	.bg-contain('/images/my-que.png', 20px, 20px);
+}
+
+.icon-activity{
+	display: inline-block;
+	.bg-contain('/images/icon-activity.png', 20px, 20px);
+}
+
+.icon-chat{
+	display: inline-block;
+	.bg-contain('/images/icon-chat.png', 20px, 20px);
+}
+
+.icon-partner{
+	display: inline-block;
+	.bg-contain('/images/icon-partner.png', 20px, 20px);
+}
+
+.icon-invite{
+	display: inline-block;
+	.bg-contain('/images/icon-invite.png', 20px, 20px);
+}
+
+.icon-service{
+	display: inline-block;
+	.bg-contain('/images/person/icon-service.png', 20px, 20px);
+}
+
+.icon-shop-invite{
+	display: inline-block;
+	.bg-contain('/images/icon-shop-invite.png', 20px, 20px);
+}
+
+.icon-pf{
+	display: inline-block;
+	.bg-contain('/images/icon-pf.png', 20px, 20px);
+}
+
+.icon-taobi{
+	display: inline-block;
+	.bg-contain('/images/icon-taobi.png', 20px, 20px);
+}
+
+.icon-other{
+	display: inline-block;
+	.bg-contain('/images/person/icon-other.png', 20px, 20px);
+}
+
+section.person{
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding: 14px 40/640*100% 10px 30/640*100%;
+
+	.img-wrap{
+		background-image: url(/images/default.png?__inline);
+		width: 120/570*100%;
+		.circle();
+		margin-right: 30/570*100%;
+		vertical-align: middle;
+	}
+	.user-info{
+		width: 268/570*100%;
+		vertical-align: middle;
+	}
+	.user-name{
+		font-size: 15px;
+		margin-bottom: 6px;
+	}
+	.user-des{
+		color: @text-light-color;
+		font-size: 12px;
+
+	}
+	.erwei-wrap{
+		width: 152/570*100%;
+		text-align: right;
+		padding-top: 20px;
+	}
+}
+
+.wealth-list{
+	background-color: #fafafa;
+	line-height: 1;
+	.flex();
+	margin-top: 1px;
+	margin-bottom: 10px;
+	padding: 10px 0 8px;
+	position: relative;
+
+	// &:after{
+	// 	content: '';
+	// 	background-color: #d7d7d7;
+	// 	display: block;
+	// 	height: 44px;
+	// 	width: 1px;
+	// 	.transform(scale(0.5));
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	top: 50%;
+	// 	margin-top: -22px;
+	// 	margin-left: -0.5px;
+	// }
+
+	li{
+		.flex-item();
+
+		>a{
+			display: block;
+		}
+
+		label{
+			color: @bg-main-color;
+			font-size: 12px;
+		}
+
+		p{
+			color: @text-light-color;
+			font-size: 12px;
+			margin-top: 6px;
+		}
+	}
+}
+
+section.order{
+
+
+}
+
+.order-list{
+	.flex();
+	padding: 10px 0 12px 10px;
+	// border-bottom: 1px solid @border-base-color;
+
+	>a{
+		display: block;
+		.flex-item();
+		text-align: center;
+
+		.icon{
+			.bg-contain();
+			display: block;
+			width: 100%;
+			height: 20px;
+			margin-bottom: 5px;
+			position: relative;
+		}
+		.num{
+			background-color: #f33125;
+			.border-radius(50%);
+			color: #fff;
+			display: block;
+			width: 18px;
+			height: 18px;
+			position: absolute;
+		    left: 50%;
+		    top: -6px;
+		    margin-left: 2px;
+
+		}
+
+		label{
+			font-size: 12px;
+			color: @text-gray-color;
+		}
+
+		&:nth-child(1){
+			.icon{
+				background-image: url(/images/pay-1.png?__inline);
+			}
+		}
+		&:nth-child(2){
+			.icon{
+				background-image: url(/images/pay-2.png?__inline);
+			}
+		}
+		&:nth-child(3){
+			.icon{
+				background-image: url(/images/pay-3.png?__inline);
+			}
+		}
+		&:nth-child(4){
+			.icon{
+				background-image: url(/images/my-order.png?__inline);
+			}
+		}
+	}
+}
+
+.item-bar{
+	border-bottom: 1px solid @border-base-color;
+	display: block;
+	height: 45px;
+	line-height: 44px;
+	margin-left: 40px;
+	position: relative;
+
+	&.main-color{
+		label{
+			color: red;
+		}
+	}
+
+	&:last-child{
+		border-bottom: 0;
+	}
+
+	>i{
+		position: absolute;
+		left: -30px;
+		top: 11px;
+	}
+	label{
+		color: @text-gray-color;
+		font-size: 15px;
+	}
+	.icon-arrow{
+		position: absolute;
+		right: 10px;
+		top: 16px;
+	}
+
+}
+
+.exit-wrap{
+	background-color: transparent;
+	text-align: center;
+	padding-top: 25px;
+
+	a, a:active{
+		color: @bg-main-color;
+	}
+}
+
+.klj-section{
+
+}
+.klj-link{
+	display: block;
+	.bg-cover();
+	background-image: url(/images/klj/klj-rk.jpg);
+	.rect(100%, 100/640*100%);
+	overflow: hidden;
+}

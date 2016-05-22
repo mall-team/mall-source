@@ -1,0 +1,127 @@
+@import '../common/common.less';
+
+.icon-share{
+	display: block;
+	.bg-contain('/images/share.png?__inline', 23px, 18px);
+}
+
+.wrap{
+	padding: 15px 0;
+}
+
+.tj-section{
+	margin-bottom: 10px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.section-title{
+		background-color: #fff;
+		height: 37px;
+		line-height: 37px;
+		padding-left: 6px;
+	}
+
+	h3{
+		border-left: 2px solid @label-active-color;
+		display: inline-block;
+		font-size: 15px;
+		line-height: 1;
+		padding-left: 7px;
+	}
+
+	&.section-mg{
+		.section-title{
+			margin-bottom: 1px;
+			// border-bottom: 1px solid @border-base-color;
+		}
+		.temai-list{
+			padding-top: 10px;
+		}
+	}
+}
+/*砍价与团购共用*/
+.tj-section-common{
+	.section-item{
+		margin-bottom: 5px;
+		position: relative;
+	}
+
+	.img-wrap{
+		.rect(100%, 50%);
+	}
+
+	.item-infos{
+		background-color: #fff;
+		padding: 10px 15px 11px;
+		position: relative;
+		font-size: 0;
+	}
+	.item-title{
+		font-size: 12px;
+		margin-bottom: 18px;
+		// max-width: 414/580 * 100%;
+	}
+	.price-min{
+		color: @label-active-color;
+		margin-right: 10px;
+		line-height: 1;
+		>label{
+			font-size: 12px;
+			margin-right: 5px;
+		}
+		>.price{
+			font-size: 18px;
+		}
+	}
+	.price-origin{
+		color: @text-gray-color;
+		font-size: 12px;
+		line-height: 1;
+	}
+	.btn, .icon-share{
+		margin-top: -10px;
+	}
+}
+
+.timer-tag{
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	text-align: center;
+
+	.amount{
+		background-color: rgba(234, 0, 121, 0.6);
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+		height: 20px;
+		line-height: 20px;
+		padding: 0 8px;
+	}
+	.timer{
+		background-color: #fff;
+		border: 1px solid @bg-main-color;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		color: @text-gray-color;
+		height: 20px;
+		line-height: 18px;
+		padding: 0 8px;
+		position: relative;
+
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: -4px;
+			left: 50%;
+			margin-left: -2px;
+			.transform(rotateZ(180deg));
+
+			.triangle(#fff, 2px);
+		}
+	}
+}

@@ -1,0 +1,67 @@
+@import '../common/common.less';
+
+@color-main: #ffb406;
+@color-section: #ffeeaa;
+@text-color: #be7e41;
+@text-base-color: #d44817;
+@text-section-color: #f57338;
+
+body{
+	background-color: #fff;
+	line-height: 1.33em;
+}
+
+.wrap{
+	padding: 80px 30/640*100%;
+}
+
+
+.result{
+	background-color: @color-section;
+	color: @text-base-color;
+	.border-radius(6px);
+	font-size: 12px;
+	min-height: 225px;
+	padding: 30px 30/580*100% 37px;
+	margin-bottom: 20px;
+	position: relative;
+
+	.user{
+		.bg-contain('/images/game/result-top.png', 553px/2, 63px/2);
+		position: absolute;
+		top: -63px/4;
+		left: 50%;
+		margin-left: -553px/4;
+
+		.img-wrap{
+			.bg-cover();
+			.circle();
+			width: 60px;
+			position: absolute;
+			top: -38px;
+			left: 50%;
+			margin-left: -30px;
+		}
+	}
+
+	.title{
+		margin-bottom: 28px;
+	}
+
+	.worth{
+		font-size: 50px;
+		text-align: center;
+		line-height: 1;
+		margin-bottom: 25px;
+	}
+
+	.des{
+		padding: 0 60/520*100%;
+	}
+}
+
+.btn-wrap{
+	.btnl{
+		margin-bottom: 10px;
+	}
+}

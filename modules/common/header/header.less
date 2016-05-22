@@ -1,0 +1,43 @@
+@import '../ui/func.less';
+@import '../atten-panel/index.less';
+
+header{
+	background-color: @bg-header-color;
+	height: 37px;
+	line-height: 37px;
+	padding: 0 15px 0 10px;
+	position: relative;
+
+	>a{
+		color: @label-base-color;
+		display: inline-block;
+		font-size: 12px;
+		&:active, &:visited{
+			color: @label-base-color;
+		}
+	}
+	label{
+		vertical-align: middle;
+	}
+
+	i[class^='icon-']{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	.btn-order{
+		position: absolute;
+		right: 10px;
+		top: 0;
+	}
+
+	.icon-fir{
+		.bg-contain('/images/index.png?__inline', 21px, 37px);
+	}
+
+	.icon-order{
+		.bg-contain('/images/order.png?__inline', 15px, 37px);
+	}
+
+}

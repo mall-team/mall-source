@@ -1,0 +1,89 @@
+@import '/modules/common/common.less';
+
+input[type="text"], input[type="password"], select{
+	background-color: #fff;
+	border: 1px solid #d3d3d3;
+	.border-radius(4px);
+	color: #646464;
+	display: block;
+	height: 40px;
+	width: 100%;
+	padding: 0 11px;
+}
+
+header{
+	background-color: #fff;
+	color: @bg-main-color;
+	font-size: 16px;
+	line-height: 47px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.container{
+	padding: 0 20/640*100%;
+}
+
+.summary{
+	color: #969696;
+	font-size: 13px;
+	margin-top: -2px;
+	margin-bottom: 27px;
+
+	p{
+		margin-bottom: 6px;
+	}
+}
+
+.edit-content{
+	dt{
+		color: #333;
+		font-size: 15px;
+		line-height: 1;
+		margin-bottom: 14px;
+
+		input[type="checkbox"]{
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			vertical-align: top;
+			margin-left: 10px;
+		}
+	}
+	dd{
+		margin: 0 55/600*100% 30px;
+
+		input[type="password"]{
+			display: none;
+		}
+	}
+}
+
+.btn-wrap{
+
+	.btnl-border{
+		display: block;
+		margin: 0 55/600*100% 32px;
+		width: auto;
+	}
+
+	>p{
+		border-top: 1px solid #dadada;
+		margin: 0 25/600*100%;
+		padding: 32px 30/600*100%;
+		font-size: 0;
+
+		.btnl{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 15px;
+		}
+		.btnl.cancel{
+			width: 210/490*100%;
+			margin-right: 5/490*100%;
+		}
+		.btnl.ok{
+			width: 275/490*100%;
+		}
+	}
+}

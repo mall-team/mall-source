@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<title>淘金子</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+	<script type="text/javascript">
+	//测试数据，套页面时可删掉
+	setTimeout(function(){
+		phpdata = {
+			serverTime: 21005
+		}
+	}, 500);
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="atten-panel clearfix">
+			<a class="logo"></a>
+			<a class="atten-btn">点击关注</a>
+			<p>
+				点击关注淘金子商城<br/>
+				赢好礼、享实惠
+			</p>
+		</div>
+		<section class="tj-section">
+			<div id="banner" class='swipe'>
+				<div class="swipe-wrap">
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" style="background-image:url(/static/images/index-new/test/5.jpg)"></div>
+						  </a>
+					</div>
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" style="background-image:url(/static/images/index-new/test/6.jpg)"></div>
+						  </a>
+					</div>
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" style="background-image:url(/static/images/index-new/test/7.jpg)"></div>
+						  </a>
+					</div>
+					<div>
+					      <a href="#">
+					      	<div class="img-wrap" style="background-image:url(/static/images/index-new/test/8.jpg)"></div>
+						  </a>
+					</div>
+				</div>
+				<div id="bannerPager"><span id="page"></span></div>
+			</div>
+		</section>
+		<section class="tj-tab">
+			<ul class="tab-nav">
+				<li class="active">
+					<a tmpl-href="cut-list.tmpl">
+						<label>全民疯砍</label>
+					</a>
+				</li>
+				<li>
+					<a tmpl-href="worth-list.tmpl">
+						<label>值得买</label>
+					</a>
+				</li>
+				<li>
+					<a tmpl-href="overseas.tmpl">
+						<label>跨境购</label>
+					</a>
+				</li>
+				<li>
+					<a tmpl-href="hot-list.tmpl">
+						<label>热卖</label>
+					</a>
+				</li>
+			</ul>
+			<div class="tab-container">
+				
+			</div>
+		</section>
+		<a class="cart"><i>2</i></a>
+		<ul class="nav">
+			<li class="mall active">
+				<a>
+					<i class="icon"></i>
+					<label>淘金商城</label>
+				</a>
+			</li>
+			<li class="gift">
+				<a>
+					<i class="icon"></i>
+					<label>开店</label>
+				</a>
+			</li>
+			<li class="mine">
+				<a>
+					<i class="icon"></i>
+					<label>我的</label>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+        require('index-new2/index');
+    </script>
+</body>
+</html>

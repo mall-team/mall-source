@@ -1,0 +1,234 @@
+@import '../common/ui/func.less';
+@import '../common/tuan-steps/index';
+@import '/modules/common/ui/rem.less';
+
+body{
+	padding-bottom: 60px;
+}
+
+.tuan-steps{
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+.tuan-rule-wrap{
+	text-align: right;
+	padding-right: 20/640*100%;
+}
+
+.tuan-rule-link{
+	color: #5388bb;
+	font-size: 12px;
+}
+
+.tuan-suc{
+	background-color: #f1f1f1;
+	color: @text-suc-color;
+	padding: 18px 0;
+	font-size: 18px;
+	text-align: center;
+
+	.icon-suc{
+		.bg-contain('/images/ok.png?__inline', 28px, 28px);
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	>span{
+		vertical-align: middle;
+	}
+}
+
+.tuan-join{
+	color: @bg-main-color;
+}
+
+.tuan-info{
+	background-color: @bg-section-color;
+	padding: 10px;
+	position: relative;
+
+	.img-wrap{
+		width: 140/600 * 100%;
+		.square();
+		margin-right: 26/600 * 100%;
+	}
+	.info-r{
+		width: 434/600 * 100%;
+	}
+	.item-title{
+		color: @text-gray-color;
+		font-size: 12px;
+		margin-top: 3px;
+		margin-bottom: 17px;
+	}
+	.item-b{
+		line-height: 1;
+	}
+	.amount{
+		color: #999;
+	}
+	.price{
+		float: right;
+		i{
+			font-size: 12px;
+			font-style: normal;
+			margin-right: 2px;
+		}
+		b{
+			font-weight: normal;
+			font-size: 15px;
+		}
+	}
+	.state{
+		.bg-contain();
+		width: 70/20rem;
+		.square();
+		overflow: hidden;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -35/20rem;
+
+		&.suc{
+			background-image: url(/images/tuan/tuan-suc.png);
+		}
+		&.fail{
+			background-image: url(/images/tuan/tuan-fail.png);
+		}
+	}
+}
+
+.tuan-timer{
+	// background-color: @bg-base-color;
+	color: @text-light-color;
+	padding: 12px 0;
+	font-size: 12px;
+	line-height: 1;
+	text-align: center;
+}
+
+.tuan-list{
+	background-color: @bg-section-color;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+.tuan-person{
+	font-size: 0;
+	padding: 10px 20/640 * 100% 18px;
+
+	>li{
+		.bg-contain();
+		background-image: url(/images/who.png?__inline);
+		display: inline-block;
+		width: 100/640 * 100%;
+		.square();
+		.circle();
+		margin: 0 50/600 * 100% 22px;
+		position: relative;
+
+		>span{
+			color: @text-gray-color;
+			display: inline-block;
+			.ellipsis();
+			font-size: 12px;
+			line-height: 1;
+			text-align: center;
+			width: 120%;
+			margin-left: -10%;
+			position: absolute;
+			top: 105/100*100%;
+			left: 0;
+			z-index: 2;
+		}
+
+		.icon-paying, .icon-payed{
+			display: block;
+			.bg-contain('/images/tuan-paying.png?__inline', 43px, 22px);
+			position: absolute;
+			top: -4px;
+			right: -25px;
+			z-index: 2;
+		}
+
+		.icon-payed{
+			background-image: url(/images/tuan-payed.png?__inline);
+		}
+
+	}
+}
+.tuan-tip{
+	color: @text-light-color;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 15px;
+
+	.amount{
+		color: @bg-main-color;
+		font-size: 18px;
+	}
+}
+
+.goods-des{
+	background-color: #fff;
+	.section-title{
+		font-size: 15px;
+		line-height: 37px;
+		padding: 0 20/640*100%;
+	}
+	.goods-des-content{
+		img{
+			width: 100%;
+		}
+	}
+}
+
+// .tuan-rule{
+// 	background-color: @bg-section-color;
+// 	.section-title{
+// 		border-bottom: 1px solid @border-base-color;
+// 		height: 36px;
+// 		line-height: 36px;
+// 		font-size: 12px;
+// 		padding-left: 20/640*100%;
+// 		margin-bottom: 10px;
+// 	}
+
+// 	.rule-content{
+// 		padding: 20/640*100%;
+// 	}
+
+// 	.img-wrap{
+// 		background-color: #fff;
+// 		.bg-contain('/images/tuan-rule.png?__inline', 100%, 28px);
+// 	}
+// 	ol{
+// 		padding-top: 15px;
+// 		li{
+// 			color: @text-light-color;
+// 			font-size: 12px;
+// 			margin-bottom: 15px;
+// 			padding-left: 32px;
+// 			position: relative;
+
+// 			>label{
+// 				display: inline-block;
+// 				width: 32px;
+// 				vertical-align: middle;
+// 				position: absolute;
+// 				left: 0;
+// 				top: 50%;
+// 				margin-top: -7px;
+// 			}
+// 		}
+// 	}
+
+// }
+
+.footer();
+
+footer{
+	background-color: #fafafa;
+	border-top: 1px solid @border-base-color;
+	padding: 5px 10px;
+}

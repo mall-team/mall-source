@@ -1,0 +1,29 @@
+<% $.each(list, function(i, item){ %>
+<li tel="<%= item.cellphone %>" 
+	<% if(item.canChat == 1){ %>
+	chart-href="/User/Customer/single?touser=<%= item.customer_id %>"
+	<% } %>>
+	<div class="img-wrap" 
+	<% if(item.head_sculpture){ %>
+	style="background-image: url(<%= item.head_sculpture %>)"
+	<% } %>
+	></div>
+	<div class="info">
+		<p class="name"><%= item.nickname %>
+			<% if(item['order_id']){ %>
+			<span class="state complete">未支付</span>
+			<% }else{ %>
+			<span class="state doing">未下单</span>
+			<% } %>
+		</p>
+		<p class="time"><%= item.create_time %></p>
+	</div>
+	<div class="btn-wrap">
+		<% if(item.canChat == 1){ %>
+		<a class="btn-contact">联系他</a>
+		<% }else{ %>
+		<a class="btn-contact disabled">联系他</a>
+		<% } %>
+	</div>
+</li>
+<% }) %>

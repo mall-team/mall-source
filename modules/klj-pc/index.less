@@ -1,0 +1,251 @@
+@import '/modules/common/ui/func.less';
+
+@bg-1: #dd054d;
+@bg-2: #302f3c;
+@bg-3: #e10154;
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.bg-1{
+	background-color: @bg-1;
+}
+
+.bg-2{
+	background-color: @bg-2;
+}
+
+.bg-3{
+	background-color: @bg-3;
+}
+
+.item-content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+.img-wrap{
+	position: relative;
+}
+
+img{
+	width: 100%;
+}
+
+
+body{
+	font-family: 微软雅黑;
+	line-height: 1;
+	font-size: 0;
+	// background-color: #dd054d;
+}
+
+.section{
+	position: relative;
+
+	.section-inner{
+		position: absolute;
+		left: 50%;
+		top: 0;
+		width: 990px;
+		height: 100%;
+		margin-left: -495px;
+		z-index: 2;
+	}
+}
+
+
+.header{
+	position: relative;
+
+	.img-wrap{
+		width: 1440px;
+		margin: 0 auto;
+	}
+}
+
+.container{
+		
+	.section{
+
+	}
+
+	.img-wrap{
+		position: relative;
+		width: 990px;
+		margin: 0 auto;
+	}
+
+}
+
+.send-red{
+	color: #d41048;
+	font-size: 24px;
+	text-align: center;
+	position: absolute;
+	top: 448px;
+    left: 514px;
+	width: 408px;
+	height: 134px;
+
+	p{
+		margin-top: 20px;
+	}
+
+	.money{
+		font-size: 52px;
+
+		small{
+			font-size: 24px;
+			margin-left: 5px;
+		}
+	}
+
+	.money-ani{
+		-webkit-animation: shan 0.5s ease-in;
+		animation: shan 0.5s ease-in;
+  		display: inline-block;
+	}
+}
+
+@-webkit-keyframes shan{
+	0%{
+		opacity: 1;
+		-webkit-transform: scale3d(1, 1, 1);
+		// .transform(scale3d(1, 1, 1));
+	}
+	50%{
+		opacity: 0.2;
+		-webkit-transform: scale3d(1.2, 1.2, 1.2);
+		// .transform(scale3d(1.2));
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: scale3d(1, 1, 1);
+		// .transform(scale3d(1, 1, 1));
+	}
+}
+
+.section-ercode{
+	padding-bottom: 600px;
+
+	.ercode-content{
+		width: 612px;
+		height: 368px;
+		margin: 35px auto 100px;
+		text-align: center;
+
+		img{
+			display: inline-block;
+			width: 245px;
+			height: 245px;
+			margin-bottom: 30px;
+		}
+		p{
+			color: #fff;
+			font-size: 30px;
+		}
+	}
+
+	.them-tip{
+		color: #fff;
+		font-size: 30px;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+	.them-list{
+		width: 850px;
+		margin: 0 auto;
+
+		li{
+			text-align: center;
+			color: #fff;
+			text-align: center;
+			float: left;
+			width: 170px;
+			margin-right: 168px;
+		}
+
+		.first-child{
+			.img-inner{
+				background-image: url(/images/klj/xiao.jpg);
+			}
+		}
+		.second-child{
+			.img-inner{
+				background-image: url(/images/klj/default.png);
+			}
+		}
+		.last-child{
+			margin-right: 0;
+
+			.img-inner{
+				background-image: url(/images/klj/default.png);
+				// background-image: url(/images/klj/wang.png);
+			}
+		}
+
+		.ceo{
+			.img-inner{
+				background-image: url(/images/klj/wu.png);
+			}
+		}
+		.wdf{
+			.img-inner{
+				background-image: url(/images/klj/wang.png);
+			}
+		}
+
+		.head-img{
+			background-color: #bc3c34;
+			display: inline-block;
+			.circle();
+			width: 170px;
+			height: 170px;
+			position: relative;
+			margin-bottom: 26px;
+		}
+
+		.img-inner{
+			.bg-cover();
+			.circle();
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			background-repeat: no-repeat;
+		}
+
+		.name{
+			color: #fff;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		.des{
+			font-size: 21px;
+			opacity: .6;
+			width: 100%;
+			line-height: 1.5;
+		}
+	}
+}
+
+.flash-item{
+	margin: 0 auto;
+    width: 480px;
+    height: 388px;
+    padding-bottom: 60px;
+}

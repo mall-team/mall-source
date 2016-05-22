@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection"> 
+	<link rel="stylesheet" href="/p/game-sign/index/webh5.css" />
+    <link rel="stylesheet" href="/p/game-sign/index/base.css" />
+    <link rel="stylesheet" href="/p/game-sign/index/signin_new6.css" />
+     <style type="text/css">
+   #login2View .h5-list-div span{
+	
+	width:78px;
+   }
+    </style>
+    <script type="text/javascript" src="/lib/mod.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/p/common/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/p/common/jquery/jquery.rotate.min.js"></script>
+    
+	<!-- // <script src="/p/game-sign/index/webh5v2core.js"></script> -->
+	<!-- // <script src="/p/game-sign/index/main.js"></script> -->
+    <title>签到抽奖</title>
+</head>
+<body class="body">
+	<div id="wrapper" class="homeapp_wrapper">
+		<div id="headerLayout" style="margin-bottom:0px;">
+			<div id="normalHeader" class="h5-header" style="display: none;">
+				<a href="javascript:;" data-name="go-back"><span class="back app-icon icon-back"></span></a>
+				<h3 class="h5-viewTitle"></h3>
+			</div>
+		</div>
+		<div id="viewLayout" style="width: 200%;">
+			<div id="chanceView" data-header="chanceView" style="width: 50%; float: left; display: block; left: 0px;">
+				<div class="img">
+					<p class="pos-text"></p>
+					<div class="img-wrap banner"></div>
+				</div>
+				<div id="J-wake-sign" class="wake-sign">
+					<i class="icon-wake ctrl"></i><span class="ctrl">设置提醒</span>
+					<i class="icon-wake-has ctrl2"></i><span class="ctrl2">已提醒</span>
+				</div>
+				<div class="cont-box">
+					<div class="signin-btn">我要签到</div>
+					<p class="text">累积连续签到
+						<span id="J-sign-days" class='days'>0</span>天，您目前还有
+						<span id="J-award-amount" class='number'>0</span>次抽奖机会<br/>
+						当前总积分<span id="J-scroe-num">0</span>分</p>
+				</div>
+
+				<div class="days-box">
+					<span class='dy1'>1</span>
+					<span class='dy2'>2</span>
+					<span class='dy3'>3</span>
+					<span class='dy4'>4</span>
+					<span class='dy5'></span>
+				</div>
+				<div class="cont-box">
+					<div class="rotate-item">
+						<div class="rotate-bg">
+							<div id="rotatebg"></div>
+							<!-- <img src="/static/images/game-sign/activity-prize1-8-4.png" id='rotatebg'> -->
+							<div id="prizestar" class="prize-star">
+								<!-- <img src="/static/images/game-sign/activity-prize2.png" id='prizestar'> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont-box">
+					<div class="prize-item">
+						<div class="prize-winner" style="display: none;">最新大奖5000元 旅游基金得主：
+							<span class='winner' ></span>
+							
+						</div>
+					</div>
+					<section class="rank-section">
+						<!-- <h2 class="title-t">
+							<span class='t'>中奖纪录</span>
+						</h2> -->
+						<ul class="tab-nav">
+							<li class="active"><a>中奖纪录</a></li>
+							<li><a>我的签到纪录</a></li>
+						</ul>
+						<div class="tab-container">
+							<div class="item-container">
+								<ul class="rank-list">
+									<li class="dib-wrap">
+										<div class="img-wrap dib" style="background-image: url(/static/images/test/person.png)"></div>
+										<div class="info dib">
+											<p class="name-wrap"><span class="username">圈子郑圈子郑圈子郑圈子郑</span></p>
+											<p class="time">11-11 20:20</p>
+										</div>
+										<div class="worth dib">抽中了xxx</div>
+									</li>
+									<li class="dib-wrap">
+										<div class="img-wrap dib" style="background-image: url(/static/images/test/person.png)"></div>
+										<div class="info dib">
+											<p class="name-wrap"><span class="username">圈子郑圈子郑圈子郑圈子郑</span></p>
+											<p class="time">15/07/07 20:20</p>
+										</div>
+										<div class="worth dib">抽中了xxx</div>
+									</li>
+								</ul>
+								<p class="tip">以上是最新10条中奖记录</p>
+							</div>
+							<div class="item-container">
+								<ul class="rank-list">
+									<li class="dib-wrap">
+										<div class="img-wrap dib" style="background-image: url(/static/images/test/person.png)"></div>
+										<div class="info dib">
+											<p class="name-wrap"><span class="username">圈子郑圈子郑圈子郑圈子郑</span></p>
+											<p class="time">11-11 20:20</p>
+										</div>
+										<div class="worth dib">签到了1次</div>
+									</li>
+									<li class="dib-wrap">
+										<div class="img-wrap dib" style="background-image: url(/static/images/test/person.png)"></div>
+										<div class="info dib">
+											<p class="name-wrap"><span class="username">圈子郑圈子郑圈子郑圈子郑</span></p>
+											<p class="time">15/07/07 20:20</p>
+										</div>
+										<div class="worth dib">签到了1次</div>
+									</li>
+								</ul>
+								<p class="tip">以上是最近5天签到记录</p>
+							</div>
+						</div>
+					</section>
+					<h2 class="title-t">
+						<span class='t'>活动说明</span>
+					</h2>
+					<div class="instructions">
+			            1、若抽中了实物奖品，仅需支付0.01元即可获得，工作人员会尽快安排商品的寄出哦。
+			            <span class='space'></span>
+			            2、若您抽中优惠券，系统会在24小时内将优惠券发放至您的账号中，优惠券的有效期为7天。
+			            <span class='space'></span>
+			            3、如果抽中积分，则会累加到您的积分账户中，积分用途敬请期待哦。
+			            <span class='space'></span>
+			            4、本活动最终解释权归淘金子所有。
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	require('game-sign/index/index');
+	</script>
+</body>
+
+</html>

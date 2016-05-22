@@ -1,0 +1,212 @@
+@import '../common/ui/func.less';
+@import '../common/tuan-steps/index';
+
+.tuan-steps{
+	margin-left: 20/640*100%;
+}
+
+.icon-arrow{
+	display: inline-block;
+	.bg-contain('/images/arrow.png?__inline', 7px, 12px);
+}
+
+.icon-share{
+	display: block;
+	.bg-contain('/images/share.png?__inline', 23px, 18px);
+}
+
+body{
+	padding-bottom: 80px;
+}
+body > section{
+	background-color: #fff;
+	margin-bottom: 10px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.swiper-container{
+	position: relative;
+
+	.tuan-tag{
+		color: #fff;
+		.bg-contain('/images/tuan-tag.png', 42px, 49px);
+		font-size: 12px;
+		text-align: center;
+		line-height: 16px;
+		padding-top: 4px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 2;
+	}
+}
+
+.goods-item{
+
+	#bannerPager{
+		text-align: center;
+	}
+	.img-wrap{
+		.bg-contain();
+		background-color: #fff;
+		.rect(100%, 1/2 * 100%);
+		position: relative;
+	}
+
+	// .img-wrap{
+	// 	.rect(100%, 9/16 * 100%);
+	// }
+	.item-infos{
+		padding: 10px 30/640*100% 10px 20/640*100%;
+		background-color: #fff;
+		position: relative;
+	}
+
+	.item-title{
+		line-height: 19px;
+		margin-bottom: 10px;
+		width: 506/600 * 100%;
+	}
+
+	.item-sell{
+		float: right;
+	}
+
+	.item-b{
+		color: @text-light-color;
+		font-size: 12px;
+		width: 506/600 * 100%;
+	}
+
+	.icon-share{
+		position: absolute;
+		right: 20/640*100%;
+		top: 66/200 * 100%;
+	}
+}
+
+.goods-des{
+	.section-title{
+		font-size: 15px;
+		line-height: 37px;
+		padding: 0 20/640*100%;
+	}
+	.goods-des-content{
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.tuan-list{
+	padding-bottom: 12px;
+}
+.rule-title{
+	border-bottom: 1px solid @border-base-color;
+	margin-left: 20/640*100%;
+	height: 46px;
+	line-height: 46px;
+	position: relative;
+
+	a{
+		display: block;
+	}
+
+	.icon-rule{
+		display: inline-block;
+		.bg-contain('/images/icon-rule.png?__inline', 13px, 14px);
+		margin-right: 8px;
+		vertical-align: middle;
+	}
+
+	.icon-arrow{
+		display: inline-block;
+		position: absolute;
+		right: 20/640*100%;
+		top: 17px;
+	}
+}
+.rule-tip{
+	color: @text-gray-color;
+	line-height: 1;
+	padding: 16px 20/640*100%;
+}
+
+.tuan-rule{
+	background-color: @bg-section-color;
+	.section-title{
+		border-bottom: 1px solid @border-base-color;
+		height: 36px;
+		line-height: 36px;
+		font-size: 12px;
+		padding-left: 20/640*100%;
+		margin-bottom: 10px;
+	}
+
+	.rule-content{
+		padding: 20/640*100%;
+	}
+
+	.img-wrap{
+		background-color: #fff;
+		.bg-contain('/images/tuan-rule.png?__inline', 100%, 28px);
+	}
+	ol{
+		padding-top: 15px;
+		li{
+			color: @text-light-color;
+			font-size: 12px;
+			margin-bottom: 15px;
+			padding-left: 32px;
+			position: relative;
+
+			>label{
+				display: inline-block;
+				width: 32px;
+				vertical-align: middle;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -7px;
+			}
+		}
+	}
+
+}
+
+.footer();
+
+footer{
+	background-color: #fafafa;
+	border-top: 1px solid @border-base-color;
+	padding: 7px 0;
+	font-size: 0;
+	text-align: right;
+}
+.buy-btn{
+	background-color: #fff;
+	border: 1px solid @bg-main-color;
+	color: @bg-main-color;
+	display: inline-block;
+	font-size: 12px;
+	.rounded-corners(2px);
+	text-align: center;
+	line-height: 1;
+	padding: 13px 0 12px;
+	width: 300/640 * 100%;
+	margin: 0 10/640 * 100%;
+
+	.amount{
+		margin-bottom: 8px;
+		b{
+			font-weight: normal;
+			font-size: 18px;
+		}
+	}
+}
+a.tuan-btn, a.tuan-bt:active, a.tuan-bt:visited{
+	background-color: @bg-main-color;
+	color: #fff;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>我的优惠券</title>
+	<script type="text/javascript" src="../lib/mod.js"></script>
+</head>
+<body>
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<ul class="ticket-nav">
+		<li class="active"><a>当前可用</a></li>
+		<li><a>不可用</a></li>
+	</ul>
+	<ul class="ticket-list">
+		<li class="dated">
+			<div class="info">
+				<p class="ticket-name">新人礼券</p>
+				<p class="tip">满88元可用</p>
+				<p class="ticket-date">15-10-27~15-12-01</p>
+			</div>
+			<div class="money"><small>&yen;</small><b>12</b></div>
+		</li>
+		<li class="used">
+			<div class="info">
+				<p class="ticket-name">新人礼券</p>
+				<p class="tip">满88元可用</p>
+				<p class="ticket-date">15-10-27~15-12-01</p>
+			</div>
+			<div class="money"><small>&yen;</small><b>12</b></div>
+		</li>
+		<li>
+			<div class="info">
+				<p class="ticket-name">新人礼券</p>
+				<p class="tip">满88元可用</p>
+				<p class="ticket-date">15-10-27~15-12-01</p>
+			</div>
+			<div class="money"><small>&yen;</small><b>12</b></div>
+		</li>
+	</ul>
+	<!-- <div class="empty">
+		<div class="icon-empty"></div>
+		<p>啊哦，您还没有优惠券哦！</p>
+	</div> -->
+	<script type="text/javascript">
+		require('ticket-list/index');
+	</script>
+</body>
+</html>

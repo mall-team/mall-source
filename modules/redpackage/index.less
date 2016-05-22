@@ -1,0 +1,186 @@
+@import '/modules/common/common.less';
+
+body{
+	background-color: #8a1414;
+}
+.wrap{
+	background-color: #8a1414;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+
+.top-bg{
+	.bg-cover();
+	background-image: url(/images/redpackage/top-bg.jpg);
+	.rect(100%, percentage(360/640));
+}
+
+.content-bg{
+	.bg-cover();
+	background-image: url(/images/redpackage/content-bg.png);
+	background-color: #dc3b1e;
+	.rect(percentage(576/640), percentage(640/576));
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: percentage(-576/2/640);
+	margin-top: percentage(274/640);
+	z-index: 2;
+}
+
+.content-section{
+	padding: percentage(230/576) percentage(28/576) 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+
+	.tip{
+		color: #ffda20;
+		text-align: center;
+		font-style: 15px;
+		margin-bottom: percentage(70/576);
+	}
+
+	.award-btn{
+		background-color: #fcd820;
+		.border-radius(50%);
+		-webkit-box-shadow:0 5px 0 rgba(0, 0, 0, 0.2);
+		box-shadow:0 5px 0 rgba(0, 0, 0, 0.2);
+		color: #800d0d;
+		.circle();
+		width: percentage(180/576);
+		text-align: center;
+		margin: 0 auto;
+		font-size: 0;
+		overflow: hidden;
+		position: relative;
+
+		&:active{
+			opacity: .8;
+		}
+
+		>span{
+			font-size: 16px;
+			line-height: 16px;
+			width: 64px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -8px;
+			margin-left: -32px;
+			z-index: 2;
+		}
+
+
+	}
+
+}
+
+/**
+ * 奖励提示
+ */
+.alert .redpackage-alert{
+	padding: 0;
+	width: percentage(600/640);
+}
+.redpackage-panel{
+	.bg-cover();
+	background-image: url(/images/redpackage/alert-red.png);
+	.square();
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	&.ticket-panel{
+		background-image: url(/images/redpackage/alert-ticket.png);
+	}
+
+	.inner-content{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: percentage(40/600) 0;
+		text-align: center;
+	}
+
+	.title{
+		color: #fff;
+		font-size: 24px;
+		line-height: 1;
+		margin-bottom: percentage(15/600);
+	}
+
+	.sub-title{
+		color: #fff;
+		line-height: 1;
+		margin-bottom: percentage(40/600);
+	}
+
+	.item-content{
+		display: inline-block;
+		padding-top: 20px;
+		font-size: 0;
+
+		&.item-ticket{
+			.bg-contain('/images/redpackage/bg-ticket.png', 397px/2, 209px/2);
+		}
+
+		&.item-red{
+			.price-wrap{
+				color: #fff;
+			}
+			.item-des{
+				color: rgba(255, 255, 255, 0.8);
+				text-align: center;
+			}
+		}
+
+		.price-wrap{
+			color: @bg-main-color;
+			display: inline-block;
+			height: 40px;
+			line-height: 1;
+			font-size: 0;
+			margin-bottom: 16px;
+
+			i{
+				font-size: 18px;
+				vertical-align: top;
+				margin-right: 10px;
+			}
+			b{
+				font-size: 50px;
+				font-weight: normal;
+				display: inline-block;
+				height: 40px;
+				line-height: 40px;
+				vertical-align: top;
+				margin-right: 6px;
+			}
+			.unit{
+				font-size: 12px;
+				vertical-align: bottom;
+			}
+		}
+
+		.item-des{
+			color: #666;
+			font-size: 12px;
+		}
+	}
+
+	.btn-wrap{
+		padding: 0 percentage(62/600);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-bottom: percentage(40/600);
+		width: 100%;
+	}
+}

@@ -1,0 +1,130 @@
+@import '../ui/func.less';
+
+.nav{
+	background-color: @bg-section-color;
+	border-top: 1px solid @border-base-color;
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	width: 100%;
+	padding: 0 62/640*100%;
+	max-width: 640px;
+	.clearfix();
+
+	>li{
+		width: 1/3 * 100%;
+		height: 50px;
+		text-align: center;
+		padding-top: 9px;
+		padding-bottom: 5px;
+		float: left;
+
+		>a{
+			display: block;
+		}
+
+		label{
+			color: @label-base-color;
+			font-size: 12px;
+			line-height: 1;
+			.transform(scale(0.75));
+			display: block;
+		}
+	}
+
+	>li.active, >li:active, >li:focus{
+		label{
+			color: @label-active-color;
+		}
+	}
+
+	.icon{
+		.bg-contain();
+		display: inline-block;
+		width: 100%;
+		height: 22px;
+	}
+
+	.mall .icon{
+		background-image: url(/images/mall-d.png?__inline);
+	}
+
+	.mall.active .icon, .mall:active .icon, .mall:focus .icon{
+		background-image: url(/images/mall.png?__inline);
+	}
+
+	.gift .icon{
+		background-image: url(/images/shop-d.png?__inline);
+		// background-image: url(/images/gift-d.png);
+	}
+
+	.gift.active .icon, .gift:active .icon, .gift:focus .icon{
+		background-image: url(/images/shop.png?__inline);
+		// background-image: url(/images/gift.png);
+	}
+
+	.mine .icon{
+		background-image: url(/images/mine-d.png?__inline);
+	}
+
+	.mine.active .icon, .mine:active .icon, .mine:focus .icon{
+		background-image: url(/images/mine.png?__inline);
+	}
+
+	/*圣诞节*/
+	// >li{
+	// 	height: auto;
+	// 	padding-top: 5px;
+		
+	// 	label{
+	// 		color: #d94d34;
+	// 	}
+	// }
+	// >li.active, >li:active, >li:focus{
+	// 	label{
+	// 		color: #019146;
+	// 	}
+	// }
+	// .icon{
+	// 	.bg-contain();
+	// 	display: inline-block;
+	// 	width: 100%;
+	// 	height: 32px;
+	// }
+	// .mall .icon{
+	// 	background-image: url(/images/christmas/mall-d.png?__inline);
+	// }
+
+	// .mall.active .icon, .mall:active .icon, .mall:focus .icon{
+	// 	background-image: url(/images/christmas/mall.png?__inline);
+	// }
+
+	// .gift .icon{
+	// 	background-image: url(/images/christmas/shop-d.png?__inline);
+	// }
+
+	// .gift.active .icon, .gift:active .icon, .gift:focus .icon{
+	// 	background-image: url(/images/christmas/shop.png?__inline);
+	// }
+
+	// .mine .icon{
+	// 	background-image: url(/images/christmas/mine-d.png?__inline);
+	// }
+
+	// .mine.active .icon, .mine:active .icon, .mine:focus .icon{
+	// 	background-image: url(/images/christmas/mine.png?__inline);
+	// }
+}
+
+// .festival{
+// 	.nav .mall.active .icon, .nav .mall:active .icon, .nav .mall:focus .icon{
+// 		background-image: url(/images/festival/mall-active.png?__inline);
+// 	}
+// 	.nav .gift.active .icon, .nav .gift:active .icon, .nav .gift:focus .icon{
+// 		background-image: url(/images/festival/shop-active.png?__inline);
+// 	}
+// 	.nav .mine.active .icon, .nav .mine:active .icon, .nav .mine:focus .icon{
+// 		background-image: url(/images/festival/mine-active.png?__inline);
+// 	}
+
+// }

@@ -1,0 +1,67 @@
+@import '/modules/common/common.less';
+
+.bullet-container{
+	width: 100%;
+	overflow: hidden;
+}
+
+.bullet-list{
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+	position: relative;
+
+	>.item{
+		color: #fff;
+		display: inline-block;
+		font-size: 14px;
+		line-height: 1;
+		// max-width: 100%;
+		// .ellipsis();
+		vertical-align: middle;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -7px;
+
+		// -webkit-animation: slideLeft 14s linear both;
+		// animation: slideLeft 14s linear both;
+
+		&.slow{
+			-webkit-animation-duration: 16s;
+			animation-duration: 16s;
+		}
+		&.normal{
+			-webkit-animation-duration: 14s;
+			animation-duration: 14s;
+		}
+		&.fast{
+			-webkit-animation-duration: 12s;
+			animation-duration: 12s;
+		}
+		&.faster{
+			-webkit-animation-duration: 10s;
+			animation-duration: 10s;
+		}
+	}
+
+}
+
+
+@-webkit-keyframes slideLeft{
+	0%{
+		// .transform(translateX(200px));
+	}
+	100%{
+		.transform(translateX(-900px));
+	}
+}
+
+// @keyframes slideLeft{
+// 	0%{
+// 		.transform(translateX(0));
+// 	}
+// 	100%{
+// 		.transform(translateX(-900px));
+// 	}
+// }

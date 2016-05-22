@@ -1,0 +1,143 @@
+@import '/modules/common/ui/func.less';
+
+/*服务人弹窗*/
+.alert .service-alert{
+	background-color: #fff;
+	padding: 0;
+	padding-bottom: 40px;
+}
+
+.service-alert-content{
+	background-color: #fff;
+	width: 100%;
+
+	.title{
+		border-bottom: 1px solid #d8d8d8;
+		color: #313131;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 14px;
+
+		b{
+			color: @bg-main-color;
+			font-weight: normal;
+		}
+	}
+	.tips{
+		color: @text-light-color;
+		font-size: 12px;
+		line-height: 1;
+		margin-bottom: 8px;
+	}
+	.input-wrap{
+		background-color: @bg-section-color;
+		border: 1px solid #d7d7d7;
+		padding: 0 0 0 10px;
+		line-height: 1;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		margin: 45px percentage(30/600) 10px;
+
+		.flex();
+
+		label{
+			color: #666;
+			display: block;
+			width: 58px;
+			padding: 14px 0;
+			font-size: 16px;
+		}
+		input{
+			display: block;
+			.flex-item(2);
+			padding: 14px 0;
+			text-align: left;
+			font-size: 16px;
+			line-height: 1;
+		}
+	}
+
+	.btn-content{
+		padding: 0;
+		margin: 0 percentage(30/600);
+	}
+
+	.service-list{
+		padding-top: 28px;
+		.flex();
+
+		>li{
+			.flex-item();
+		}
+		.headimg{
+			border: 2px solid #fff;
+			display: inline-block;
+
+			.bg-cover();
+			.circle();
+			width: 45px;
+			margin-bottom: 6px;
+		}
+
+		.user-name{
+			font-size: 12px;
+			line-height: 1;
+			margin-bottom: 5px;
+		}
+
+		.phone-label{
+			color: @text-light-color;
+			font-size: 14px;
+			line-height: 1;
+		}
+
+		.btnl{
+			height: 30px;
+			line-height: 30px;
+			padding: 0 12px;
+			width: auto;
+			margin-top: 16px;
+		}
+	}
+
+	.userinfo{
+		font-size: 0;
+		height: 24px;
+		line-height: 24px;
+		margin-bottom: 10px;
+		text-align: center;
+
+		.head-img{
+			display: inline-block;
+			.bg-cover();
+			.circle();
+			width: 24px;
+			margin-right: 8px;
+			vertical-align: middle;
+		}
+		.user-name{
+			color: @text-gray-color;
+			display: inline-block;
+			font-size: 12px;
+			vertical-align: middle;
+		}
+
+		.err{
+			color: red;
+			font-size: 12px;
+		}
+	}
+
+	.link-wrap{
+		margin-top: 15px;
+		text-align: right;
+		padding-right: percentage(30/600);
+	}
+
+	.link{
+		color: #717c99;
+		font-size: 12px;
+		text-decoration: none;
+	}
+}

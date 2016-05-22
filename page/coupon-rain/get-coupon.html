@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>领优惠券</title>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+</head>
+<body>
+	<link rel="import" href="/modules/common/header/header.html?__inline">
+	<ul class="ticket-list">
+		<li>
+			<div class="info">
+				<p class="ticket-name">新人礼券</p>
+				<p class="ticket-date">有效期至2015-10-27</p>
+				<span class="money"><small>&yen;</small><b>12</b></span>
+			</div>
+			<p class="tip">满88元可用</p>
+			<div class="img-wrap"></div>
+		</li>
+	</ul>
+	<div class="btn-wrap">
+		<button id="J-get-coupon" class="btnl">领取优惠券</button>
+	</div>
+	<!-- <div class="empty">
+		<div class="icon-empty"></div>
+		<p>啊哦，您还没有优惠券哦!</p>
+		<div class="btn-wrap">
+			<a href="/" class="btnl btnl-border">去逛逛 >></a>
+		</div>
+	</div> -->
+	<script type="text/javascript">
+		require('coupon-rain/get-coupon/index');
+	</script>
+</body>
+</html>
