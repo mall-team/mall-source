@@ -121,7 +121,7 @@ var Panel = {
 	_initSel: function() {
 		var self = this;
 
-		self._resetSku();
+		// self._resetSku();
 		amount.init();
 		$('#J-cm').delegate('label', EVENT_TAP, function(evt) {
 			var $cur = $(evt.target);
@@ -130,23 +130,23 @@ var Panel = {
 			$cur.addClass('sel');
 			$cur.siblings('input').val($cur.attr('value'));
 
-			self._resetSku();
+			// self._resetSku();
 			amount.resetBtn();
 		});
 
 	},
 
-	_resetSku: function() {
-		var sku = search_sku_key();
-		var $bar = $('.J-amount-bar');
+	// _resetSku: function() {
+	// 	var sku = search_sku_key();
+	// 	var $bar = $('.J-amount-bar');
 
-		$('#J-last-num').text(sku.sku_num);
+	// 	$('#J-last-num').text(sku.sku_num);
 
-		if (!$bar.attr('max')) {
-			$bar.attr('max', sku.sku_num);
-		}
-		$('#J-sku-price').text(sku.skuPrice);
-	},
+	// 	if (!$bar.attr('max')) {
+	// 		$bar.attr('max', sku.sku_num);
+	// 	}
+	// 	$('#J-sku-price').text(sku.skuPrice);
+	// },
 
 	show: function(ty) {
 		var $cm = $('#J-panel-cm');
@@ -391,18 +391,18 @@ function addCar() {
 		}
 	}
 	var goods_id = $("#gid").val();
-	var sku_info = search_sku_key();
+	// var sku_info = search_sku_key();
 	// var goods_number = parseInt($('#goods_number').val());
 	var goods_number = parseInt($('#J-cm-amount').find('.amount-val').text(), 10);
 
-	if (!sku_info) {
-		Bubble.show('请选择商品属性');
-		return;
-	}
-	if (parseInt(sku_info.sku_num) == 0 || parseInt(sku_info.sku_num) < goods_number || sku_info.sku_id == 'empty') {
-		Bubble.show('已经卖光了，下次早点哦!');
-		return;
-	}
+	// if (!sku_info) {
+	// 	Bubble.show('请选择商品属性');
+	// 	return;
+	// }
+	// if (parseInt(sku_info.sku_num) == 0 || parseInt(sku_info.sku_num) < goods_number || sku_info.sku_id == 'empty') {
+	// 	Bubble.show('已经卖光了，下次早点哦!');
+	// 	return;
+	// }
 	var url = '/Mall/Cart/add';
 	var data = {
 		productId: goods_id,
@@ -441,17 +441,17 @@ function quickBuy() {
 		}
 	}
 	var goods_id = $("#gid").val();
-	var sku_info = search_sku_key();
+	// var sku_info = search_sku_key();
 	var goods_number = parseInt($('#J-cm-amount').find('.amount-val').text(), 10);
 
-	if (!sku_info) {
-		Bubble.show('请选择商品属性');
-		return;
-	}
-	if (parseInt(sku_info.sku_num) == 0 || parseInt(sku_info.sku_num) < goods_number || sku_info.sku_id == 'empty') {
-		Bubble.show('已经卖光了，下次早点哦!');
-		return;
-	}
+	// if (!sku_info) {
+	// 	Bubble.show('请选择商品属性');
+	// 	return;
+	// }
+	// if (parseInt(sku_info.sku_num) == 0 || parseInt(sku_info.sku_num) < goods_number || sku_info.sku_id == 'empty') {
+	// 	Bubble.show('已经卖光了，下次早点哦!');
+	// 	return;
+	// }
 	var url = '/Mall/Pay/immediateBuy';
 	var data = {
 		productId: goods_id,
@@ -487,47 +487,53 @@ function quickBuy() {
 	});
 }
 
-function search_sku_key() {
-	var sku_key = [];
-	var checked = '';
-	var exit = false;
-	var $dts = $('#J-cm').find('dt');
-	var $dds = $('#J-cm').find('dd');
+// function search_sku_key() {
+// 	var sku_key = [];
+// 	var checked = '';
+// 	var exit = false;
+// 	var $dts = $('#J-cm').find('dt');
+// 	var $dds = $('#J-cm').find('dd');
 
-	$dts.each(function(i, dt) {
-		var $dt = $(dt);
-		var $dd = $($dds[i]);
+// 	$dts.each(function(i, dt) {
+// 		var $dt = $(dt);
+// 		var $dd = $($dds[i]);
 
-		// sku_key.push($dt.text() + ':' + $dd.find('.sel').text())
-		sku_key.push($dd.find('.sel').text());
+// 		// sku_key.push($dt.text() + ':' + $dd.find('.sel').text())
+// 		sku_key.push($dd.find('.sel').text());
 
-	});
+// 	});
 
-	var sku_json = $('#goods_sku_json').val();
-	var sku_o = JSON.parse(sku_json);
-	var res = {};
-	for (var i = 0; i < sku_o.length; i++) {
-		if ('|' + sku_key.join('|') + '|' == sku_o[i].sku_values_text) {
-			res = sku_o[i];
-			break;
-		}
-	}
-	return {
-		sku_num: res.actual_quantity || 0,
-		sku_id: res.sku_ids || 'empty',
-		skuTexts: res.sku_texts,
-		skuValues: res.sku_values,
-		skuValuesText: res.sku_values_text,
-		skuPrice: res.retail_price
-	};
-}
+// 	var sku_json = $('#goods_sku_json').val();
+// 	var sku_o;
+// 	var res = {};
+
+// 	try {
+// 		sku_o = JSON.parse(sku_json);
+// 	} catch (e) {
+// 		return;
+// 	}
+// 	for (var i = 0; i < sku_o.length; i++) {
+// 		if ('|' + sku_key.join('|') + '|' == sku_o[i].sku_values_text) {
+// 			res = sku_o[i];
+// 			break;
+// 		}
+// 	}
+// 	return {
+// 		sku_num: res.actual_quantity || 0,
+// 		sku_id: res.sku_ids || 'empty',
+// 		skuTexts: res.sku_texts,
+// 		skuValues: res.sku_values,
+// 		skuValuesText: res.sku_values_text,
+// 		skuPrice: res.retail_price
+// 	};
+// }
 
 /**
  * 初始化购物车
  */
 function resetCart() {
 	new Ajax().send({
-		url: '/Mall/Home/cartGoodsNumber'
+		url: $('#J-ajaxurl-initCart').val()
 	}, function(result) {
 		var num = +result.number;
 		var $cart = $('#J-cart-num');

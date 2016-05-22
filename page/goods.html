@@ -5,8 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<title>商品详情</title>
 	<script type="text/javascript" src="../lib/mod.js"></script>
+	<script type="text/javascript">
+		var phpdata = {
+			isLogin: 1
+		};
+	</script>
 </head>
 <body isPop="login">
+	<!--初始化购物车url，返回number-->
+	<input type="hidden" id="J-ajaxurl-initCart" value="/Mall/Home/cartGoodsNumber2" />
+	<!--加载更多评论-->
+	<input id="J-ajaxurl-moreComment" type="hidden" value="/Mall/Goods/moreComment" />
+	<!--初始化点赞相关数据-->
+	<input id="J-ajaxurl-initProductLikeData" type="hidden" value="/Mall/Goods/initProductLikeData" />
+
 	<!--
 		@require "/modules/common/common.less"
 		@require "/modules/common/header/header.less"
@@ -65,12 +77,9 @@
 		</ul>
 	</section>
 	<section class="comment-section">
-		<input id="J-ajaxurl-moreComment" type="hidden" value="/Mall/Goods/moreComment" />
-		<input id="J-ajaxurl-initProductLikeData" type="hidden" value="/Mall/Goods/initProductLikeData" />
-		
 		<div class="nav-wrap">
 			<ul class="comment-nav">
-				<li id="J-support-btn" ><i class="icon-support"></i>总点赞数(<span class="J-num">57</span>）</li>
+				<li id="J-support-btn" ajax-url="/Mall/Goods/setProductLike"><i class="icon-support"></i>总点赞数(<span class="J-num">57</span>）</li>
 				<li><i class="icon-discuss"></i>总评价数(<span id="J-discuss-amount">1222</span>）</li>
 			</ul>
 			<div id="J-discuss-layer" class="discuss-layer">
@@ -163,7 +172,7 @@
 			</div>
 		</div>
 	</script>
-	<div id="J-panel-cm"  class="panel-cm add-phone">
+	<div id="J-panel-cm"  class="panel-cm">
 		<div class="mask"></div>
 		<div class="panel-content">
 			<form>
@@ -175,7 +184,7 @@
 					</div>
 					<div class="close dib"></div>
 				</div>
-				<section class="cm-content">
+				<!-- <section class="cm-content">
 					<dl id="J-cm">
 						<dt>口味</dt>
                         <dd>
@@ -203,7 +212,7 @@
 	                         <label >73</label>
                          </dd>
                     </dl>
-				</section>
+				</section> -->
 				<div id="J-cm-amount" class="cm-amount clearfix">
 					<label>库存量：<span id="J-last-num">98</span></label>
 					<div class="right">
