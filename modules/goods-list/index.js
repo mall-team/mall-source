@@ -27,7 +27,7 @@ new PageLoader({
 			}
 		}, function(result) {
 			back && back(__inline('item.tmpl')({
-				list: result.goodslist
+				list: result.goodsList
 			}));
 		});
 

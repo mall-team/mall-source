@@ -121,7 +121,7 @@ var Panel = {
 	_initSel: function() {
 		var self = this;
 
-		// self._resetSku();
+		self._resetSku();
 		amount.init();
 		$('#J-cm').delegate('label', EVENT_TAP, function(evt) {
 			var $cur = $(evt.target);
@@ -130,23 +130,23 @@ var Panel = {
 			$cur.addClass('sel');
 			$cur.siblings('input').val($cur.attr('value'));
 
-			// self._resetSku();
+			self._resetSku();
 			amount.resetBtn();
 		});
 
 	},
 
-	// _resetSku: function() {
-	// 	var sku = search_sku_key();
-	// 	var $bar = $('.J-amount-bar');
+	_resetSku: function() {
+		var sku = search_sku_key();
+		var $bar = $('.J-amount-bar');
 
-	// 	$('#J-last-num').text(sku.sku_num);
+		$('#J-last-num').text(sku.amount);
 
-	// 	if (!$bar.attr('max')) {
-	// 		$bar.attr('max', sku.sku_num);
-	// 	}
-	// 	$('#J-sku-price').text(sku.skuPrice);
-	// },
+		// if (!$bar.attr('max')) {
+			$bar.attr('max', sku.amount);
+		// }
+		$('#J-sku-price').text(sku.price);
+	},
 
 	show: function(ty) {
 		var $cm = $('#J-panel-cm');
@@ -391,8 +391,7 @@ function addCar() {
 		}
 	}
 	var goods_id = $("#gid").val();
-	// var sku_info = search_sku_key();
-	// var goods_number = parseInt($('#goods_number').val());
+	var sku_info = search_sku_key();
 	var goods_number = parseInt($('#J-cm-amount').find('.amount-val').text(), 10);
 
 	// if (!sku_info) {
@@ -406,6 +405,7 @@ function addCar() {
 	var url = $('#J-ajaxurl-addCart').val();
 	var data = {
 		productId: goods_id,
+		skuId: sku_info.skuId,
 		// skuIds: sku_info.sku_id,
 		// skuTexts: sku_info.skuTexts,
 		// skuValues: sku_info.skuValues,
@@ -441,7 +441,7 @@ function quickBuy() {
 		}
 	}
 	var goods_id = $("#gid").val();
-	// var sku_info = search_sku_key();
+	var sku_info = search_sku_key();
 	var goods_number = parseInt($('#J-cm-amount').find('.amount-val').text(), 10);
 
 	// if (!sku_info) {
@@ -452,9 +452,14 @@ function quickBuy() {
 	// 	Bubble.show('已经卖光了，下次早点哦!');
 	// 	return;
 	// }
+	if (parseInt($('#J-last-num').text()) < goods_number) {
+		Bubble.show('库存不足，下次早点哦!');
+		return;
+	}
 	var url = $('#J-ajaxurl-quickBuy').val();
 	var data = {
 		productId: goods_id,
+		skuId: sku_info.skuId,
 		// skuIds: sku_info.sku_id,
 		// skuTexts: sku_info.skuTexts,
 		// skuValues: sku_info.skuValues,
@@ -487,46 +492,54 @@ function quickBuy() {
 	});
 }
 
-// function search_sku_key() {
-// 	var sku_key = [];
-// 	var checked = '';
-// 	var exit = false;
-// 	var $dts = $('#J-cm').find('dt');
-// 	var $dds = $('#J-cm').find('dd');
+function search_sku_key() {
+	var sku_key = [];
+	var checked = '';
+	var exit = false;
+	var $dts = $('#J-cm').find('dt');
+	var $dds = $('#J-cm').find('dd');
 
-// 	$dts.each(function(i, dt) {
-// 		var $dt = $(dt);
-// 		var $dd = $($dds[i]);
+	$dts.each(function(i, dt) {
+		var $dt = $(dt);
+		var $dd = $($dds[i]);
 
-// 		// sku_key.push($dt.text() + ':' + $dd.find('.sel').text())
-// 		sku_key.push($dd.find('.sel').text());
+		sku_key.push($dd.find('.sel').text());
 
-// 	});
+	});
 
-// 	var sku_json = $('#goods_sku_json').val();
-// 	var sku_o;
-// 	var res = {};
+	var sku_json = $('#goods_sku_json').val();
+	var sku_o;
+	var res = {};
 
-// 	try {
-// 		sku_o = JSON.parse(sku_json);
-// 	} catch (e) {
-// 		return;
-// 	}
-// 	for (var i = 0; i < sku_o.length; i++) {
-// 		if ('|' + sku_key.join('|') + '|' == sku_o[i].sku_values_text) {
-// 			res = sku_o[i];
-// 			break;
-// 		}
-// 	}
-// 	return {
-// 		sku_num: res.actual_quantity || 0,
-// 		sku_id: res.sku_ids || 'empty',
-// 		skuTexts: res.sku_texts,
-// 		skuValues: res.sku_values,
-// 		skuValuesText: res.sku_values_text,
-// 		skuPrice: res.retail_price
-// 	};
-// }
+	try {
+		sku_o = JSON.parse(sku_json);
+	} catch (e) {
+		return;
+	}
+
+	for (var i = 0; i < sku_o.length; i++) {
+		// if ('|' + sku_key.join('|') + '|' == sku_o[i].sku_values_text) {
+		if(sku_key[0] == sku_o[i].skuValue){
+			res = sku_o[i];
+			break;
+		}
+	}
+	return {
+		skuId: res.skuId,
+		skuAttr: res.skuAttr,
+		skuValue: res.skuValue,
+		price: res.price,
+		amount: res.amount
+	};
+	// return {
+	// 	sku_num: res.actual_quantity || 0,
+	// 	sku_id: res.sku_ids || 'empty',
+	// 	skuTexts: res.sku_texts,
+	// 	skuValues: res.sku_values,
+	// 	skuValuesText: res.sku_values_text,
+	// 	skuPrice: res.retail_price
+	// };
+}
 
 /**
  * 初始化购物车
