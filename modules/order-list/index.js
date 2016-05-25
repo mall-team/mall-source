@@ -23,20 +23,8 @@ renderTimer($('[timer]'));
 var orderType = $('body').attr('order-type');
 var ajaxUrl, itemLink;
 
-switch (orderType) {
-	case 'pay-wait':
-		ajaxUrl = '/User/MyOrder/toPayOrderListNextPage';
-		itemLink = '/User/MyOrder/orderToPay?order_id=';
-		break;
-	case 'sign-wait':
-		ajaxUrl = '/User/MyOrder/toTakeDeliveryOrderListNextPage';
-		itemLink = '/User/MyOrder/orderToTakeDelivery?order_id=';
-		break;
-	case 'complete':
-		ajaxUrl = '/User/MyOrder/finishedOrderListNextPage';
-		itemLink = '/User/MyOrder/orderFinished?order_id=';
-		break;
-}
+ajaxUrl = $('#J-ajaxurl-list').val();
+itemLink = $('#J-detail-prefix').val();
 
 new PageLoader({
 	container: '.order-list',

@@ -6,7 +6,12 @@
 	<title>我的订单</title>
 	<script type="text/javascript" src="../lib/mod.js"></script>
 </head>
-<body order-type="pay-wait">
+<body>
+	<!--分页请求，第1页由后端输出-->
+	<input type="hidden" id="J-ajaxurl-list" value="/User/MyOrder/toPayOrderListNextPage" />
+	<!--详情页地址前缀-->
+	<input type="hidden" id="J-detail-prefix" value="/User/MyOrder/orderToPay?order_id=" />
+
 	<!--
 		@require "/modules/common/common.less"
 		@require "/modules/common/header/header.less"

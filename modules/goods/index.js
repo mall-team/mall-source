@@ -12,14 +12,14 @@ var Util = require('common/util/index');
 var Amount = require('common/amount/index');
 var Alert = require('common/alert/alert');
 var LoginPop = require('common/login-pop/index');
-var Notice = require('notice/index');
+// var Notice = require('notice/index');
 var amount = new Amount();
 var CommentSection = require('common/comment-section/index');
 
 require('common/gotop/index');
 var globalGuide = new Guide();
 
-Notice.start();
+// Notice.start();
 
 Util.phpdataReady(function() {
 	var $share = $('#J-share');
@@ -404,13 +404,14 @@ function addCar() {
 	// }
 	var url = $('#J-ajaxurl-addCart').val();
 	var data = {
-		productId: goods_id,
-		skuId: sku_info.skuId,
+		goodsId: goods_id,
+		skuAttr: sku_info.skuAttr,
+		skuValue: sku_info.skuValue,
 		// skuIds: sku_info.sku_id,
 		// skuTexts: sku_info.skuTexts,
 		// skuValues: sku_info.skuValues,
 		// skuValuesText: sku_info.skuValuesText,
-		productNumber: goods_number
+		amount: goods_number
 	};
 
 	new Ajax().send({
@@ -435,11 +436,11 @@ function addCar() {
 
 
 function quickBuy() {
-	if ($('#spe_id').val() > 0) {
-		if ($('#spe_already_start').val() == 0) {
-			return false;
-		}
-	}
+	// if ($('#spe_id').val() > 0) {
+	// 	if ($('#spe_already_start').val() == 0) {
+	// 		return false;
+	// 	}
+	// }
 	var goods_id = $("#gid").val();
 	var sku_info = search_sku_key();
 	var goods_number = parseInt($('#J-cm-amount').find('.amount-val').text(), 10);
@@ -458,15 +459,16 @@ function quickBuy() {
 	}
 	var url = $('#J-ajaxurl-quickBuy').val();
 	var data = {
-		productId: goods_id,
-		skuId: sku_info.skuId,
+		goodsId: goods_id,
+		skuAttr: sku_info.skuAttr,
+		skuValue: sku_info.skuValue,
 		// skuIds: sku_info.sku_id,
 		// skuTexts: sku_info.skuTexts,
 		// skuValues: sku_info.skuValues,
 		// skuValuesText: sku_info.skuValuesText,
-		productNumber: goods_number,
-		spe: $('#J-goods-type').val(),
-		speId: $('#J-spe-id').val()
+		amount: goods_number,
+		// spe: $('#J-goods-type').val(),
+		// speId: $('#J-spe-id').val()
 	};
 
 
@@ -545,8 +547,13 @@ function search_sku_key() {
  * 初始化购物车
  */
 function resetCart() {
+	var ajaxUrl = $('#J-ajaxurl-initCart').val();
+
+	if(ajaxUrl){
+		return;
+	}
 	new Ajax().send({
-		url: $('#J-ajaxurl-initCart').val()
+		url: ajaxUrl
 	}, function(result) {
 		var num = +result.number;
 		var $cart = $('#J-cart-num');

@@ -61,7 +61,7 @@ function getList(back, isOpenList) {
 
 	// if (!listData) {
 	new Ajax().send({
-		url: '/User/Center/myAddressList',
+		url: $('#J-ajaxurl-address-list').val(),
 		type: 'get'
 	}, function(result) {
 		listData = result.data;
@@ -90,17 +90,13 @@ function setDefault(evt) {
 	// 	return;
 	// }
 	new Ajax().send({
-		url: '/User/Center/setDefaultAddr',
+		url: $('#J-ajaxurl-address-setDefault').val(),
 		data: {
 			id: id
 		}
 	}, function() {
 		$radios.removeClass('selected');
 		$radio.addClass('selected');
-		if (curType == 'pop') {
-			Pop.hide();
-		}
-		selected && selected(_getAddr(id));
 	});
 }
 
@@ -175,15 +171,15 @@ function save() {
 	}
 
 	new Ajax().send({
-		url: '/User/Center/editAddress',
+		url: $('#J-ajaxurl-address-save').val(),
 		data: {
 			id: curItem.id,
-			recipientName: name,
-			recipientPhone: phone,
+			name: name,
+			phone: phone,
 			provinceId: pro,
 			cityId: city,
 			districtId: region,
-			recipientAddress: addr
+			detailAddr: addr
 		}
 	}, function() {
 
@@ -207,7 +203,7 @@ function del() {
 		msg: '您确定删除该地址吗？',
 		yesBack: function() {
 			new Ajax().send({
-				url: '/User/Center/delAddr',
+				url: $('#J-ajaxurl-address-del').val(),
 				data: {
 					id: curItem.id
 				}
@@ -232,7 +228,21 @@ function _getAddr(id) {
 	for (; i < listData.length; i++) {
 		item = listData[i];
 		if (item.id == id) {
-			return item;
+			return {
+				id: item['id'],
+				province_name: item['provinceName'],
+				city_name: item['cityName'],
+				region_name: item['districtName'],
+				province_id: item['provinceId'],
+				city_id: item['cityId'],
+				district_id: item['districId'],
+				recipient_address: item['detailAddr'],
+				is_default: item['isDefault'],
+				phone: item['rePhone'],
+				realName: item['reName'],
+				recipient_name: item['reName'],
+				recipient_phone: item['rePhone'],
+			};
 		}
 	}
 	return {};
@@ -244,7 +254,7 @@ function _getDefault() {
 
 	for (; i < listData.length; i++) {
 		item = listData[i];
-		if (item['is_default'] == 1) {
+		if (item['isDefault'] == 1) {
 			return item;
 		}
 	}
@@ -272,9 +282,18 @@ function _initNodes() {
 	$addBtn = $container.find('.btn-add');
 
 	$container.on('click', '.radio', setDefault);
-	$container.on('click', '.addr-info', setDefault);
+	$container.on('click', '.addr-info', selCurrent);
 	$container.on('click', '.edit', edit);
 	$addBtn.on('click', add);
+}
+
+//选中当前
+function selCurrent() {
+	var id = $(this).parent().attr('addr-id');
+	if (curType == 'pop') {
+		Pop.hide();
+	}
+	selected && selected(_getAddr(id));
 }
 
 /**
@@ -296,45 +315,45 @@ function _openDetail() {
 	$delBtn.on('click', del);
 
 	if (!curItem.province_name) {
-		try {
-			getPos(function(lat, lng) {
-				if (lat && lng) {
-					new Ajax().send({
-						url: '/User/Center/getConsigneeInfo',
-						data: {
-							lat: lat,
-							lng: lng
-						}
-					}, function(result) {
-						var bdAddrs = result.addressComponent;
-						var ids = result.regionId;
+		// try {
+		// 	getPos(function(lat, lng) {
+		// 		if (lat && lng) {
+		// 			new Ajax().send({
+		// 				url: '/User/Center/getConsigneeInfo',
+		// 				data: {
+		// 					lat: lat,
+		// 					lng: lng
+		// 				}
+		// 			}, function(result) {
+		// 				var bdAddrs = result.addressComponent;
+		// 				var ids = result.regionId;
 
-						if (bdAddrs && ids.provinceId && ids.cityId && ids.districtId) {
-							curItem = {
-								province_name: bdAddrs.province,
-								city_name: bdAddrs.city,
-								region_name: bdAddrs.district,
-								province_id: ids.provinceId,
-								city_id: ids.cityId,
-								district_id: ids.districtId,
-								street: bdAddrs.street,
-								streetNum: bdAddrs.street_number,
-								phone: result.cellPhone,
-								realName: result.realName
-							}
-						}
-						_initAddrSel();
-					}, function() {
-						_initAddrSel();
-					});
-				} else {
-					_initAddrSel();
-				}
+		// 				if (bdAddrs && ids.provinceId && ids.cityId && ids.districtId) {
+		// 					curItem = {
+		// 						province_name: bdAddrs.province,
+		// 						city_name: bdAddrs.city,
+		// 						region_name: bdAddrs.district,
+		// 						province_id: ids.provinceId,
+		// 						city_id: ids.cityId,
+		// 						district_id: ids.districtId,
+		// 						street: bdAddrs.street,
+		// 						streetNum: bdAddrs.street_number,
+		// 						phone: result.cellPhone,
+		// 						realName: result.realName
+		// 					}
+		// 				}
+		// 				_initAddrSel();
+		// 			}, function() {
+		// 				_initAddrSel();
+		// 			});
+		// 		} else {
+		// 			_initAddrSel();
+		// 		}
 
-			});
-		} catch (e) {
-			_initAddrSel();
-		}
+		// 	});
+		// } catch (e) {
+		_initAddrSel();
+		// }
 	} else {
 		_initAddrSel();
 	}

@@ -42,11 +42,11 @@ AddrSel.prototype = {
 
 		self._getPro();
 
-		if(this.addr.cityId){
+		if (this.addr.cityId) {
 			self._getCity();
 		}
 
-		if(this.addr.regionId){
+		if (this.addr.regionId) {
 			self._getRegion();
 		}
 
@@ -61,7 +61,7 @@ AddrSel.prototype = {
 		self.addr.pro = option.text;
 		self.addr.proId = option.value;
 
-		self._getCity(function(){
+		self._getCity(function() {
 			self.$regionBtn[0].selectedIndex = 0;
 		});
 	},
@@ -89,7 +89,7 @@ AddrSel.prototype = {
 	_getPro: function() {
 		var self = this;
 		new Ajax().send({
-			url: '/User/Center/getAllProvince'
+			url: '/api/UserAddress/getAllProvince'
 		}, function(result) {
 			var list = result.data;
 
@@ -112,7 +112,7 @@ AddrSel.prototype = {
 		var self = this;
 
 		new Ajax().send({
-			url: '/User/Center/getAllCity',
+			url: '/api/UserAddress/getAllCity',
 			data: {
 				province_id: self.addr.proId
 			}
@@ -139,8 +139,9 @@ AddrSel.prototype = {
 		var self = this;
 
 		new Ajax().send({
-			url: '/User/Center/getAllDistrict',
+			url: '/api/UserAddress/getAllDistrict',
 			data: {
+				province_id: self.addr.proId,
 				city_id: self.addr.cityId
 			}
 		}, function(result) {
