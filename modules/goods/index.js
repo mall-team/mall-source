@@ -549,7 +549,7 @@ function search_sku_key() {
 function resetCart() {
 	var ajaxUrl = $('#J-ajaxurl-initCart').val();
 
-	if(ajaxUrl){
+	if(!ajaxUrl){
 		return;
 	}
 	new Ajax().send({

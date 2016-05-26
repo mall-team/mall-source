@@ -353,10 +353,11 @@ body{
 }
 
 /*分类标签*/
-.tj-types{
+.tj-types, .tj-types2{
 	background-color: #fff;
 	padding: 14px 0 10px;
 	.flex();
+
 
 	>li{
 		width: 25%;
@@ -370,32 +371,22 @@ body{
 
 		&:nth-child(1){
 			.icon{
-				// background-image: url(/images/icon-cat-1.png?__inline);
-				background-image: url(/images/0208/ty-1.png);
+				background-image: url(/images/ty-1.png);
 			}
 		}
 		&:nth-child(2){
 			.icon{
-				// background-image: url(/images/icon-cat-2.png?__inline);
-				background-image: url(/images/0208/ty-2.png);
+				background-image: url(/images/ty-2.png);
 			}
 		}
 		&:nth-child(3){
 			.icon{
-				// background-image: url(/images/icon-cat-3.png?__inline);
-				background-image: url(/images/0208/ty-3.png);
+				background-image: url(/images/ty-3.png);
 			}
 		}
 		&:nth-child(4){
 			.icon{
-				// background-image: url(/images/icon-cat-4.png?__inline);
-				background-image: url(/images/0208/ty-4.png);
-			}
-		}
-		&:nth-child(5){
-			.icon{
-				// background-image: url(/images/icon-cat-5.png?__inline);
-				background-image: url(/images/0208/ty-5.png);
+				background-image: url(/images/ty-4.png);
 			}
 		}
 	}
@@ -404,12 +395,39 @@ body{
 		.bg-contain();
 		width: 40px;
 		height: 40px;
-		margin-bottom: 10px;
+		// margin-bottom: 10px;
+		margin-bottom: 8px;
 	}
 	label{
 		color: @text-gray-color;
 		display: block;
 		font-size: 12px;
+	}
+}
+
+.tj-types2{
+	padding-top: 0;
+	>li{
+		&:nth-child(1){
+			.icon{
+				background-image: url(/images/ty-5.png);
+			}
+		}
+		&:nth-child(2){
+			.icon{
+				background-image: url(/images/ty-6.png);
+			}
+		}
+		&:nth-child(3){
+			.icon{
+				background-image: url(/images/ty-7.png);
+			}
+		}
+		&:nth-child(4){
+			.icon{
+				background-image: url(/images/ty-8.png);
+			}
+		}
 	}
 }
 
@@ -990,7 +1008,7 @@ ul.three{
 		font-size: 12px;
 	}
 	.price{
-		color: @bg-main-color;
+		color: @text-price-color;
 		font-size: 15px;
 		line-height: 36px;
 		i{
@@ -1101,7 +1119,7 @@ ul.three{
 
 	.item-price{
 		.price{
-			color: @label-active-color;
+			color: @text-price-color;
 			font-size: 15px;
 		}
 		.btn{
