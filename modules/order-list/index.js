@@ -21,7 +21,20 @@ renderTimer($('[timer]'));
 
 
 var orderType = $('body').attr('order-type');
+var orderTypeDes = '';
 var ajaxUrl, itemLink;
+
+switch (orderType) {
+	case 'pay-wait':
+		orderTypeDes = '待支付';
+		break;
+	case 'sign-wait':
+		orderTypeDes = '待收货';
+		break;
+	case 'complete':
+		orderTypeDes = '已完成';
+		break;
+}
 
 ajaxUrl = $('#J-ajaxurl-list').val();
 itemLink = $('#J-detail-prefix').val();

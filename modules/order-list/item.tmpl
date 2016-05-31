@@ -2,29 +2,29 @@
 <li class="order-item">
 	<a href="<%= itemLink + item.orderId %>">
 		<p class="top-info clearfix">
-			<span class="date"><label>下单时间:</label><b><%= item.createTime %></b></span>
-			<% if(item.showStateName == '已取消'){ %>
-			<span class="state cancel right"><%= item.showStateName %></span>
+			<span class="date"><label>下单时间:</label><b><%= item.ctime %></b></span>
+			<% if(item.orderState == '2'){ %>
+			<span class="state cancel right"><%= item.orderStateDesc %></span>
 			<% }else{ %>
-			<span class="state right"><%= item.showStateName %></span>
+			<span class="state right"><%= orderTypeDes %></span>
 			<% } %>
 		</p>
 		<div class="order-info dib-wrap">
-			<div class="img-wrap dib" style="background-image: url(<%= item.iShowImageUrl %>)"></div>
+			<div class="img-wrap dib" style="background-image: url(<%= item.showImageUrl %>)"></div>
 			<dl class="dib clearfix">
 				<dt>订单编号</dt>
 				<dd><%= item.orderId %></dd>
 				<dt>订单金额</dt>
-				<dd><span class="price"><i>&yen;</i><b><%= item.totalAmount %></b></span></dd>
+				<dd><span class="price"><i>&yen;</i><b><%= item.orderAmount %></b></span></dd>
 				<dt>商品件数</dt>
-				<dd><%= item.productList.length %></dd>
+				<dd><%= item.goodsNumber %></dd>
 			</dl>
 			<i class="icon-arrow"></i>
 		</div>
 		<% if(orderType == 'pay-wait'){ %>
 		<div class="btn-wrap">
-			<button class="btnl">支付<span class="J-timer-<%= pageNum %>" timer="<%= item.iLeftTime %>"></span></button>
-		</div>
+			<button class="btnl">支付<span class="J-timer-<%= pageNum %>" timer="<%= item.leftTime %>"></span></button>
+		</div
 		<% } %>
 	</a>
 </li>

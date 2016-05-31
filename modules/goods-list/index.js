@@ -59,7 +59,13 @@ new FixTop({
 });
 
 
-initCat();
+init();
+
+function init() {
+	initCat();
+	addEvt();
+	initCart();
+}
 
 /**
  * 初始化二级分类
@@ -79,5 +85,46 @@ function initCat() {
 	$catList.on('touchstart', function(e) {
 		e.stopPropagation();
 		sessionStorage.clear();
+	});
+}
+
+
+function addEvt() {
+	$('#J-goods-list').on('click', '.J-add-cart', addCart);
+}
+
+/**
+ * 初始化购物车
+ */
+function initCart() {
+	new Ajax().send({
+		url: $('#J-ajaxurl-initCart').val()
+	}, function(result) {
+		var num = +result.number;
+		var $cart = $('.cart');
+		var $cartNum = $('.cart > i');
+
+		if (num > 0) {
+			$cart.css('display', 'block');
+			$cartNum.text(num);
+		}
+	});
+}
+
+/**
+ * 添加到购物车
+ */
+function addCart() {
+	var $cur = $(this);
+	var goodsId = $cur.attr('goods-id');
+
+	new Ajax().send({
+		url: $('#J-ajaxurl-addCart').val(),
+		type: 'post',
+		data: {
+			goodsId: goodsId,
+		}
+	}, function() {
+		initCart();
 	});
 }
