@@ -1,10 +1,12 @@
 var $ = require('zepto');
 var Ajax = require('common/ajax/index');
 var Pop = require('common/pop/index');
+var Nav = require('common/nav/index');
 
 init();
 
 function init() {
+	Nav.initCart();
 	addEvent();
 }
 

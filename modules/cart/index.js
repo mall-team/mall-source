@@ -4,8 +4,11 @@ var Ajax = require('common/ajax/index');
 var Bubble = require('common/bubble/bubble');
 var Confirm = require('common/confirm/index');
 var Timer = require('common/timer/timer');
+var Nav = require('common/nav/index');
 
 function init() {
+	Nav.initCart();
+	
 	//初始化数字选择器
 	$('.J-amount-bar').each(function(i, el) {
 		new Amount(el).init(upadateNum);

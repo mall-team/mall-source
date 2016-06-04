@@ -261,7 +261,7 @@
 		font-size: 12px;
 		.ellipsis-multiple(2);
 		padding: 0 20/640*100%;
-		margin-bottom: 6px;
+		margin-bottom: 4px;
 		min-height: 12*1.25*2px;
 	}
 	.clearfix{
@@ -270,20 +270,22 @@
 		height: 19px;
 
 		.price{
-			color: @label-active-color;
+			color: @text-price-color;
 			font-size: 14px;
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
 		}
 		.btn-sm{
 			// background-color: transparent;
 			float: right;
-			.bg-contain('/images/goods-list/icon-add-cart.png', 24px, 24px);
+			.bg-contain('/images/goods-list/icon-add-cart.png', 30px, 30px);
 			color: #fff;
 			// text-align: right;
 			line-height: 19px;
 			font-size: 12px;
 			padding-right: 0;
 			padding-left: 10px;
-			margin-top: -2.5px;
 		}
 	}
 

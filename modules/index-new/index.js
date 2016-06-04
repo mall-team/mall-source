@@ -8,6 +8,8 @@ var Ajax = require('common/ajax/index');
 var Util = require('common/util/index');
 var Alert = require('common/alert/alert');
 // var KljAlert = require('klj/klj-alert/index');
+var CartAni = require('common/cart-ani/index');
+var Nav = require('common/nav/index');
 
 require('search-panel/index');
 require('common/gotop/index');
@@ -23,19 +25,22 @@ function init() {
 	});
 	// isKlj();
 	initTimer();
-	initCart();
 	lazyLoadImg();
 	initImgLoader();
 	initMiao();
 	initNy();
+	Nav.initCart();
+
+	$('.J-add-cart').on('click', addCart);
+	window.addCart = addCart;
 }
 
-function lazyLoadImg(){
+function lazyLoadImg() {
 	$("[data-original]").lazyload({
 		placeholderClass: 'placeholder',
 		effect: 'fadeIn',
 		threshold: 1500
-     });
+	});
 }
 
 /**
@@ -127,7 +132,7 @@ function selMiao() {
 	var tmpl = __inline('maioItem.tmpl');
 
 	new Ajax().send({
-		url: '/Mall/Activity/previewFlashActivity',
+		url: $('#J-ajaxurl-miaoList').val(),
 		data: {
 			hour: $cur.text().split(':')[0]
 		}
@@ -218,20 +223,25 @@ function initTimer() {
 }
 
 /**
- * 初始化购物车
+ * 添加到购物车
  */
-function initCart() {
-	new Ajax().send({
-		url: $('#J-ajaxurl-initCart').val()
-	}, function(result) {
-		var num = +result.number;
-		var $cart = $('.cart');
-		var $cartNum = $('.cart > i');
+function addCart(evt) {
+	evt.preventDefault();
+	evt.stopPropagation();
 
-		if (num > 0) {
-			$cart.css('display', 'block');
-			$cartNum.text(num);
+	var $cur = $(evt.target);
+	var goodsId = $cur.attr('goods-id');
+
+	new Ajax().send({
+		url: $('#J-ajaxurl-addCart').val(),
+		type: 'post',
+		data: {
+			goodsId: goodsId,
 		}
+	}, function() {
+		new CartAni($cur.parent().parent().parent().find('.img-wrap'), $('.gift')).fly(function() {
+			Nav.initCart();
+		});
 	});
 }
 

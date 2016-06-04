@@ -1,4 +1,6 @@
-#
+#调度地址
+ * http://devsocial.taojinzi.cn
+ * http://wx.dazemall.com
 
 ##类库
  * [zepto](http://www.zeptojs.cn/) 基础类库

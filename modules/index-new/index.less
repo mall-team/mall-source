@@ -294,30 +294,32 @@ body{
 	right: 22/640*100%;
 }
 
-.cart{
-	.bg-contain('/images/cart.png?__inline', 48px, 36px);
-	display: none;
-	position: fixed;
-	left: 20/640*100%;
-	bottom: 65px;
-	z-index: 2000;
 
-	i{
-		background-color: #f33125;
-		.border-radius(50%);
-		color: #fff;
-		font-size: 12px;
-		font-size: normal;
-		width: 18px;
-		height: 18px;
-		line-height: 18px;
-		text-align: center;
-		position: absolute;
-		top: -6px;
-		right: 0px;
-		z-index: 2;
-	}
-}
+
+// .cart{
+// 	.bg-contain('/images/cart.png?__inline', 48px, 36px);
+// 	display: none;
+// 	position: fixed;
+// 	left: 20/640*100%;
+// 	bottom: 65px;
+// 	z-index: 2000;
+
+// 	i{
+// 		background-color: #f33125;
+// 		.border-radius(50%);
+// 		color: #fff;
+// 		font-size: 12px;
+// 		font-size: normal;
+// 		width: 18px;
+// 		height: 18px;
+// 		line-height: 18px;
+// 		text-align: center;
+// 		position: absolute;
+// 		top: -6px;
+// 		right: 0px;
+// 		z-index: 2;
+// 	}
+// }
 
 .cut-timer{
 	display: inline-block;
@@ -1096,6 +1098,21 @@ ul.three{
 	background-color: #fff;
 	padding: 0 6/640*100% 4px;
 }
+.temai-list{
+	.ready-tip{
+		background-color: rgba(0, 0, 0, 0.6);
+		width: 60%;
+		margin-left: -30%;
+		margin-top: -30px;
+	}
+	.empty{
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		margin-left: -50px;
+		margin-top: -50px;
+	}
+}
 .temai-item{
 	border: 1px solid @border-base-color;
 	margin: 0 6/628*100% 6px;
@@ -1104,10 +1121,25 @@ ul.three{
 	.img-wrap{
 		.rect(100%, 310/302*100%);
 		margin-bottom: 10px;
+		position: relative;
 	}
 
 	.item-info{
 		padding: 0 6px 9px;
+		.clearfix();
+	}
+
+	.btn-sm{
+		display: inline-block;
+		float: right;
+		// background-color: transparent;
+		.bg-contain('/images/goods-list/icon-add-cart.png', 30px, 30px);
+		color: #fff;
+		// text-align: right;
+		line-height: 19px;
+		font-size: 12px;
+		padding-right: 0;
+		padding-left: 10px;
 	}
 
 	.item-title{
@@ -1119,8 +1151,11 @@ ul.three{
 
 	.item-price{
 		.price{
+			display: inline-block;
 			color: @text-price-color;
 			font-size: 15px;
+			height: 30px;
+			line-height: 30px;
 		}
 		.btn{
 			float: right;

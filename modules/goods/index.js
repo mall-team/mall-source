@@ -419,7 +419,8 @@ function addCar() {
 		data: data,
 		type: 'post',
 		// selfBack: true
-	}, function(resp) {
+	}, function(result) {
+		Bubble.show('加入购物车成功');
 		resetCart();
 		// if (resp.code == 1) {
 		// CartNum.add(goods_number);

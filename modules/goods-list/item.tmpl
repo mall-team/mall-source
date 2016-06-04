@@ -1,11 +1,11 @@
 <% _.each(list, function(item){  %>
 <div class="goods">
-	<a href="/Mall/Goods/detail?goodsId=<%= item.goodsId %>">
+	<a href="/mall/Goods/detail?goodsId=<%= item.goodsId %>">
 		<div class="img-wrap" style="background-image: url(<%= item.imageUrl %>)"></div>
 		<div class="goods-title"><%= item.name %></div>
 		<div class="clearfix">
 			<label class="price"><i>&yen;</i><b><%= item.salePrice %></b></label>
-			<a class="btn-sm J-add-cart" goods-id="<%= item.goodsId %>"></a>
+			<label onclick="addCart(event);" class="btn-sm J-add-cart" goods-id="<%= item.goodsId %>"></label>
 		</div>
 	</a>
 </div>
